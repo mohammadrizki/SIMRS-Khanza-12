@@ -1,5 +1,3 @@
-# SIMRS-Khanza-12
-
   Software ini adalah Software Menejemen Rumah Sakit/Klinik/
   Puskesmas yang  gratis, open source dan boleh digunakan siapa saja tanpa dikenai 
   biaya apapun.  Hal yang tidak boleh dilakukan adalah memperjualbelikan/mengambil 
