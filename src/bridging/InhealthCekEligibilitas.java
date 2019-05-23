@@ -1675,7 +1675,7 @@ public final class InhealthCekEligibilitas extends javax.swing.JDialog {
         FormKelengkapanPasien.add(jLabel19);
         jLabel19.setBounds(235, 85, 45, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "BELUM MENIKAH", "JANDA", "DUDHA" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {

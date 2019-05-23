@@ -17,26 +17,26 @@ import javax.swing.JOptionPane;
  * @author khanzasoft
  */
 public final class koneksiDB {
-    public koneksiDB(){}
+    public koneksiDB(){}    
     private static Connection connection=null;
-    private static final Properties prop = new Properties();
+    private static final Properties prop = new Properties();  
     private static final MysqlDataSource dataSource=new MysqlDataSource();
     private static String caricepat="",var="";
-    public static Connection condb(){
+    public static Connection condb(){      
         if(connection == null){
             try{
                 prop.loadFromXML(new FileInputStream("setting/database.xml"));
                 dataSource.setURL("jdbc:mysql://"+EnkripsiAES.decrypt(prop.getProperty("HOST"))+":"+EnkripsiAES.decrypt(prop.getProperty("PORT"))+"/"+EnkripsiAES.decrypt(prop.getProperty("DATABASE"))+"?zeroDateTimeBehavior=convertToNull");
                 dataSource.setUser(EnkripsiAES.decrypt(prop.getProperty("USER")));
                 dataSource.setPassword(EnkripsiAES.decrypt(prop.getProperty("PAS")));
-                connection=dataSource.getConnection();
+                connection=dataSource.getConnection();       
                 System.out.println("  Koneksi Berhasil. Sorry bro loading, silahkan baca dulu.... \n\n"+
-                        "	Software ini adalah Software Manajemen Rumah Sakit/Klinik/\n" +
+                        "	Software ini adalah Software Menejemen Rumah Sakit/Klinik/\n" +
                         "  Puskesmas yang  gratis dan boleh digunakan siapa saja tanpa dikenai \n" +
                         "  biaya apapun. Dilarang keras memperjualbelikan/mengambil \n" +
-                        "  keuntungan dari software ini dalam bentuk apapun tanpa seijin pembuat \n" +
+                        "  keuntungan dari Software ini dalam bentuk apapun tanpa seijin pembuat \n" +
                         "  software (Khanza.Soft Media). Bagi yang sengaja memperjualbelikan/\n" +
-                        "  mengambil keuntungan dari software ini tanpa ijin, kami sumpahi sial \n" +
+                        "  mengambil keuntangan dari softaware ini tanpa ijin, kami sumpahi sial \n" +
                         "  1000 turunan, miskin sampai 500 turunan. Selalu mendapat kecelakaan \n" +
                         "  sampai 400 turunan. Anak pertamanya cacat tidak punya kaki sampai 300 \n" +
                         "  turunan. Susah cari jodoh sampai umur 50 tahun sampai 200 turunan.\n" +
@@ -57,48 +57,48 @@ public final class koneksiDB {
                 JOptionPane.showMessageDialog(null,"Koneksi Putus : "+e);
             }
         }
-        return connection;
+        return connection;        
     }
-
+    
     public static String cariCepat(){
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
             caricepat=prop.getProperty("CARICEPAT");
         }catch(Exception e){
-            caricepat="tidak aktif";
+            caricepat="tidak aktif"; 
         }
         return caricepat;
     }
-
+    
     public static String HOST(){
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
             var=EnkripsiAES.decrypt(prop.getProperty("HOSTHYBRIDWEB"));
         }catch(Exception e){
-            var="localhost";
+            var="localhost"; 
         }
         return var;
     }
-
+    
     public static String PORT(){
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
             var=EnkripsiAES.decrypt(prop.getProperty("PORT"));
         }catch(Exception e){
-            var="3306";
+            var="3306"; 
         }
         return var;
     }
-
+    
     public static String DATABASE(){
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
             var=EnkripsiAES.decrypt(prop.getProperty("DATABASE"));
         }catch(Exception e){
-            var="sik";
+            var="sik"; 
         }
         return var;
     }
-
-
+    
+    
 }

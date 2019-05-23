@@ -84,7 +84,7 @@ public class DUKCAPILJakartaCekNik {
                 NO_RW=nameNode.path("NO_RW").asText();
                 NO_PROP=nameNode.path("NO_PROP").asText();
                 NO_KEC=nameNode.path("NO_KEC").asText();
-                DSC_STAT_KWN=nameNode.path("DSC_STAT_KWN").asText().replaceAll("Belum Kawin","BELUM KAWIN").replaceAll("Sudah Kawin","KAWIN");
+                DSC_STAT_KWN=nameNode.path("DSC_STAT_KWN").asText().replaceAll("Belum Kawin","BELUM MENIKAH").replaceAll("Sudah Kawin","MENIKAH");
                 DSC_STAT_HBKEL=nameNode.path("DSC_STAT_HBKEL").asText();
                 DSC_GOL_DRH=nameNode.path("DSC_GOL_DRH").asText().replaceAll("Tidak Tahu","-");
             } catch (Exception e) {

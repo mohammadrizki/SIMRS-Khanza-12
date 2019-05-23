@@ -518,7 +518,7 @@ public class DlgDokter extends javax.swing.JDialog {
         jLabel16.setPreferredSize(new java.awt.Dimension(80, 23));
         panelGlass8.add(jLabel16);
 
-        CmbCrStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
+        CmbCrStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "MENIKAH", "SINGLE", "JANDA", "DUDHA" }));
         CmbCrStts.setLightWeightPopupEnabled(false);
         CmbCrStts.setName("CmbCrStts"); // NOI18N
         CmbCrStts.setPreferredSize(new java.awt.Dimension(120, 23));
@@ -686,7 +686,7 @@ public class DlgDokter extends javax.swing.JDialog {
         FormInput.add(jLabel19);
         jLabel19.setBounds(639, 12, 90, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI", "KAWIN TIDAK TERCATAT" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "SINGLE", "JANDA", "DUDHA", "JOMBLO" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {
