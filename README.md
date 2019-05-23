@@ -17,3 +17,9 @@
   Hasil build/Software jadi bisa di download di https://drive.google.com/drive/folders/0ByL--Jg6bdF7RG1NSlVTT2ZPODg 
 
   Bagi yang ingin donasi untuk SIMRS Khanza bisa lewat BRI Syariah 1015369872 atas nama Windiarto
+  
+  ---------------------------
+  EDIT YANG DILAKUKAN:
+  1. Status kawin disesuaikan dengan Dukcapil (BELUM KAWIN, KAWIN, CERAI HIDUP, CERAI MATI)
+  2. Typo fix
+  3. Tombol di form utama greyed out semua saat logout selain tombol Login dan Keluar
