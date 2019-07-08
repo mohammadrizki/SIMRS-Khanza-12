@@ -497,8 +497,8 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                 "</tr>"+
                 "<tr class='isi'>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>0-6 hr</td>"+
-                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>7-28hr</td>"+
-                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>28hr-<1th</td>"+
+                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>7-27hr</td>"+
+                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>28hr-&lsaquo;1th</td>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>1-4th</td>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>5-14th</td>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>15-24th</td>"+
@@ -534,7 +534,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                 "</tr>"
             );   
             ps=koneksi.prepareStatement(
-                    "select reg_periksa.no_rkm_medis,reg_periksa.tgl_registrasi,reg_periksa.no_rawat,reg_periksa.umurdaftar,reg_periksa.sttsumur,pasien.jk "+
+                    "select reg_periksa.no_rkm_medis,reg_periksa.tgl_registrasi,reg_periksa.jam_reg,reg_periksa.no_rawat,reg_periksa.umurdaftar,reg_periksa.sttsumur,pasien.jk "+
                     "from reg_periksa inner join diagnosa_pasien inner join pasien on reg_periksa.no_rawat=diagnosa_pasien.no_rawat and reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                     "where reg_periksa.tgl_registrasi between ? and ? and reg_periksa.status_lanjut='Ranap' and diagnosa_pasien.status='Ranap' and diagnosa_pasien.prioritas='1' and "+
                     "diagnosa_pasien.kd_penyakit=? order by reg_periksa.tgl_registrasi");
@@ -559,7 +559,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                                 hr0s6p++;
                                 sthr0s6p="V";
                             }
-                        }else if((rs.getInt("umurdaftar")>=7)&&(rs.getInt("umurdaftar")<=28)){
+                        }else if((rs.getInt("umurdaftar")>=7)&&(rs.getInt("umurdaftar")<=27)){
                             if(rs.getString("jk").equals("L")){
                                 hr7s28l++;
                                 sthr7s28l="V";
@@ -567,7 +567,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                                 hr7s28p++;
                                 sthr7s28p="V";
                             }
-                        }else if(rs.getInt("umurdaftar")>28){
+                        }else if(rs.getInt("umurdaftar")>=28){
                             if(rs.getString("jk").equals("L")){
                                 hr28s1thl++;
                                 sthr28s1thl="V";
@@ -662,15 +662,15 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                         diagnosa = diagnosa.substring(0,diagnosa.length() - 1);
                     }
                     
+                    jamdiff=0;
                     stmatilb48="";stmatikr48="";stpulang="";staps="";stlari="";strujuk="";tglkeluar="";lamainap="";
-                    ps2=koneksi.prepareStatement("select tgl_keluar,stts_pulang,sum(lama) as lama from kamar_inap where no_rawat=? order by tgl_keluar desc limit 1");    
+                    ps2=koneksi.prepareStatement("select tgl_keluar,jam_keluar,stts_pulang,sum(lama) as lama from kamar_inap where no_rawat=? order by tgl_keluar desc limit 1");    
                     try {
                         ps2.setString(1,rs.getString("no_rawat"));
                         rs2=ps2.executeQuery();
                         if(rs2.next()){
-                            tglkeluar=rs2.getString("tgl_keluar");
+                            tglkeluar=rs2.getString("tgl_keluar")+" "+rs2.getString("jam_keluar");
                             lamainap=rs2.getString("lama");
-                            jamdiff=Sequel.cariInteger("SELECT TIMESTAMPDIFF(HOUR,'"+rs.getString("tgl_registrasi")+"','"+tglkeluar+"')");
                             if(rs2.getString("stts_pulang").equals("Sehat")){
                                 stpulang="V";
                                 pulang++;
@@ -684,6 +684,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                                 stpulang="V";
                                 pulang++;
                             }else if(rs2.getString("stts_pulang").equals("Meninggal")){
+                                jamdiff=Sequel.cariInteger("SELECT TIMESTAMPDIFF(HOUR,'"+rs.getString("tgl_registrasi")+" "+rs.getString("jam_reg")+"','"+tglkeluar+"')");
                                 if(jamdiff<=48){
                                     stmatikr48="V";
                                     matikr48++;
@@ -761,8 +762,8 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                             "<td valign='middle' align='center'>"+staps+"</td>"+
                             "<td valign='middle' align='center'>"+stlari+"</td>"+
                             "<td valign='middle' align='center'>"+strujuk+"</td>"+
-                            "<td valign='middle' align='center'>"+stmatikr48+"</td>"+
                             "<td valign='middle' align='center'>"+stmatilb48+"</td>"+
+                            "<td valign='middle' align='center'>"+stmatikr48+"</td>"+
                         "</tr>"
                     );
                     i++;
@@ -805,8 +806,8 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                         "<td valign='middle' align='center'>"+aps+"</td>"+
                         "<td valign='middle' align='center'>"+lari+"</td>"+
                         "<td valign='middle' align='center'>"+rujuk+"</td>"+
-                        "<td valign='middle' align='center'>"+matikr48+"</td>"+
                         "<td valign='middle' align='center'>"+matilb48+"</td>"+
+                        "<td valign='middle' align='center'>"+matikr48+"</td>"+
                     "</tr>");
             }
             
@@ -840,8 +841,8 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                 "</tr>"+
                 "<tr class='isi'>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>0-6 hr</td>"+
-                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>7-28hr</td>"+
-                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>28hr-<1th</td>"+
+                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>7-27hr</td>"+
+                    "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>28hr-&lsaquo;1th</td>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>1-4th</td>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>5-14th</td>"+
                     "<td valign='middle' bgcolor='#fafff5' align='center' colspan='2'>15-24th</td>"+
@@ -877,7 +878,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                 "</tr>"
             );   
             ps=koneksi.prepareStatement(
-                    "select reg_periksa.no_rkm_medis,reg_periksa.tgl_registrasi,reg_periksa.no_rawat,reg_periksa.umurdaftar,reg_periksa.sttsumur,pasien.jk "+
+                    "select reg_periksa.no_rkm_medis,reg_periksa.tgl_registrasi,reg_periksa.jam_reg,reg_periksa.no_rawat,reg_periksa.umurdaftar,reg_periksa.sttsumur,pasien.jk "+
                     "from reg_periksa inner join diagnosa_pasien inner join pasien inner join kamar_inap on reg_periksa.no_rawat=diagnosa_pasien.no_rawat and "+
                     "reg_periksa.no_rkm_medis=pasien.no_rkm_medis and reg_periksa.no_rawat=kamar_inap.no_rawat where kamar_inap.tgl_keluar between ? and ? and "+
                     "kamar_inap.stts_pulang<>'Pindah Kamar' and reg_periksa.status_lanjut='Ranap' and diagnosa_pasien.status='Ranap' and diagnosa_pasien.prioritas='1' and "+
@@ -903,7 +904,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                                 hr0s6p++;
                                 sthr0s6p="V";
                             }
-                        }else if((rs.getInt("umurdaftar")>=7)&&(rs.getInt("umurdaftar")<=28)){
+                        }else if((rs.getInt("umurdaftar")>=7)&&(rs.getInt("umurdaftar")<=27)){
                             if(rs.getString("jk").equals("L")){
                                 hr7s28l++;
                                 sthr7s28l="V";
@@ -911,7 +912,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                                 hr7s28p++;
                                 sthr7s28p="V";
                             }
-                        }else if(rs.getInt("umurdaftar")>28){
+                        }else if(rs.getInt("umurdaftar")>=28){
                             if(rs.getString("jk").equals("L")){
                                 hr28s1thl++;
                                 sthr28s1thl="V";
@@ -1008,15 +1009,15 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                         diagnosa = diagnosa.substring(0,diagnosa.length() - 1);
                     }
                     
+                    jamdiff=0;
                     stmatilb48="";stmatikr48="";stpulang="";staps="";stlari="";strujuk="";tglkeluar="";lamainap="";
-                    ps2=koneksi.prepareStatement("select tgl_keluar,stts_pulang,sum(lama) as lama from kamar_inap where no_rawat=? order by tgl_keluar desc limit 1");    
+                    ps2=koneksi.prepareStatement("select tgl_keluar,jam_keluar,stts_pulang,sum(lama) as lama from kamar_inap where no_rawat=? order by tgl_keluar desc limit 1");    
                     try {
                         ps2.setString(1,rs.getString("no_rawat"));
                         rs2=ps2.executeQuery();
                         if(rs2.next()){
-                            tglkeluar=rs2.getString("tgl_keluar");
+                            tglkeluar=rs2.getString("tgl_keluar")+" "+rs2.getString("jam_keluar");
                             lamainap=rs2.getString("lama");
-                            jamdiff=Sequel.cariInteger("SELECT TIMESTAMPDIFF(HOUR,'"+rs.getString("tgl_registrasi")+"','"+tglkeluar+"')");
                             if(rs2.getString("stts_pulang").equals("Sehat")){
                                 stpulang="V";
                                 pulang++;
@@ -1030,6 +1031,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                                 stpulang="V";
                                 pulang++;
                             }else if(rs2.getString("stts_pulang").equals("Meninggal")){
+                                jamdiff=Sequel.cariInteger("SELECT TIMESTAMPDIFF(HOUR,'"+rs.getString("tgl_registrasi")+" "+rs.getString("jam_reg")+"','"+tglkeluar+"')");
                                 if(jamdiff<=48){
                                     stmatikr48="V";
                                     matikr48++;
@@ -1107,8 +1109,8 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                             "<td valign='middle' align='center'>"+staps+"</td>"+
                             "<td valign='middle' align='center'>"+stlari+"</td>"+
                             "<td valign='middle' align='center'>"+strujuk+"</td>"+
-                            "<td valign='middle' align='center'>"+stmatikr48+"</td>"+
                             "<td valign='middle' align='center'>"+stmatilb48+"</td>"+
+                            "<td valign='middle' align='center'>"+stmatikr48+"</td>"+
                         "</tr>"
                     );
                     i++;
@@ -1151,8 +1153,8 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
                         "<td valign='middle' align='center'>"+aps+"</td>"+
                         "<td valign='middle' align='center'>"+lari+"</td>"+
                         "<td valign='middle' align='center'>"+rujuk+"</td>"+
-                        "<td valign='middle' align='center'>"+matikr48+"</td>"+
                         "<td valign='middle' align='center'>"+matilb48+"</td>"+
+                        "<td valign='middle' align='center'>"+matikr48+"</td>"+
                     "</tr>");
             }
             
