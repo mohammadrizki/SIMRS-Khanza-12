@@ -114,7 +114,9 @@ public final class akses {
             skrining_ralan_pernapasan_pertahun=false,pengajuan_barang_medis=false,pengajuan_barang_nonmedis=false,grafik_kunjungan_ranapbulan=false,
             grafik_kunjungan_ranaptanggal=false,grafik_kunjungan_ranap_peruang=false,kunjungan_bangsal_pertahun=false,grafik_jenjang_jabatanpegawai=false,
             grafik_bidangpegawai=false,grafik_departemenpegawai=false,grafik_pendidikanpegawai=false,grafik_sttswppegawai=false,
-            grafik_sttskerjapegawai=false,grafik_sttspulangranap=false,kip_pasien_ranap=false,kip_pasien_ralan=false,bpjs_mapping_dokterdpjp=false;
+            grafik_sttskerjapegawai=false,grafik_sttspulangranap=false,kip_pasien_ranap=false,kip_pasien_ralan=false,bpjs_mapping_dokterdpjp=false,
+            data_triase=false,master_triase_skala1=false,master_triase_skala2=false,master_triase_skala3=false,master_triase_skala4=false,
+            master_triase_skala5=false,master_triase_pemeriksaan=false,master_triase_macamkasus=false;
     
     public static void setData(String user, String pass) {
        try {                
@@ -660,6 +662,14 @@ public final class akses {
                         akses.kip_pasien_ranap=true;
                         akses.kip_pasien_ralan=true;
                         akses.bpjs_mapping_dokterdpjp=true;
+                        akses.data_triase=true;
+                        akses.master_triase_skala1=true;
+                        akses.master_triase_skala2=true;
+                        akses.master_triase_skala3=true;
+                        akses.master_triase_skala4=true;
+                        akses.master_triase_skala5=true;
+                        akses.master_triase_pemeriksaan=true;
+                        akses.master_triase_macamkasus=true;
                     }else if(rs2.getRow()>=1){   
                         rs2.beforeFirst();
                         rs2.next();
@@ -1189,6 +1199,14 @@ public final class akses {
                         akses.kip_pasien_ranap=rs2.getBoolean("kip_pasien_ranap");
                         akses.kip_pasien_ralan=rs2.getBoolean("kip_pasien_ralan");
                         akses.bpjs_mapping_dokterdpjp=rs2.getBoolean("bpjs_mapping_dokterdpjp");
+                        akses.data_triase=rs2.getBoolean("data_triase");
+                        akses.master_triase_skala1=rs2.getBoolean("master_triase_skala1");
+                        akses.master_triase_skala2=rs2.getBoolean("master_triase_skala2");
+                        akses.master_triase_skala3=rs2.getBoolean("master_triase_skala3");
+                        akses.master_triase_skala4=rs2.getBoolean("master_triase_skala4");
+                        akses.master_triase_skala5=rs2.getBoolean("master_triase_skala5");
+                        akses.master_triase_pemeriksaan=rs2.getBoolean("master_triase_pemeriksaan");
+                        akses.master_triase_macamkasus=rs2.getBoolean("master_triase_macamkasus");
                     }else if((rs.getRow()==0)&&(rs2.getRow()==0)){
                         akses.kode="";                  
                         akses.penyakit= false;
@@ -1716,6 +1734,14 @@ public final class akses {
                         akses.kip_pasien_ranap=false;
                         akses.kip_pasien_ralan=false;
                         akses.bpjs_mapping_dokterdpjp=false;
+                        akses.data_triase=false;
+                        akses.master_triase_skala1=false;
+                        akses.master_triase_skala2=false;
+                        akses.master_triase_skala3=false;
+                        akses.master_triase_skala4=false;
+                        akses.master_triase_skala5=false;
+                        akses.master_triase_pemeriksaan=false;
+                        akses.master_triase_macamkasus=false;
                     }
                 } catch (Exception e) {
                     System.out.println("Notifikasi : "+e);
@@ -2297,4 +2323,12 @@ public final class akses {
     public static boolean getkip_pasien_ranap(){return akses.kip_pasien_ranap;}
     public static boolean getkip_pasien_ralan(){return akses.kip_pasien_ralan;}
     public static boolean getbpjs_mapping_dokterdpjp(){return akses.bpjs_mapping_dokterdpjp;}
+    public static boolean getdata_triase(){return akses.data_triase;}
+    public static boolean getmaster_triase_skala1(){return akses.master_triase_skala1;}
+    public static boolean getmaster_triase_skala2(){return akses.master_triase_skala2;}
+    public static boolean getmaster_triase_skala3(){return akses.master_triase_skala3;}
+    public static boolean getmaster_triase_skala4(){return akses.master_triase_skala4;}
+    public static boolean getmaster_triase_skala5(){return akses.master_triase_skala5;}
+    public static boolean getmaster_triase_pemeriksaan(){return akses.master_triase_pemeriksaan;}
+    public static boolean getmaster_triase_macamkasus(){return akses.master_triase_macamkasus;}
 }   
