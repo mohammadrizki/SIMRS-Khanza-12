@@ -134,7 +134,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
 
         ppBersihkan.setBackground(new java.awt.Color(255, 255, 254));
         ppBersihkan.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppBersihkan.setForeground(new java.awt.Color(70, 70, 70));
+        ppBersihkan.setForeground(new java.awt.Color(50,50,50));
         ppBersihkan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppBersihkan.setText("Bersihkan Pilihan");
         ppBersihkan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -151,7 +151,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
 
         ppSemua.setBackground(new java.awt.Color(255, 255, 254));
         ppSemua.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppSemua.setForeground(new java.awt.Color(70, 70, 70));
+        ppSemua.setForeground(new java.awt.Color(50,50,50));
         ppSemua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppSemua.setText("Pilih Semua");
         ppSemua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -168,7 +168,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
 
         ppBersihkan1.setBackground(new java.awt.Color(255, 255, 254));
         ppBersihkan1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppBersihkan1.setForeground(new java.awt.Color(70, 70, 70));
+        ppBersihkan1.setForeground(new java.awt.Color(50,50,50));
         ppBersihkan1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppBersihkan1.setText("Bersihkan Semua Hak Akses");
         ppBersihkan1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -185,7 +185,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
 
         ppSemua1.setBackground(new java.awt.Color(255, 255, 254));
         ppSemua1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppSemua1.setForeground(new java.awt.Color(70, 70, 70));
+        ppSemua1.setForeground(new java.awt.Color(50,50,50));
         ppSemua1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppSemua1.setText("Pilih Semua Hak Akses");
         ppSemua1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -204,7 +204,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Update Hak Akses User ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(70, 70, 70))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Update Hak Akses User ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -871,6 +871,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pengajuan_barang_medis='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
                 
+                if("[D]10 Obat Terbanyak Poli".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","10_obat_terbanyak_poli='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
                 if("[E]Barang Non Medis".equals(tbUser.getValueAt(i,1).toString())){
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","ipsrs_barang='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
@@ -1001,6 +1005,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
 
                 if("[F]Pest Control".equals(tbUser.getValueAt(i,1).toString())){
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pest_control='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[F]Pengajuan Aset/Inventaris".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pengajuan_asetinventaris='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
 
                 if("[G]Jenis Parkir".equals(tbUser.getValueAt(i,1).toString())){
@@ -1379,7 +1387,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","penyakit_ranap_cara_bayar='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
 
-                if("[I]Anggota Militer Dirawat".equals(tbUser.getValueAt(i,1).toString())){
+                if("[I]Anggota TNI Dirawat".equals(tbUser.getValueAt(i,1).toString())){
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","anggota_militer_dirawat='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
 
@@ -1453,6 +1461,18 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 
                 if("[I]KIP Pasien Ralan".equals(tbUser.getValueAt(i,1).toString())){
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","kip_pasien_ralan='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[I]Rekap Permintaan Diet".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","rekap_permintaan_diet='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[I]Daftar Pasien Ranap".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","daftar_pasien_ranap='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[I]Daftar Pasien Ranap TNI".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","daftar_pasien_ranaptni='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
 
                 if("[J]Deposit Pasien".equals(tbUser.getValueAt(i,1).toString())){
@@ -1992,7 +2012,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 }
                 
                 if("[L]Data Triase".equals(tbUser.getValueAt(i,1).toString())){
-                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","data_triase='"+tbUser.getValueAt(i,2).toString()+"'");
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","data_triase_igd='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
                 
                 if("[L]Master Triase Skala 1".equals(tbUser.getValueAt(i,1).toString())){
@@ -2355,6 +2375,22 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_sttspulangranap='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
 
+                if("[N]Item Apotek Per Jenis".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","item_apotek_jenis='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[N]Item Apotek Per Kategori".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","item_apotek_kategori='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[N]Item Apotek Per Golongan".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","item_apotek_golongan='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
+                if("[N]Item Apotek Per Industri Farmasi".equals(tbUser.getValueAt(i,1).toString())){
+                    Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","item_apotek_industrifarmasi='"+tbUser.getValueAt(i,2).toString()+"'");
+                }
+                
                 if("[O]Indeks Surat".equals(tbUser.getValueAt(i,1).toString())){
                     Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","surat_indeks='"+tbUser.getValueAt(i,2).toString()+"'");
                 }
@@ -2751,8 +2787,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         "pengajuan_barang_nonmedis,grafik_kunjungan_ranapbulan,grafik_kunjungan_ranaptanggal,grafik_kunjungan_ranap_peruang,"+
                         "kunjungan_bangsal_pertahun,grafik_jenjang_jabatanpegawai,grafik_bidangpegawai,grafik_departemenpegawai,"+
                         "grafik_pendidikanpegawai,grafik_sttswppegawai,grafik_sttskerjapegawai,grafik_sttspulangranap,kip_pasien_ranap,"+
-                        "kip_pasien_ralan,bpjs_mapping_dokterdpjp,data_triase,master_triase_skala1,master_triase_skala2,master_triase_skala3,"+
-                        "master_triase_skala4,master_triase_skala5,master_triase_pemeriksaan,master_triase_macamkasus from user where id_user=AES_ENCRYPT(?,'nur')");
+                        "kip_pasien_ralan,bpjs_mapping_dokterdpjp,data_triase_igd,master_triase_skala1,master_triase_skala2,master_triase_skala3,"+
+                        "master_triase_skala4,master_triase_skala5,master_triase_pemeriksaan,master_triase_macamkasus,rekap_permintaan_diet,"+
+                        "daftar_pasien_ranap,daftar_pasien_ranaptni,pengajuan_asetinventaris,item_apotek_jenis,item_apotek_kategori,"+
+                        "item_apotek_golongan,item_apotek_industrifarmasi,10_obat_terbanyak_poli from user where id_user=AES_ENCRYPT(?,'nur')");
             try {
                 ps.setString(1,user);
                 rs=ps.executeQuery();
@@ -3213,6 +3251,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[D]Pengajuan Obat & BHP",rs.getBoolean("pengajuan_barang_medis")});
                     }
                     
+                    if("[D]10 Obat Terbanyak Poli".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[D]10 Obat Terbanyak Poli",rs.getBoolean("10_obat_terbanyak_poli")});
+                    }
+                    
                     if("[E]Barang Non Medis".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[E]Barang Non Medis",rs.getBoolean("ipsrs_barang")});
                     }
@@ -3343,6 +3385,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[F]Pest Control".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[F]Pest Control",rs.getBoolean("pest_control")});
+                    }
+                    
+                    if("[F]Pengajuan Aset/Inventaris".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[F]Pengajuan Aset/Inventaris",rs.getBoolean("pengajuan_asetinventaris")});
                     }
                     
                     if("[G]Jenis Parkir".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -3721,8 +3767,8 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[I]Penyakit Ranap Per Cara Bayar",rs.getBoolean("penyakit_ranap_cara_bayar")});
                     }
                     
-                    if("[I]Anggota Militer Dirawat".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[I]Anggota Militer Dirawat",rs.getBoolean("anggota_militer_dirawat")});
+                    if("[I]Anggota TNI Dirawat".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[I]Anggota TNI Dirawat",rs.getBoolean("anggota_militer_dirawat")});
                     }
                     
                     if("[I]Lama Pelayanan Radiologi".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -3795,6 +3841,18 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[I]KIP Pasien Ralan".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[I]KIP Pasien Ralan",rs.getBoolean("kip_pasien_ralan")});
+                    }
+                    
+                    if("[I]Rekap Permintaan Diet".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[I]Rekap Permintaan Diet",rs.getBoolean("rekap_permintaan_diet")});
+                    }
+                    
+                    if("[I]Daftar Pasien Ranap".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[I]Daftar Pasien Ranap",rs.getBoolean("daftar_pasien_ranap")});
+                    }
+                    
+                    if("[I]Daftar Pasien Ranap TNI".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[I]Daftar Pasien Ranap TNI",rs.getBoolean("daftar_pasien_ranaptni")});
                     }
                     
                     if("[J]Deposit Pasien".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -4334,7 +4392,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     }
                     
                     if("[L]Data Triase".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[L]Data Triase",rs.getBoolean("data_triase")});
+                        tabMode.addRow(new Object[]{false,"[L]Data Triase",rs.getBoolean("data_triase_igd")});
                     }
                     
                     if("[L]Master Triase Skala 1".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -4695,6 +4753,22 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[N]Status Pulang Ranap".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[N]Status Pulang Ranap",rs.getBoolean("grafik_sttspulangranap")});
+                    }
+                    
+                    if("[N]Item Apotek Per Jenis".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Item Apotek Per Jenis",rs.getBoolean("item_apotek_jenis")});
+                    }
+                    
+                    if("[N]Item Apotek Per Kategori".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Item Apotek Per Kategori",rs.getBoolean("item_apotek_kategori")});
+                    }
+                    
+                    if("[N]Item Apotek Per Golongan".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Item Apotek Per Golongan",rs.getBoolean("item_apotek_golongan")});
+                    }
+                    
+                    if("[N]Item Apotek Per Industri Farmasi".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Item Apotek Per Industri Farmasi",rs.getBoolean("item_apotek_industrifarmasi")});
                     }
                     
                     if("[O]Indeks Surat".toLowerCase().contains(TCari.getText().toLowerCase())){
