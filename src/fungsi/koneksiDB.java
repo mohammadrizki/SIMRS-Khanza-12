@@ -53,7 +53,7 @@ public class koneksiDB {
                         "                                                                           \n"+
                         "  Lisensi yang dianut di software ini https://en.wikipedia.org/wiki/Aladdin_Free_Public_License \n"+
                         "  Informasi dan panduan bisa dicek di halaman https://github.com/mas-elkhanza/SIMRS-Khanza/wiki \n"+
-                        "  Update 06/09/2019                                                                         ");
+                        "  Update 22/09/2019                                                                         ");
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null,"Koneksi Putus : "+e);
             }
