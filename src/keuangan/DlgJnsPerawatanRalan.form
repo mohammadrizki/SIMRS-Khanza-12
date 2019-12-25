@@ -787,7 +787,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel14">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Total Biaya Dokter: Rp."/>
+                    <Property name="text" type="java.lang.String" value="Total Biaya Dokter &amp; Pr : Rp."/>
                     <Property name="name" type="java.lang.String" value="jLabel14" noResource="true"/>
                   </Properties>
                   <Constraints>

@@ -26,8 +26,8 @@ public class MenuBar extends JMenuBar {
     private final Color dark = new Color(1F, 1F, 1F, 0.35F);
     //private Color black = Color.black;
     //private Color warna = Color.magenta.darker().darker().darker().darker();
-    private final Color black = new Color(240,0,110);
-    private final Color warna = new Color(240,0,110);
+    private final Color black = new Color(00,00,00);
+    private final Color warna = new Color(00,00,00);
 
     public MenuBar() {
         super();
@@ -41,7 +41,7 @@ public class MenuBar extends JMenuBar {
         setUpLigthImage();
         if (isOpaque()) {
             g.drawImage(gradientImage, 0, 0, getWidth(), getHeight(), null);
-            g.drawImage(ligthImage, 0, 0, getWidth(), getHeight() / 2, null);
+            g.drawImage(ligthImage, 0, 0, getWidth(), getHeight(), null);
         }
     }
 
@@ -58,14 +58,14 @@ public class MenuBar extends JMenuBar {
     }
 
     private void setUpLigthImage() {
-        ligthImage = new BufferedImage(1, getHeight() / 2, BufferedImage.TYPE_INT_ARGB);
+        ligthImage = new BufferedImage(1, getHeight(), BufferedImage.TYPE_INT_ARGB);
 
         GradientPaint paint = new GradientPaint(0, 0, light, 0, getHeight(), dark);
 
         Graphics2D g = (Graphics2D) ligthImage.getGraphics();
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g.setPaint(paint);
-        g.fillRect(0, 0, 1, getHeight() / 2);
+        g.fillRect(0, 0, 1, getHeight());
         g.dispose();
     }
 
