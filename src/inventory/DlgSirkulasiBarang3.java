@@ -443,7 +443,7 @@ public class DlgSirkulasiBarang3 extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Sirkulasi Obat, Alkes & BHP Medis Keluar Masuk ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Sirkulasi Obat, Alkes & BHP Medis Keluar Masuk ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -924,7 +924,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                     jumlahutd=0;jumlahkeluar=0;totalkeluar=0;totalutd=0;
                     jumlahmutasikeluar=0;totalmutasikeluar=0;jumlahmutasimasuk=0;totalmutasimasuk=0;
 
-                    ps2=koneksi.prepareStatement("select sum(stok),(sum(stok)*h_beli) as aset "+
+                    ps2=koneksi.prepareStatement("select sum(stok),(sum(stok)*dasar) as aset "+
                         "from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng "+
                         "where gudangbarang.kode_brng=?");
                     try {
@@ -1314,7 +1314,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                     jumlahutd=0;jumlahkeluar=0;totalkeluar=0;totalutd=0;
                     jumlahmutasikeluar=0;totalmutasikeluar=0;jumlahmutasimasuk=0;totalmutasimasuk=0;
 
-                    ps2=koneksi.prepareStatement("select sum(stok),(sum(stok)*h_beli) as aset "+
+                    ps2=koneksi.prepareStatement("select sum(stok),(sum(stok)*dasar) as aset "+
                         "from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng "+
                         "where gudangbarang.kode_brng=? and gudangbarang.kd_bangsal=?");
                     try {

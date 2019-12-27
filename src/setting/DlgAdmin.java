@@ -47,7 +47,7 @@ public class DlgAdmin extends javax.swing.JDialog {
         this.setLocation(10,10);
         setSize(457,249);
 
-        Object[] row={"ID Admin",
+        Object[] row={"Username",
                       "Password"};
         tabMode=new DefaultTableModel(null,row){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
@@ -110,7 +110,7 @@ public class DlgAdmin extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Setup Admin ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Setup Admin ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -139,7 +139,7 @@ public class DlgAdmin extends javax.swing.JDialog {
         panelGlass7.setPreferredSize(new java.awt.Dimension(44, 47));
         panelGlass7.setLayout(null);
 
-        jLabel3.setText("ID Admin :");
+        jLabel3.setText("Username :");
         jLabel3.setName("jLabel3"); // NOI18N
         panelGlass7.add(jLabel3);
         jLabel3.setBounds(0, 12, 69, 23);
@@ -285,7 +285,7 @@ public class DlgAdmin extends javax.swing.JDialog {
 
     private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSimpanActionPerformed
         if(TKd.getText().trim().equals("")){
-            Valid.textKosong(TKd,"ID Admin");
+            Valid.textKosong(TKd,"Username");
         }else if(TNm.getText().trim().equals("")){
             Valid.textKosong(TNm,"Password");
         }else if(tabMode.getRowCount()==0){

@@ -347,7 +347,7 @@ public class PanelResume extends widget.panelisi {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
 
-        TabRawat.setBackground(new java.awt.Color(255, 255, 253));
+        TabRawat.setBackground(new java.awt.Color(255, 255, 255));
         TabRawat.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         TabRawat.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
@@ -361,7 +361,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame16.setBorder(null);
         internalFrame16.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll14.setOpaque(true);
 
         LoadHTML14.setBorder(null);
@@ -375,7 +375,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame2.setBorder(null);
         internalFrame2.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll.setOpaque(true);
 
         LoadHTML.setBorder(null);
@@ -389,7 +389,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame3.setBorder(null);
         internalFrame3.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll1.setOpaque(true);
 
         LoadHTML2.setBorder(null);
@@ -403,7 +403,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame4.setBorder(null);
         internalFrame4.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll2.setOpaque(true);
 
         LoadHTML3.setBorder(null);
@@ -417,7 +417,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame5.setBorder(null);
         internalFrame5.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll3.setOpaque(true);
 
         LoadHTML4.setBorder(null);
@@ -431,7 +431,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame6.setBorder(null);
         internalFrame6.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll4.setOpaque(true);
 
         LoadHTML5.setBorder(null);
@@ -445,7 +445,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame7.setBorder(null);
         internalFrame7.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll5.setOpaque(true);
 
         LoadHTML6.setBorder(null);
@@ -459,7 +459,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame8.setBorder(null);
         internalFrame8.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll6.setOpaque(true);
 
         LoadHTML7.setBorder(null);
@@ -473,7 +473,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame9.setBorder(null);
         internalFrame9.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll7.setOpaque(true);
 
         LoadHTML8.setBorder(null);
@@ -487,7 +487,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame10.setBorder(null);
         internalFrame10.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll8.setOpaque(true);
 
         LoadHTML9.setBorder(null);
@@ -501,7 +501,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame11.setBorder(null);
         internalFrame11.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll9.setOpaque(true);
 
         LoadHTML10.setBorder(null);
@@ -515,7 +515,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame12.setBorder(null);
         internalFrame12.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll10.setOpaque(true);
 
         LoadHTML11.setBorder(null);
@@ -529,7 +529,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame13.setBorder(null);
         internalFrame13.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll11.setOpaque(true);
 
         LoadHTML12.setBorder(null);
@@ -543,7 +543,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame14.setBorder(null);
         internalFrame14.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll12.setOpaque(true);
         Scroll12.setViewportView(tbRegistrasi);
 
@@ -555,7 +555,7 @@ public class PanelResume extends widget.panelisi {
         internalFrame15.setBorder(null);
         internalFrame15.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Scroll13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 50, 50)));
         Scroll13.setOpaque(true);
 
         LoadHTML13.setBorder(null);

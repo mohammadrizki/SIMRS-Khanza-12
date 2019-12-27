@@ -1363,7 +1363,7 @@ public class DlgIKBBayi extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Bayi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Bayi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -2594,7 +2594,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                     NoRm.getText(),NmBayi.getText(),"-",
                     JKel.getSelectedItem().toString().substring(0,1),"-",
                     Valid.SetTgl(Lahir.getSelectedItem()+""),
-                    Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM MENIKAH","-",
+                    Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM KAWIN","-",
                     Valid.SetTgl(Daftar.getSelectedItem()+""),"0",UmurBayi.getText(),
                     "-","AYAH",NmAyah.getText(),"-","-",
                     Sequel.cariIsi("select kelurahan.kd_kel from kelurahan where kelurahan.nm_kel=?","-"),
@@ -2634,7 +2634,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                             NoRm.getText(),NmBayi.getText(),"-",
                             JKel.getSelectedItem().toString().substring(0,1),"-",
                             Valid.SetTgl(Lahir.getSelectedItem()+""),
-                            Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM MENIKAH","-",
+                            Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM KAWIN","-",
                             Valid.SetTgl(Daftar.getSelectedItem()+""),"0",UmurBayi.getText(),
                             "-","AYAH",NmAyah.getText(),"-","-",
                             Sequel.cariIsi("select kelurahan.kd_kel from kelurahan where kelurahan.nm_kel=?","-"),
@@ -2675,7 +2675,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 NoRm.getText(),NmBayi.getText(),"-",
                                 JKel.getSelectedItem().toString().substring(0,1),"-",
                                 Valid.SetTgl(Lahir.getSelectedItem()+""),
-                                Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM MENIKAH","-",
+                                Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM KAWIN","-",
                                 Valid.SetTgl(Daftar.getSelectedItem()+""),"0",UmurBayi.getText(),
                                 "-","AYAH",NmAyah.getText(),"-","-",
                                 Sequel.cariIsi("select kelurahan.kd_kel from kelurahan where kelurahan.nm_kel=?","-"),
@@ -3142,7 +3142,7 @@ private void MnKartuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                 NoRm.getText(),NmBayi.getText(),"-",
                                 JKel.getSelectedItem().toString().substring(0,1),"-",
                                 Valid.SetTgl(Lahir.getSelectedItem()+""),
-                                Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM MENIKAH","-",
+                                Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM KAWIN","-",
                                 Valid.SetTgl(Daftar.getSelectedItem()+""),"0",UmurBayi.getText(),
                                 "-","AYAH",NmAyah.getText(),"-","-",
                                 Sequel.cariIsi("select kelurahan.kd_kel from kelurahan where kelurahan.nm_kel=?","-"),
@@ -3181,7 +3181,7 @@ private void MnKartuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                     NoRm.getText(),NmBayi.getText(),"-",
                                     JKel.getSelectedItem().toString().substring(0,1),"-",
                                     Valid.SetTgl(Lahir.getSelectedItem()+""),
-                                    Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM MENIKAH","-",
+                                    Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM KAWIN","-",
                                     Valid.SetTgl(Daftar.getSelectedItem()+""),"0",UmurBayi.getText(),
                                     "-","AYAH",NmAyah.getText(),"-","-",
                                     Sequel.cariIsi("select kelurahan.kd_kel from kelurahan where kelurahan.nm_kel=?","-"),
@@ -3220,7 +3220,7 @@ private void MnKartuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                         NoRm.getText(),NmBayi.getText(),"-",
                                         JKel.getSelectedItem().toString().substring(0,1),"-",
                                         Valid.SetTgl(Lahir.getSelectedItem()+""),
-                                        Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM MENIKAH","-",
+                                        Nmibu.getText(),AlamatIbu.getText(),"-","-","BELUM KAWIN","-",
                                         Valid.SetTgl(Daftar.getSelectedItem()+""),"0",UmurBayi.getText(),
                                         "-","AYAH",NmAyah.getText(),"-","-",
                                         Sequel.cariIsi("select kelurahan.kd_kel from kelurahan where kelurahan.nm_kel=?","-"),
