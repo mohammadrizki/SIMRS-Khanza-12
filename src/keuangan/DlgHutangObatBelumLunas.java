@@ -384,7 +384,7 @@ public final class DlgHutangObatBelumLunas extends javax.swing.JDialog {
         });
         panelisi3.add(BtnSeek2);
 
-        label17.setText("Key Word :");
+        label17.setText("Keyword :");
         label17.setName("label17"); // NOI18N
         label17.setPreferredSize(new java.awt.Dimension(75, 23));
         panelisi3.add(label17);

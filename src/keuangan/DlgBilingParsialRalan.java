@@ -1816,7 +1816,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         panelGlass8.setPreferredSize(new java.awt.Dimension(155, 225));
         panelGlass8.setLayout(null);
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelGlass8.add(label9);
         label9.setBounds(0, 10, 70, 23);

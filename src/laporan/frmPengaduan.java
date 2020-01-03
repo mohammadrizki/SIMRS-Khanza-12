@@ -233,7 +233,7 @@ public class frmPengaduan extends javax.swing.JFrame {
         Tgl2.setPreferredSize(new java.awt.Dimension(90, 23));
         panelisi3.add(Tgl2);
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi3.add(label9);
 

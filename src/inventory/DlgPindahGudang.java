@@ -617,7 +617,7 @@ public final class DlgPindahGudang extends javax.swing.JDialog {
         DTPCari2.setPreferredSize(new java.awt.Dimension(105, 23));
         panelisi3.add(DTPCari2);
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(100, 23));
         panelisi3.add(label9);

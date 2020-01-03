@@ -3462,7 +3462,7 @@ public class DlgKamarInap extends javax.swing.JDialog {
         });
         panelGlass11.add(btnBangsalCari);
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass11.add(jLabel6);

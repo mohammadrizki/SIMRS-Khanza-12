@@ -60,7 +60,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         Object[] row={
             "P","No.Kantung","Komponen","G.D.","Rhesus","Aftap","Kadaluarsa",
             "Asal Darah","Status","Jasa Sarana","Paket BHP",
-            "KSO","Manajemen","Biaya"};
+            "KSO","Menejemen","Biaya"};
         tabMode=new DefaultTableModel(null,row){
             @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -458,7 +458,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         });
         panelisi1.add(CmbCariResus);
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(61, 23));
         panelisi1.add(label9);
@@ -677,7 +677,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         panelisi7.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label13.setText("Key Word :");
+        label13.setText("Keyword :");
         label13.setName("label13"); // NOI18N
         label13.setPreferredSize(new java.awt.Dimension(60, 23));
         panelisi7.add(label13);
@@ -761,7 +761,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         panelisi8.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label17.setText("Key Word :");
+        label17.setText("Keyword :");
         label17.setName("label17"); // NOI18N
         label17.setPreferredSize(new java.awt.Dimension(60, 23));
         panelisi8.add(label17);

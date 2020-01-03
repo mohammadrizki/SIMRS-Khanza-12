@@ -165,7 +165,7 @@ public final class DlgPiutangPerAKunPiutang extends javax.swing.JDialog {
         jLabel12.setPreferredSize(new java.awt.Dimension(10, 23));
         panelGlass5.add(jLabel12);
 
-        label17.setText("Key Word :");
+        label17.setText("Keyword :");
         label17.setName("label17"); // NOI18N
         label17.setPreferredSize(new java.awt.Dimension(60, 23));
         panelGlass5.add(label17);

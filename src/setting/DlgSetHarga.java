@@ -1235,7 +1235,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         panelisi5.setPreferredSize(new java.awt.Dimension(100, 44));
         panelisi5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi5.add(label9);
@@ -1632,7 +1632,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         panelisi6.setPreferredSize(new java.awt.Dimension(100, 44));
         panelisi6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label11.setText("Key Word :");
+        label11.setText("Keyword :");
         label11.setName("label11"); // NOI18N
         label11.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi6.add(label11);

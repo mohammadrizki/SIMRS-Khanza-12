@@ -288,7 +288,7 @@ periksa_radiologi.tgl_periksa between $P{tanggal1} and $P{tanggal2} and penjab.p
 					<font fontName="Tahoma" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Menejemen]]></text>
+				<text><![CDATA[Manajemen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="1561" y="0" width="55" height="16" forecolor="#000000" backcolor="#F0F0DC" uuid="15de97f0-1cb3-4a03-8f78-f7c588187e38"/>

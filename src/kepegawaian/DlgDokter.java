@@ -196,7 +196,6 @@ public class DlgDokter extends javax.swing.JDialog {
         });
     }
 
-
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -542,7 +541,7 @@ public class DlgDokter extends javax.swing.JDialog {
         jSeparator4.setPreferredSize(new java.awt.Dimension(1, 23));
         panelGlass8.add(jSeparator4);
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass8.add(jLabel6);

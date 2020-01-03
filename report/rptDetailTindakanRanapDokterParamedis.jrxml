@@ -251,7 +251,7 @@ where rawat_inap_drpr.tgl_perawatan between $P{tanggal1} and $P{tanggal2} and ra
 					<font fontName="Tahoma" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Menejemen]]></text>
+				<text><![CDATA[Manajemen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="1345" y="0" width="55" height="16" forecolor="#000000" backcolor="#F0F0DC" uuid="ea43d87d-50b0-4a43-9195-13ea338c4d9f"/>

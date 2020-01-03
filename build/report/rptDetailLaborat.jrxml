@@ -288,7 +288,7 @@ periksa_lab.tgl_periksa between $P{tanggal1} and $P{tanggal2} and penjab.png_jaw
 					<font fontName="Tahoma" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Menejemen]]></text>
+				<text><![CDATA[Manajemen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="1561" y="0" width="55" height="16" forecolor="#000000" backcolor="#F0F0DC" uuid="fc289bb5-4404-4f81-a5d6-8bdff20050ee"/>

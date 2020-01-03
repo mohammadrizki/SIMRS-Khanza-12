@@ -626,7 +626,7 @@ public class DlgTagihanOperasi extends javax.swing.JDialog {
         panelisi5.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label10.setText("Key Word :");
+        label10.setText("Keyword :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi5.add(label10);
@@ -722,7 +722,7 @@ public class DlgTagihanOperasi extends javax.swing.JDialog {
         panelisi4.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi4.add(label9);

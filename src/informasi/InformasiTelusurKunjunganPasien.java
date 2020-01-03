@@ -238,7 +238,7 @@ public final class InformasiTelusurKunjunganPasien extends javax.swing.JDialog {
         panelGlass6.setPreferredSize(new java.awt.Dimension(44, 44));
         panelGlass6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass6.add(jLabel6);
@@ -331,7 +331,7 @@ public final class InformasiTelusurKunjunganPasien extends javax.swing.JDialog {
         panelGlass7.setPreferredSize(new java.awt.Dimension(44, 44));
         panelGlass7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        jLabel8.setText("Key Word :");
+        jLabel8.setText("Keyword :");
         jLabel8.setName("jLabel8"); // NOI18N
         jLabel8.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass7.add(jLabel8);

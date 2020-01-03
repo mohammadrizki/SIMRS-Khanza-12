@@ -489,7 +489,7 @@ public class DlgInputStokPasien extends javax.swing.JDialog {
         });
         panelisi1.add(Jeniskelas);
 
-        label9.setText("Key Word :");
+        label9.setText("Keyword :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi1.add(label9);

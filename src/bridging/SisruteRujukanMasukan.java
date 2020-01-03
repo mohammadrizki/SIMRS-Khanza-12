@@ -430,7 +430,7 @@ public final class SisruteRujukanMasukan extends javax.swing.JDialog {
         cmbStatus.setPreferredSize(new java.awt.Dimension(120, 23));
         panelGlass8.add(cmbStatus);
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(67, 23));
         panelGlass8.add(jLabel6);

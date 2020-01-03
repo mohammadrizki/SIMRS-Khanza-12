@@ -350,7 +350,7 @@ public class DlgParkirMasuk extends javax.swing.JDialog {
         panelGlass10.setPreferredSize(new java.awt.Dimension(55, 55));
         panelGlass10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(65, 23));
         panelGlass10.add(jLabel6);

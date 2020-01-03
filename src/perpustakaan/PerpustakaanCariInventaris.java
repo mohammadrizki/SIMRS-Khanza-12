@@ -178,7 +178,7 @@ public final class PerpustakaanCariInventaris extends javax.swing.JDialog {
         panelGlass8.setPreferredSize(new java.awt.Dimension(44, 56));
         panelGlass8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(65, 23));
         panelGlass8.add(jLabel6);

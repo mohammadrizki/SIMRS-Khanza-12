@@ -167,7 +167,7 @@ public class DlgPengadaanIPSRSPerTanggal extends javax.swing.JDialog {
         BlnCari.setPreferredSize(new java.awt.Dimension(62, 23));
         panelGlass8.add(BlnCari);
 
-        jLabel6.setText("Key Word :");
+        jLabel6.setText("Keyword :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(65, 23));
         panelGlass8.add(jLabel6);

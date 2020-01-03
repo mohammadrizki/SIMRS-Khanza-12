@@ -290,7 +290,7 @@ public class DlgPengeluaranIPSRS extends javax.swing.JDialog {
         });
         panelisi1.add(BtnSimpan);
 
-        label10.setText("Key Word :");
+        label10.setText("Keyword :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(65, 23));
         panelisi1.add(label10);

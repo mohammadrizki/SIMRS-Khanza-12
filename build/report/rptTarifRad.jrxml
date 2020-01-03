@@ -126,7 +126,7 @@ from jns_perawatan_radiologi inner join penjab on penjab.kd_pj=jns_perawatan_rad
 				<textElement verticalAlignment="Middle" lineSpacing="Single">
 					<font fontName="Tahoma" size="8" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Menejemen]]></text>
+				<text><![CDATA[Manajemen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="466" y="0" width="67" height="16" forecolor="#000000" backcolor="#F0F0DC"/>

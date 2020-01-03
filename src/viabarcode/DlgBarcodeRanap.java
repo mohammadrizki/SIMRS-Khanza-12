@@ -427,7 +427,7 @@ public final class DlgBarcodeRanap extends javax.swing.JDialog {
         panelisi5.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label11.setText("Key Word :");
+        label11.setText("Keyword :");
         label11.setName("label11"); // NOI18N
         label11.setPreferredSize(new java.awt.Dimension(75, 23));
         panelisi5.add(label11);
@@ -489,7 +489,7 @@ public final class DlgBarcodeRanap extends javax.swing.JDialog {
         panelisi6.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label12.setText("Key Word :");
+        label12.setText("Keyword :");
         label12.setName("label12"); // NOI18N
         label12.setPreferredSize(new java.awt.Dimension(75, 23));
         panelisi6.add(label12);

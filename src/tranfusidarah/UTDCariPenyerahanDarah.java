@@ -468,7 +468,7 @@ public class UTDCariPenyerahanDarah extends javax.swing.JDialog {
         });
         panelisi4.add(btnKomponen);
 
-        label10.setText("Key Word :");
+        label10.setText("Keyword :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(97, 23));
         panelisi4.add(label10);

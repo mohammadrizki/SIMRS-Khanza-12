@@ -561,7 +561,7 @@ public class DlgCariPermintaanRadiologi extends javax.swing.JDialog {
         });
         panelGlass8.add(Tgl2);
 
-        label10.setText("Key Word :");
+        label10.setText("Keyword :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(112, 23));
         panelGlass8.add(label10);

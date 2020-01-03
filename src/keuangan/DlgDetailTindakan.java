@@ -1438,7 +1438,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         cmbStatus.setPreferredSize(new java.awt.Dimension(115, 23));
         panelGlass5.add(cmbStatus);
 
-        label10.setText("Key Word :");
+        label10.setText("Keyword :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass5.add(label10);

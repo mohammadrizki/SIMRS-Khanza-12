@@ -639,7 +639,7 @@ public class DlgSuratPemesanan extends javax.swing.JDialog {
         panelisi1.setPreferredSize(new java.awt.Dimension(100, 107));
         panelisi1.setLayout(null);
 
-        label10.setText("Key Word :");
+        label10.setText("Keyword :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(75, 23));
         panelisi1.add(label10);
