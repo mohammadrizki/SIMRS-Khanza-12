@@ -364,16 +364,16 @@
                         <StringItem index="3" value="[D] Transaksi Inventory Obat, BHP Medis, Alat Kesehatan Pasien"/>
                         <StringItem index="4" value="[E] Transaksi Inventory Barang Non Medis dan Penunjang ( Lab &amp; RO )"/>
                         <StringItem index="5" value="[F] Aset, Inventaris Barang &amp; Instalasi Kesehatan Lingkungan"/>
-                        <StringItem index="6" value="[G] Manajemen Parkir Kendaraan Pasien &amp; Karyawan"/>
+                        <StringItem index="6" value="[G] Menejemen Parkir Kendaraan Pasien &amp; Karyawan"/>
                         <StringItem index="7" value="[H] Olah Data Tagihan Rawat Inap &amp; Rawat Jalan"/>
                         <StringItem index="8" value="[I] Olah Data Penyakit, Laporan DKK, Laporal RL &amp; Laporan Internal"/>
-                        <StringItem index="9" value="[J] Tarif Pelayanan, Manajemen Keuangan &amp; Akuntansi"/>
+                        <StringItem index="9" value="[J] Tarif Pelayanan, Menejemen Keuangan &amp; Akuntansi"/>
                         <StringItem index="10" value="[K] Bridging VClaim, Aplicare, PCare, INACBG, Kemenkes &amp; Pihak Ke 3"/>
                         <StringItem index="11" value="[L] Olah Data Pasien"/>
                         <StringItem index="12" value="[M] Unit Pelayanan Tranfusi Darah"/>
                         <StringItem index="13" value="[N] Analisa, Dashboard &amp; Info Grafik"/>
-                        <StringItem index="14" value="[O] Manajemen Surat Masuk &amp; Keluar"/>
-                        <StringItem index="15" value="[P] Manajemen Perpustakaan &amp; Koleksi Pustaka Digital"/>
+                        <StringItem index="14" value="[O] Menejemen Surat Masuk &amp; Keluar"/>
+                        <StringItem index="15" value="[P] Menejemen Perpustakaan &amp; Koleksi Pustaka Digital"/>
                         <StringItem index="16" value="[Q] Pengaturan Program Aplikasi HMS"/>
                       </StringArray>
                     </Property>
@@ -7729,7 +7729,7 @@
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="1">
-            <StringItem index="0" value="16/12/2019"/>
+            <StringItem index="0" value="02/01/2020"/>
           </StringArray>
         </Property>
         <Property name="displayFormat" type="java.lang.String" value="dd/MM/yyyy"/>
@@ -8873,7 +8873,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="::[ Khanza SIMKES 2019 ]::"/>
+    <Property name="title" type="java.lang.String" value="::[ Khanza SIMKES 2020 ]::"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="fe" green="fe" red="ff" type="rgb"/>
     </Property>

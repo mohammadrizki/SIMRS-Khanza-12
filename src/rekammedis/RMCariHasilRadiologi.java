@@ -14,7 +14,6 @@ package rekammedis;
 import fungsi.WarnaTable;
 import fungsi.batasInput;
 import fungsi.koneksiDB;
-import fungsi.sekuel;
 import fungsi.validasi;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
@@ -90,7 +89,6 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
             });
         }
     }
-    
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -363,10 +361,10 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
         LCount.setText(""+tabMode.getRowCount());
     }
 
-    public void emptTeks() {   
+    public void emptTeks() {
         TCari.requestFocus();
     }
-    
+
     public void setNoRawat(String norawat){
         this.norawat=norawat;
     }
@@ -374,5 +372,5 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
     public JTable getTable(){
         return tbKamar;
     }
-    
+
 }

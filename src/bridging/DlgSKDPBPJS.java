@@ -45,8 +45,6 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
     private DlgCariPoli2 poli2=new DlgCariPoli2(null,false);
     private String URUTNOREG="",status="",kdpoli="",nmpoli="",noantri="",aktifjadwal="";
 
-
-
     /** Creates new form DlgPemberianInfus
      * @param parent
      * @param modal */
@@ -336,7 +334,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
 
         MnSurat.setBackground(new java.awt.Color(255, 255, 254));
         MnSurat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnSurat.setForeground(new java.awt.Color(50,50,50));
+        MnSurat.setForeground(new java.awt.Color(50, 50, 50));
         MnSurat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnSurat.setText("Surat SKDP BPJS");
         MnSurat.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -359,7 +357,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ SKDP BPJS ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ SKDP BPJS ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -572,7 +570,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         panelCari.setPreferredSize(new java.awt.Dimension(44, 43));
         panelCari.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 2, 9));
 
-        R1.setBackground(new java.awt.Color(240, 250, 230));
+        R1.setBackground(new java.awt.Color(255, 253, 247));
         R1.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.pink));
         buttonGroup1.add(R1);
         R1.setSelected(true);
@@ -583,7 +581,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         R1.setPreferredSize(new java.awt.Dimension(85, 23));
         panelCari.add(R1);
 
-        R2.setBackground(new java.awt.Color(240, 250, 230));
+        R2.setBackground(new java.awt.Color(255, 253, 247));
         R2.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.pink));
         buttonGroup1.add(R2);
         R2.setText("Tanggal :");
@@ -628,7 +626,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         });
         panelCari.add(DTPCari2);
 
-        R3.setBackground(new java.awt.Color(240, 250, 230));
+        R3.setBackground(new java.awt.Color(255, 253, 247));
         R3.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.pink));
         buttonGroup1.add(R3);
         R3.setText("Selesai :");

@@ -293,7 +293,7 @@ detail_periksa_lab.tgl_periksa between $P{tanggal1} and $P{tanggal2} and penjab.
 					<font fontName="Tahoma" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Manajemen]]></text>
+				<text><![CDATA[Menejemen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="1561" y="0" width="55" height="16" forecolor="#000000" backcolor="#F0F0DC" uuid="8039a235-aff7-4dc6-a6c6-095722f6da92"/>

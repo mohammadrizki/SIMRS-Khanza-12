@@ -492,7 +492,7 @@ public final class DlgDataHAIs extends javax.swing.JDialog {
         PanelInput.setOpaque(false);
         PanelInput.setLayout(new java.awt.BorderLayout(1, 1));
 
-        FormInput.setBackground(new java.awt.Color(250, 255, 245));
+        FormInput.setBackground(new java.awt.Color(255, 253, 247));
         FormInput.setName("FormInput"); // NOI18N
         FormInput.setPreferredSize(new java.awt.Dimension(100, 195));
         FormInput.setLayout(null);

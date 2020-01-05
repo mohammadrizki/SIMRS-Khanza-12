@@ -32,7 +32,7 @@ public class koneksiDB {
                 dataSource.setPassword(EnkripsiAES.decrypt(prop.getProperty("PAS")));
                 connection=dataSource.getConnection();
                 System.out.println("  Koneksi Berhasil. Sorry Bro loading, silakan baca dulu.... \n\n"+
-                        "	 Software ini adalah Software Manajemen Rumah Sakit/Klinik/\n" +
+                        "	 Software ini adalah Software Menejemen Rumah Sakit/Klinik/\n" +
                         "  Puskesmas yang  gratis dan boleh digunakan siapa saja tanpa dikenai \n" +
                         "  biaya apapun. Dilarang keras memperjualbelikan/mengambil \n" +
                         "  keuntungan dari software ini dalam bentuk apapun tanpa seijin pembuat \n" +
@@ -53,7 +53,7 @@ public class koneksiDB {
                         "                                                                           \n"+
                         "  Lisensi yang dianut di software ini https://en.wikipedia.org/wiki/Aladdin_Free_Public_License \n"+
                         "  Informasi dan panduan bisa dicek di halaman https://github.com/mas-elkhanza/SIMRS-Khanza/wiki \n"+
-                        "  Update 25/12/2019   ver. 1.0b - Kustom RS Unram                                                                   ");
+                        "  Update 02/01/2020   ver. 1.0 - Kustom RS Unram                                                                   ");
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null,"Koneksi Putus : "+e);
             }
