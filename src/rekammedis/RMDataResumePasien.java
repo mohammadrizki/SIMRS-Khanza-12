@@ -87,7 +87,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
             }else if(i==2){
                 column.setPreferredWidth(105);
             }else if(i==3){
-                column.setPreferredWidth(70);
+                column.setPreferredWidth(65);
             }else if(i==4){
                 column.setPreferredWidth(150);
             }else if(i==5){
@@ -472,7 +472,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         Scroll.setPreferredSize(new java.awt.Dimension(452, 200));
 
         tbObat.setAutoCreateRowSorter(true);
-        tbObat.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
+        tbObat.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
         tbObat.setComponentPopupMenu(jPopupMenu1);
         tbObat.setName("tbObat"); // NOI18N
         tbObat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1241,8 +1241,10 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
             isRawat();
             isPsien();
-        }else{
-            //Valid.pindah(evt,TCari,Kejadian);
+
+        }else{            
+            Valid.pindah(evt,TCari,BtnDokter);
+
         }
 }//GEN-LAST:event_TNoRwKeyPressed
 
@@ -1308,7 +1310,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null,"Gagal menghapus..!!");
             }
         }else{
-            JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
         }
 
 }//GEN-LAST:event_BtnHapusActionPerformed
@@ -1348,7 +1350,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
                        emptTeks();
                 }
             }else{
-                JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
+                JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
             }
         }
 }//GEN-LAST:event_BtnEditActionPerformed
@@ -1496,6 +1498,13 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         if(tabMode.getRowCount()!=0){
             if((evt.getKeyCode()==KeyEvent.VK_ENTER)||(evt.getKeyCode()==KeyEvent.VK_UP)||(evt.getKeyCode()==KeyEvent.VK_DOWN)){
                 try {
+                    getData();
+                } catch (java.lang.NullPointerException e) {
+                }
+            }else if(evt.getKeyCode()==KeyEvent.VK_SPACE){
+                try {
+                    ChkInput.setSelected(true);
+                    isForm(); 
                     getData();
                 } catch (java.lang.NullPointerException e) {
                 }
@@ -1706,7 +1715,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
 
     private void MnInputDiagnosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnInputDiagnosaActionPerformed
         if(TNoRw.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih dulu pasien...!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih dulu pasien...!!!");
             TCari.requestFocus();
         }else{
             penyakit.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
@@ -2016,12 +2025,12 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
     private void isPsien() {
         Sequel.cariIsi("select nm_pasien from pasien where no_rkm_medis='"+TNoRM.getText()+"' ",TPasien);
     }
-
-    public void setNoRm(String norwt, Date tgl1, Date tgl2) {
+    
+    public void setNoRm(String norwt, Date tgl2) {
         TNoRw.setText(norwt);
         TCari.setText(norwt);
-        DTPCari1.setDate(tgl1);
-        DTPCari2.setDate(tgl2);
+        Sequel.cariIsi("select tgl_registrasi from reg_periksa where no_rawat='"+norwt+"'", DTPCari1);
+        DTPCari2.setDate(tgl2);    
         isRawat();
         isPsien();
         ChkInput.setSelected(true);

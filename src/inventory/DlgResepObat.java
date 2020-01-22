@@ -470,7 +470,7 @@ public final class DlgResepObat extends javax.swing.JDialog {
 
             }
         ));
-        tbTambahan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
+        tbTambahan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
         tbTambahan.setName("tbTambahan"); // NOI18N
         tbTambahan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -553,7 +553,7 @@ public final class DlgResepObat extends javax.swing.JDialog {
 
             }
         ));
-        tbTambahan1.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
+        tbTambahan1.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
         tbTambahan1.setName("tbTambahan1"); // NOI18N
         tbTambahan1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -624,7 +624,7 @@ public final class DlgResepObat extends javax.swing.JDialog {
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
-        tbResep.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
+        tbResep.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
         tbResep.setComponentPopupMenu(Popup2);
         tbResep.setName("tbResep"); // NOI18N
         tbResep.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1078,7 +1078,7 @@ public final class DlgResepObat extends javax.swing.JDialog {
              JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
              TNoRw.requestFocus();
         }else if(TPasien.getText().trim().equals("")){
-             JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.Klik data pada table untuk memilih...!!!!");
+             JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.Klik data pada table untuk memilih...!!!!");
         }else if(!(TPasien.getText().trim().equals(""))){
            Sequel.meghapus("resep_obat","no_resep",NoResep.getText());
            Sequel.meghapus("resep_dokter","no_resep",NoResep.getText());
@@ -1259,7 +1259,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 DTPBeri.getSelectedItem().toString().substring(6,10)+DTPBeri.getSelectedItem().toString().substring(3,5)+DTPBeri.getSelectedItem().toString().substring(0,2),4,NoResep);          
         }else if(ChkRM.isSelected()==false){
            NoResep.setEditable(true);
-           NoResep.setBackground(new Color(250,255,245));
+           NoResep.setBackground(new Color(255, 253, 247));
            NoResep.setText("");
         }
     }//GEN-LAST:event_ChkRMItemStateChanged
