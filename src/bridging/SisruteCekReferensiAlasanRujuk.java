@@ -43,7 +43,7 @@ public final class SisruteCekReferensiAlasanRujuk extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private sekuel Sequel=new sekuel();
     private int i=0;
-    private SisruteApi api=new SisruteApi();
+    private ApiKemenkesSisrute api=new ApiKemenkesSisrute();
     private String URL="",link="",idrs="";
     private HttpHeaders headers ;
     private HttpEntity requestEntity;
@@ -142,7 +142,7 @@ public final class SisruteCekReferensiAlasanRujuk extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pencarian Data Referensi Alasan Rujuk Sisrute ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pencarian Data Referensi Alasan Rujuk Sisrute ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -330,14 +330,13 @@ public final class SisruteCekReferensiAlasanRujuk extends javax.swing.JDialog {
 
     public void tampil(String faskes) {
         try {
-            Valid.tabelKosong(tabMode);
             URL = link+"/referensi/alasanrujukan";
             headers = new HttpHeaders();
-	    headers.add("X-cons-id",idrs);
-	    headers.add("X-Timestamp",String.valueOf(api.GetUTCdatetimeAsString())); 
-	    headers.add("X-signature",api.getHmac()); 
-	    headers.add("Content-type","application/json");             
-	    headers.add("Content-length",null); 	
+	   headers.add("X-cons-id",idrs);
+	   headers.add("X-Timestamp",String.valueOf(api.GetUTCdatetimeAsString())); 
+	   headers.add("X-signature",api.getHmac()); 
+	   headers.add("Content-type","application/json");             
+	   headers.add("Content-length",null); 	
             requestEntity = new HttpEntity(headers);
             root = mapper.readTree(api.getRest().exchange(URL, HttpMethod.GET, requestEntity, String.class).getBody());
             nameNode = root.path("status");

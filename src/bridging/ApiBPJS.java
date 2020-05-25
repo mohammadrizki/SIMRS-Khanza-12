@@ -1,5 +1,6 @@
 package bridging;
 
+import AESsecurity.EnkripsiAES;
 import fungsi.koneksiDB;
 import java.io.FileInputStream;
 import java.io.UnsupportedEncodingException;
@@ -21,7 +22,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.security.crypto.codec.Base64;
 import org.springframework.web.client.RestTemplate;
 
-public class BPJSApiAplicare {        
+public class ApiBPJS {        
     private static final Properties prop = new Properties();
     private String Key,Consid;
     private long GetUTCdatetimeAsString;
@@ -35,11 +36,12 @@ public class BPJSApiAplicare {
     private SecretKeySpec secretKey;
     private Scheme scheme;
     private HttpComponentsClientHttpRequestFactory factory;
-    public BPJSApiAplicare(){
+    
+    public ApiBPJS(){
         try {
-            prop.loadFromXML(new FileInputStream("setting/database.xml"));            
-            Key = koneksiDB.SECRETKEYAPIAPLICARE();
-            Consid = koneksiDB.CONSIDAPIAPLICARE();
+            prop.loadFromXML(new FileInputStream("setting/database.xml"));
+            Key = koneksiDB.SECRETKEYAPIBPJS();
+            Consid = koneksiDB.CONSIDAPIBPJS();
         } catch (Exception ex) {
             System.out.println("Notifikasi : "+ex);
         }

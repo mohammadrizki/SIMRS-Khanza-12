@@ -33,7 +33,7 @@ import org.springframework.web.client.RestTemplate;
  *
  * @author khanzasoft
  */
-public class LICAApi {
+public class ApiLICA2 {
     private Connection koneksi=koneksiDB.condb();
     private PreparedStatement ps,ps2;
     private ResultSet rs,rs2;
@@ -45,7 +45,7 @@ public class LICAApi {
     private JsonNode response;
     private ObjectMapper mapper = new ObjectMapper();
     
-    public LICAApi(){
+    public ApiLICA2(){
         super();
         try {
             URL = koneksiDB.HOSTWSLICA();
@@ -59,13 +59,14 @@ public class LICAApi {
         try {
              ps=koneksi.prepareStatement(
                     "select permintaan_lab.noorder,permintaan_lab.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien,permintaan_lab.tgl_permintaan,"+
-                    "if(permintaan_lab.jam_permintaan='00:00:00','',permintaan_lab.jam_permintaan) as jam_permintaan,pasien.tgl_lahir,pasien.jk,pasien.alamat,"+
+                    "if(permintaan_lab.jam_permintaan='00:00:00','',permintaan_lab.jam_permintaan) as jam_permintaan,pasien.jk,pasien.alamat,"+
                     "if(permintaan_lab.tgl_sampel='0000-00-00','',permintaan_lab.tgl_sampel) as tgl_sampel,if(permintaan_lab.jam_sampel='00:00:00','',permintaan_lab.jam_sampel) as jam_sampel,"+
                     "if(permintaan_lab.tgl_hasil='0000-00-00','',permintaan_lab.tgl_hasil) as tgl_hasil,if(permintaan_lab.jam_hasil='00:00:00','',permintaan_lab.jam_hasil) as jam_hasil,"+
-                    "permintaan_lab.dokter_perujuk,dokter.nm_dokter,poliklinik.nm_poli,pasien.no_tlp,penjab.png_jawab from permintaan_lab "+
-                    "inner join reg_periksa inner join pasien inner join dokter inner join poliklinik inner join penjab "+
+                    "permintaan_lab.dokter_perujuk,dokter.nm_dokter,bangsal.nm_bangsal,pasien.no_tlp,penjab.png_jawab,pasien.tgl_lahir from permintaan_lab "+
+                    "inner join reg_periksa inner join pasien inner join dokter inner join bangsal inner join kamar inner join kamar_inap inner join penjab  "+
                     "on permintaan_lab.no_rawat=reg_periksa.no_rawat and reg_periksa.no_rkm_medis=pasien.no_rkm_medis and reg_periksa.kd_pj=penjab.kd_pj "+
-                    "and permintaan_lab.dokter_perujuk=dokter.kd_dokter and reg_periksa.kd_poli=poliklinik.kd_poli where permintaan_lab.noorder=?");
+                    "and permintaan_lab.dokter_perujuk=dokter.kd_dokter and kamar.kd_bangsal=bangsal.kd_bangsal and reg_periksa.no_rawat=kamar_inap.no_rawat and kamar_inap.kd_kamar=kamar.kd_kamar where "+
+                    "permintaan_lab.noorder=?");
              try {
                 ps.setString(1,nopermintaan);
                 rs=ps.executeQuery();
@@ -120,7 +121,7 @@ public class LICAApi {
                                         "\"tgl_permintaan\": \""+rs.getString("tgl_permintaan")+"\"," +
                                         "\"jam_permintaan\": \""+rs.getString("jam_permintaan")+"\"," +
                                         "\"pembayaran\": \""+rs.getString("png_jawab")+"\"," +
-                                        "\"ruangan\": \""+rs.getString("nm_poli")+"\"," +
+                                        "\"ruangan\": \""+rs.getString("nm_bangsal")+"\"," +
                                         "\"jnsreg\": \"1\"," +
                                         "\"dokter\": \""+rs.getString("nm_dokter")+"\"" +
                                     "}," +
@@ -168,12 +169,12 @@ public class LICAApi {
             Sequel.queryu("truncate table temporary_permintaan_lab");
             if(response.isArray()){
                 for(JsonNode list:response){
-                    Sequel.menyimpan("temporary_permintaan_lab","'0','"+root.path("id_kunjungan").asText()+"','"+
-                            list.path("nmdisplay").asText()+"','"+
-                            list.path("hasil").asText()+"','"+
-                            list.path("nn").asText()+"','"+
-                            list.path("satuan").asText()+"','"+
-                            list.path("keterangan").asText()+"','"+
+                    Sequel.menyimpan("temporary_permintaan_lab","'0','"+nopermintaan+"','"+//temp1
+                            list.path("nmdisplay").asText()+"','"+//temp2
+                            list.path("hasil").asText()+"','"+//temp3
+                            list.path("nn").asText()+"','"+//temp4
+                            list.path("satuan").asText()+"','"+//temp5
+                            list.path("keterangan").asText()+"','"+//temp6
                             list.path("tindakan_id").asText()+"','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab"); 
                 }
             }

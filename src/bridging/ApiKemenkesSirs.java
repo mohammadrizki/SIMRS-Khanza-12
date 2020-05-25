@@ -17,10 +17,10 @@ import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
-public class SirsApi {        
+public class ApiKemenkesSirs {        
     private static final Properties prop = new Properties();
     private String Key,pass;
-    public SirsApi(){
+    public ApiKemenkesSirs(){
         try {            
             prop.loadFromXML(new FileInputStream("setting/database.xml"));   
             pass = koneksiDB.PASSSIRS();
