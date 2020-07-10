@@ -48,7 +48,7 @@ public final class BPJSCekTanggalRujukan extends javax.swing.JDialog {
     private int i=0;
     private String URL="",link="",norm="",statussep="",statuspasien="";
     private final Properties prop = new Properties();
-    private BPJSApi api=new BPJSApi();
+    private ApiBPJS api=new ApiBPJS();
     private HttpHeaders headers ;
     private HttpEntity requestEntity;
     private ObjectMapper mapper = new ObjectMapper();
@@ -568,7 +568,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     BtnCari.requestFocus();
                 }                    
             }else{            
-                JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data rujukan...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data rujukan...!!!!");
                 BtnCari.requestFocus();
             }                 
         }else if(TabRawat.getSelectedIndex()==1){
@@ -587,7 +587,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     BtnCari.requestFocus();
                 }
             }else{            
-                JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data rujukan...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data rujukan...!!!!");
                 BtnCari.requestFocus();
             } 
         }

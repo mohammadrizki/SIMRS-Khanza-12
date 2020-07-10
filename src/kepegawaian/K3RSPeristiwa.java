@@ -66,7 +66,6 @@ public final class K3RSPeristiwa extends javax.swing.JDialog {
     private DlgCariPegawai pegawai=new DlgCariPegawai(null,false);
     private LocalDate birthday;
     private Period p;
-    private long p2;
 
     /** Creates new form DlgJnsPerawatan
      * @param parent
@@ -184,7 +183,7 @@ public final class K3RSPeristiwa extends javax.swing.JDialog {
         tbJnsPerawatan.setDefaultRenderer(Object.class, new WarnaTable());
         
         TCari.setDocument(new batasInput((byte)100).getKata(TCari));
-        NoLaporan.setDocument(new batasInput((byte)15).getKata(NoLaporan));
+        NoLaporan.setDocument(new batasInput((byte)20).getKata(NoLaporan));
         Kronologi.setDocument(new batasInput((int)300).getKata(Kronologi));
         KondisiTidakAman.setDocument(new batasInput((int)100).getKata(KondisiTidakAman));
         TindakanTidakAman.setDocument(new batasInput((int)100).getKata(TindakanTidakAman));
@@ -1193,7 +1192,7 @@ public final class K3RSPeristiwa extends javax.swing.JDialog {
         DTPCari2.setPreferredSize(new java.awt.Dimension(90, 23));
         panelGlass9.add(DTPCari2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass9.add(jLabel6);

@@ -4,6 +4,7 @@ import bridging.BPJSCekKartu;
 import bridging.BPJSCekNIK2;
 import bridging.BPJSCekRujukanKartuPCare;
 import bridging.BPJSCekRujukanKartuRS;
+import bridging.CoronaPasien;
 import fungsi.WarnaTable;
 import fungsi.batasInput;
 import fungsi.koneksiDB;
@@ -258,6 +259,7 @@ public class RMSKriningRawatJalan extends javax.swing.JDialog {
         jPopupMenu1 = new javax.swing.JPopupMenu();
         MnLembarSkriningRalan = new javax.swing.JMenuItem();
         MnPDFSkriningRalan = new javax.swing.JMenuItem();
+        ppPasienCorona = new javax.swing.JMenuItem();
         internalFrame1 = new widget.InternalFrame();
         Scroll = new widget.ScrollPane();
         tbObat = new widget.Table();
@@ -346,6 +348,22 @@ public class RMSKriningRawatJalan extends javax.swing.JDialog {
             }
         });
         jPopupMenu1.add(MnPDFSkriningRalan);
+
+        ppPasienCorona.setBackground(new java.awt.Color(255, 255, 254));
+        ppPasienCorona.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        ppPasienCorona.setForeground(new java.awt.Color(50, 50, 50));
+        ppPasienCorona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        ppPasienCorona.setText("Bridging Pasien Corona Kemenkes");
+        ppPasienCorona.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ppPasienCorona.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        ppPasienCorona.setName("ppPasienCorona"); // NOI18N
+        ppPasienCorona.setPreferredSize(new java.awt.Dimension(230, 26));
+        ppPasienCorona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppPasienCoronaBtnPrintActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(ppPasienCorona);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -526,7 +544,7 @@ public class RMSKriningRawatJalan extends javax.swing.JDialog {
         jLabel15.setPreferredSize(new java.awt.Dimension(55, 23));
         panelGlass7.add(jLabel15);
 
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-06-2019" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-01-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -539,14 +557,14 @@ public class RMSKriningRawatJalan extends javax.swing.JDialog {
         jLabel17.setPreferredSize(new java.awt.Dimension(24, 23));
         panelGlass7.add(jLabel17);
 
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-06-2019" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-01-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
         DTPCari2.setPreferredSize(new java.awt.Dimension(90, 23));
         panelGlass7.add(DTPCari2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(65, 23));
         panelGlass7.add(jLabel6);
@@ -664,7 +682,7 @@ public class RMSKriningRawatJalan extends javax.swing.JDialog {
         FormInput.add(jLabel8);
         jLabel8.setBounds(571, 100, 80, 23);
 
-        DTPReg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-06-2019" }));
+        DTPReg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-01-2020" }));
         DTPReg.setDisplayFormat("dd-MM-yyyy");
         DTPReg.setName("DTPReg"); // NOI18N
         DTPReg.setOpaque(false);
@@ -948,7 +966,7 @@ public class RMSKriningRawatJalan extends javax.swing.JDialog {
                 tampil();
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf silakan pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null,"Maaf silahkan pilih data terlebih dahulu..!!");
         }
 }//GEN-LAST:event_BtnHapusActionPerformed
 
@@ -1140,7 +1158,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 System.out.println("Notif : "+e);
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf silakan pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null,"Maaf silahkan pilih data terlebih dahulu..!!");
         }
     }//GEN-LAST:event_BtnEditActionPerformed
 
@@ -1260,14 +1278,14 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             param.put("kontakrs",akses.getkontakrs());
             param.put("emailrs",akses.getemailrs());   
             param.put("logo",Sequel.cariGambar("select logo from setting")); 
-            param.put("finger",Sequel.cariIsi("select sidikjari from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",kdptg.getText()));  
+            param.put("finger",Sequel.cariIsi("select sha1(sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",kdptg.getText()));  
             Valid.MyReportqry("rptLembarSkriningRalan.jasper","report","::[ Lembar Skrining Rawat Jalan ]::",
                     "select skrining_rawat_jalan.tanggal,skrining_rawat_jalan.jam,skrining_rawat_jalan.no_rkm_medis,pasien.nm_pasien,pasien.tgl_lahir,"+
                     "pasien.nm_ibu,pasien.jk,skrining_rawat_jalan.geriatri,skrining_rawat_jalan.kesadaran,skrining_rawat_jalan.pernapasan,"+
                     "skrining_rawat_jalan.nyeri_dada,skrining_rawat_jalan.skala_nyeri,skrining_rawat_jalan.keputusan,skrining_rawat_jalan.nip,petugas.nama "+
                     "from skrining_rawat_jalan inner join pasien inner join petugas on skrining_rawat_jalan.no_rkm_medis=pasien.no_rkm_medis and skrining_rawat_jalan.nip=petugas.nip where skrining_rawat_jalan.no_rkm_medis='"+TNoRM.getText()+"'",param);
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf silakan pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null,"Maaf silahkan pilih data terlebih dahulu..!!");
         }
     }//GEN-LAST:event_MnLembarSkriningRalanActionPerformed
 
@@ -1281,16 +1299,35 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             param.put("kontakrs",akses.getkontakrs());
             param.put("emailrs",akses.getemailrs());   
             param.put("logo",Sequel.cariGambar("select logo from setting")); 
-            param.put("finger",Sequel.cariIsi("select sidikjari from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",kdptg.getText()));  
+            param.put("finger",Sequel.cariIsi("select sha1(sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",kdptg.getText()));  
             Valid.MyReportqrypdf("rptLembarSkriningRalan.jasper","report","::[ Lembar Skrining Rawat Jalan ]::",
                     "select skrining_rawat_jalan.tanggal,skrining_rawat_jalan.jam,skrining_rawat_jalan.no_rkm_medis,pasien.nm_pasien,pasien.tgl_lahir,"+
                     "pasien.nm_ibu,pasien.jk,skrining_rawat_jalan.geriatri,skrining_rawat_jalan.kesadaran,skrining_rawat_jalan.pernapasan,"+
                     "skrining_rawat_jalan.nyeri_dada,skrining_rawat_jalan.skala_nyeri,skrining_rawat_jalan.keputusan,skrining_rawat_jalan.nip,petugas.nama "+
                     "from skrining_rawat_jalan inner join pasien inner join petugas on skrining_rawat_jalan.no_rkm_medis=pasien.no_rkm_medis and skrining_rawat_jalan.nip=petugas.nip where skrining_rawat_jalan.no_rkm_medis='"+TNoRM.getText()+"'",param);
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf silakan pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null,"Maaf silahkan pilih data terlebih dahulu..!!");
         }
     }//GEN-LAST:event_MnPDFSkriningRalanActionPerformed
+
+    private void ppPasienCoronaBtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppPasienCoronaBtnPrintActionPerformed
+        if(tabMode.getRowCount()==0){
+            JOptionPane.showMessageDialog(null,"Maaf, data pasien sudah habis...!!!!");
+            TNoRM.requestFocus();
+        }else if(TPasien.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih dulu data pasien dengan menklik data pada table...!!!");
+            tbObat.requestFocus();
+        }else{
+            this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+            CoronaPasien form=new CoronaPasien(null,false);
+            form.setPasien(TNoRM.getText());
+            form.isCek();
+            form.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+            form.setLocationRelativeTo(internalFrame1);
+            form.setVisible(true);
+            this.setCursor(Cursor.getDefaultCursor());
+        }
+    }//GEN-LAST:event_ppPasienCoronaBtnPrintActionPerformed
 
     /**
     * @param args the command line arguments
@@ -1369,6 +1406,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private widget.TextBox nmptg;
     private widget.panelisi panelGlass7;
     private widget.panelisi panelGlass8;
+    private javax.swing.JMenuItem ppPasienCorona;
     private widget.Table tbObat;
     // End of variables declaration//GEN-END:variables
 
@@ -1499,6 +1537,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         BtnSimpan.setEnabled(akses.getsekrining_rawat_jalan());
         BtnHapus.setEnabled(akses.getsekrining_rawat_jalan());
         BtnEdit.setEnabled(akses.getsekrining_rawat_jalan());
+        ppPasienCorona.setEnabled(akses.getpasien_corona());
         if(akses.getjml2()>=1){
             kdptg.setEditable(false);
             BtnPtg.setEnabled(false);

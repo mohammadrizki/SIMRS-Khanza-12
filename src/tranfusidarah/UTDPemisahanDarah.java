@@ -422,7 +422,7 @@ public class UTDPemisahanDarah extends javax.swing.JDialog {
         panelisi6.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label11.setText("Keyword :");
+        label11.setText("Key Word :");
         label11.setName("label11"); // NOI18N
         label11.setPreferredSize(new java.awt.Dimension(60, 23));
         panelisi6.add(label11);
@@ -496,7 +496,7 @@ public class UTDPemisahanDarah extends javax.swing.JDialog {
         panelisi7.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label12.setText("Keyword :");
+        label12.setText("Key Word :");
         label12.setName("label12"); // NOI18N
         label12.setPreferredSize(new java.awt.Dimension(60, 23));
         panelisi7.add(label12);
@@ -938,7 +938,7 @@ public class UTDPemisahanDarah extends javax.swing.JDialog {
         TanggalCari2.setPreferredSize(new java.awt.Dimension(95, 23));
         panelisi2.add(TanggalCari2);
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi2.add(label9);
@@ -1540,7 +1540,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbPemisahan.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang mau dihapus..!!");
         }else{
             if(!tbPemisahan.getValueAt(tbPemisahan.getSelectedRow(),0).toString().equals("")){
                 int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, Yakin mau dihapus..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
@@ -1584,7 +1584,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbPemisahan.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang mau dihapus..!!");
         }else{
             if(!tbPemisahan.getValueAt(tbPemisahan.getSelectedRow(),0).toString().equals("")){
                 int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, Yakin mau dihapus..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
@@ -1628,7 +1628,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbPemisahan.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang mau dihapus..!!");
         }else{
             if(!tbPemisahan.getValueAt(tbPemisahan.getSelectedRow(),0).toString().equals("")){
                 int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, Yakin mau dihapus..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
@@ -1691,7 +1691,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbPemisahan.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang mau dihapus..!!");
         }else{
             if(!tbPemisahan.getValueAt(tbPemisahan.getSelectedRow(),0).toString().equals("")){
                 int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, Yakin mau dihapus..??","Konfirmasi",JOptionPane.YES_NO_OPTION);

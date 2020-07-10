@@ -55,7 +55,7 @@ public final class SisruteRujukanMasukan extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private int i=0,nilai_detik,rujukanbaru=0;
     private String pilihan="",alarm="",URL="",link="",norm="",statusreg="",statuspasien="",norujuk="",nol_detik,detik;
-    private SisruteApi api=new SisruteApi();
+    private ApiKemenkesSisrute api=new ApiKemenkesSisrute();
     private BackgroundMusic music;
     private DlgCariPegawai pegawai=new DlgCariPegawai(null,false);
     private HttpHeaders headers;
@@ -430,7 +430,7 @@ public final class SisruteRujukanMasukan extends javax.swing.JDialog {
         cmbStatus.setPreferredSize(new java.awt.Dimension(120, 23));
         panelGlass8.add(cmbStatus);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(67, 23));
         panelGlass8.add(jLabel6);
@@ -724,7 +724,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 }
             }
         }else{            
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data rujukan...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data rujukan...!!!!");
             akses.setAktif(false);
             TCari.requestFocus();
         }   
@@ -839,7 +839,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
             }
         }else{  
             akses.setAktif(false);
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data rujukan...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data rujukan...!!!!");
             TCari.requestFocus();
         }  
     }//GEN-LAST:event_BtnJawabActionPerformed
@@ -993,11 +993,11 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
             Valid.tabelKosong(tabMode);
             URL = link+"/rujukan?tanggal="+Valid.SetTgl(Tanggal.getSelectedItem()+"");
             headers = new HttpHeaders();
-	    headers.add("X-cons-id",idrs);
-	    headers.add("X-Timestamp",String.valueOf(api.GetUTCdatetimeAsString())); 
-	    headers.add("X-signature",api.getHmac()); 
-	    headers.add("Content-type","application/json");             
-	    headers.add("Content-length",null); 
+	   headers.add("X-cons-id",idrs);
+	   headers.add("X-Timestamp",String.valueOf(api.GetUTCdatetimeAsString())); 
+	   headers.add("X-signature",api.getHmac()); 
+	   headers.add("Content-type","application/json");             
+	   headers.add("Content-length",null); 
             requestEntity = new HttpEntity(headers);
             root = mapper.readTree(api.getRest().exchange(URL, HttpMethod.GET, requestEntity, String.class).getBody());
             nameNode = root.path("status");

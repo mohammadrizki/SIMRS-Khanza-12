@@ -279,7 +279,6 @@ public class UTDPenunjangRusak extends javax.swing.JDialog {
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
         TabSetting.setBackground(new java.awt.Color(255, 255, 253));
-        TabSetting.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)));
         TabSetting.setForeground(new java.awt.Color(50, 50, 50));
         TabSetting.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabSetting.setName("TabSetting"); // NOI18N
@@ -428,7 +427,7 @@ public class UTDPenunjangRusak extends javax.swing.JDialog {
         });
         panelisi1.add(BtnSimpan);
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(100, 23));
         panelisi1.add(label10);
@@ -513,7 +512,7 @@ public class UTDPenunjangRusak extends javax.swing.JDialog {
         panelisi4.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-05-2019" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "21-05-2019" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -527,14 +526,14 @@ public class UTDPenunjangRusak extends javax.swing.JDialog {
         panelisi4.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-05-2019" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "21-05-2019" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
         DTPCari2.setPreferredSize(new java.awt.Dimension(95, 23));
         panelisi4.add(DTPCari2);
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi4.add(label9);
@@ -700,7 +699,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
         }else if(subtotal<=0){
             Valid.textKosong(Keterangan,"Pengambilan");
         }else{
-            i= JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            i= JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (i == JOptionPane.YES_OPTION) {
                 
                 for(i=0;i<tbDokter.getRowCount();i++){  
@@ -925,11 +924,11 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     }//GEN-LAST:event_BtnAllKeyPressed
 
     private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
-        if(tabMode.getRowCount()==0){
+        if(tabMode2.getRowCount()==0){
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
-            TCari.requestFocus();
+            TCari2.requestFocus();
         }else if(tbKamar.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data yang mau dihapus..!!");
         }else{
             
             Sequel.queryu("delete from utd_penunjang_rusak where kode_brng='"+tbKamar.getValueAt(tbKamar.getSelectedRow(),0)+"' "+
@@ -956,7 +955,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 
     private void BtnCetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCetakActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        if(tabMode.getRowCount()==0){
+        if(tabMode2.getRowCount()==0){
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             BtnKeluar.requestFocus();
         }else {
@@ -973,11 +972,11 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
                     "utd_penunjang_rusak.total,utd_penunjang_rusak.nip,petugas.nama,utd_penunjang_rusak.tanggal,"+
                     "utd_penunjang_rusak.keterangan,ipsrsbarang.kode_sat from utd_penunjang_rusak inner join ipsrsbarang inner join petugas "+
                     "on utd_penunjang_rusak.kode_brng=ipsrsbarang.kode_brng and utd_penunjang_rusak.nip=petugas.nip "+
-                    "where utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and utd_penunjang_rusak.kode_brng like '%"+TCari.getText().trim()+"%' or "+
-                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and ipsrsbarang.nama_brng like '%"+TCari.getText().trim()+"%' or "+
-                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and utd_penunjang_rusak.nip like '%"+TCari.getText().trim()+"%' or "+
-                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and petugas.nama like '%"+TCari.getText().trim()+"%' or "+
-                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and utd_penunjang_rusak.keterangan like '%"+TCari.getText().trim()+"%' order by utd_penunjang_rusak.tanggal",param);
+                    "where utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and utd_penunjang_rusak.kode_brng like '%"+TCari2.getText().trim()+"%' or "+
+                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and ipsrsbarang.nama_brng like '%"+TCari2.getText().trim()+"%' or "+
+                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and utd_penunjang_rusak.nip like '%"+TCari2.getText().trim()+"%' or "+
+                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and petugas.nama like '%"+TCari2.getText().trim()+"%' or "+
+                    "utd_penunjang_rusak.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and utd_penunjang_rusak.keterangan like '%"+TCari2.getText().trim()+"%' order by utd_penunjang_rusak.tanggal",param);
 
         }
         this.setCursor(Cursor.getDefaultCursor());
@@ -1092,7 +1091,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         jumlah=new String[jml];
         stokasal=new String[jml];
         index=0;        
-        for(i=0;i<row;i++){
+        for(i=0;i<tbDokter.getRowCount();i++){
             try {
                 if(Double.parseDouble(tbDokter.getValueAt(i,0).toString())>0){
                     jumlah[index]=tbDokter.getValueAt(i,0).toString();

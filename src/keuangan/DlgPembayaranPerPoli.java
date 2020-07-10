@@ -153,7 +153,7 @@ public class DlgPembayaranPerPoli extends javax.swing.JDialog {
         CmbStatus.setPreferredSize(new java.awt.Dimension(95, 23));
         panelisi1.add(CmbStatus);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(63, 23));
         panelisi1.add(jLabel6);

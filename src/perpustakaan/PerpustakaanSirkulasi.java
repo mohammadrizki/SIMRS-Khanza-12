@@ -783,7 +783,7 @@ public class PerpustakaanSirkulasi extends javax.swing.JDialog {
         });
         panelGlass11.add(BtnSeek2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(90, 23));
         panelGlass11.add(jLabel6);
@@ -983,7 +983,7 @@ public class PerpustakaanSirkulasi extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TNoI.requestFocus();
         }else if(TJudul.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(TOut.getText().trim().equals("")){
             JOptionPane.showMessageDialog(null,"Maaf, Data sirkulasi dengan No.Inventaris "+TNoI.getText()+" belum kembali. Data belum bisa anda hapus...!!!!");
         }else if((! TJudul.getText().trim().equals(""))&&(! TOut.getText().trim().equals(""))){
@@ -992,7 +992,7 @@ public class PerpustakaanSirkulasi extends javax.swing.JDialog {
                 tampil();
             }catch(Exception e){
                 System.out.println("Pesan Error : "+e);
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang hendak anda hapus...\n Klik data pada table untuk memilih data...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
             }
         }
 

@@ -1816,7 +1816,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         panelGlass8.setPreferredSize(new java.awt.Dimension(155, 225));
         panelGlass8.setLayout(null);
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelGlass8.add(label9);
         label9.setBounds(0, 10, 70, 23);
@@ -2753,10 +2753,10 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
 
     private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
         if(statushapus==false){
-            JOptionPane.showMessageDialog(null,"Maaf, silakan lanjutkan proses simpan terlebih dahulu ...!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan lanjutkan proses simpan terlebih dahulu ...!!!");
         }else{
             if(ttl<=0){
-                JOptionPane.showMessageDialog(null,"Maaf, silakan masukkan tagihan yang hendak dihapus ...!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, silahkan masukkan tagihan yang mau dihapus ...!!!");
             }else{
                 if(kekurangan<0){
                     JOptionPane.showMessageDialog(null,"Maaf, pembayaran/dana pengembalian pasien masih kurang ...!!!");
@@ -2812,14 +2812,14 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
 
     private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSimpanActionPerformed
         if(statushapus==true){
-            JOptionPane.showMessageDialog(null,"Maaf, silakan lanjutkan proses hapus terlebih dahulu ...!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan lanjutkan proses hapus terlebih dahulu ...!!!");
         }else{
             if(TabRawat.getSelectedIndex()==6){
                 if(TNoRw.getText().trim().equals("")||TNoRM.getText().trim().equals("")||TPasien.getText().trim().equals("")){
                     Valid.textKosong(TNoRw,"Pasien");
                 }else{
                     if(ttl<=0){
-                        JOptionPane.showMessageDialog(null,"Maaf, silakan masukkan tagihan ...!!!");
+                        JOptionPane.showMessageDialog(null,"Maaf, silahkan masukkan tagihan ...!!!");
                     }else{
                         if(kekurangan<0){
                             JOptionPane.showMessageDialog(null,"Maaf, pembayaran pasien masih kurang ...!!!");
@@ -2897,7 +2897,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
                 
                 i = 0;
                 try{
-                      biaya = (String)JOptionPane.showInputDialog(null,"Silakan pilih nota yang hendak dicetak!","Nota",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Nota", "Kwitansi", "Nota & Kwitansi"},"Nota");
+                      biaya = (String)JOptionPane.showInputDialog(null,"Silakan pilih nota yang mau dicetak!","Nota",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Nota", "Kwitansi", "Nota & Kwitansi"},"Nota");
                       switch (biaya) {
                             case "Nota":
                                   i=1;
@@ -5555,7 +5555,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
     }
 
     private void isSimpan() {        
-        int jawab=JOptionPane.showConfirmDialog(null, "Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+        int jawab=JOptionPane.showConfirmDialog(null, "Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
         if(jawab==JOptionPane.YES_OPTION){
             if(notaralan.equals("Yes")){
                 BtnNotaActionPerformed(null);
@@ -5640,10 +5640,10 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
                 if(jmlradiologi>0){
                     noorderradiologi=Valid.autoNomer3("select ifnull(MAX(CONVERT(RIGHT(noorder,4),signed)),0) from permintaan_radiologi where tgl_permintaan='"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+"' ","PR"+Valid.SetTgl(DTPTgl.getSelectedItem()+"").replaceAll("-",""),4);
                     if((!KdDokPerujukRad.getText().equals(""))&&(!TDokterPerujukRad.getText().equals(""))){
-                        Sequel.menyimpan("permintaan_radiologi","?,?,?,?,?,?,?,?,?,'ralan'","No.Permintaan",9,new String[]{
+                        Sequel.menyimpan("permintaan_radiologi","?,?,?,?,?,?,?,?,?,'ralan',?,?","No.Permintaan",11,new String[]{
                             noorderradiologi,TNoRw.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),
                             DTPTgl.getSelectedItem().toString().substring(11,19), 
-                            "0000-00-00","00:00:00","0000-00-00","00:00:00",KdDokPerujukRad.getText()
+                            "0000-00-00","00:00:00","0000-00-00","00:00:00",KdDokPerujukRad.getText(),"",""
                         });
                     }                        
                 }
@@ -5672,10 +5672,10 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
                 if(jmllaborat>0){
                     noorderlaborat=Valid.autoNomer3("select ifnull(MAX(CONVERT(RIGHT(noorder,4),signed)),0) from permintaan_lab where tgl_permintaan='"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+"' ","PR"+Valid.SetTgl(DTPTgl.getSelectedItem()+"").replaceAll("-",""),4);
                     if((!KdDokPerujukLab.getText().equals(""))&&(!TDokterPerujukLab.getText().equals(""))){
-                        Sequel.menyimpan("permintaan_lab","?,?,?,?,?,?,?,?,?,'ralan'","No.Permintaan",9,new String[]{
+                        Sequel.menyimpan("permintaan_lab","?,?,?,?,?,?,?,?,?,'ralan',?,?","No.Permintaan",11,new String[]{
                             noorderlaborat,TNoRw.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),
                             DTPTgl.getSelectedItem().toString().substring(11,19), 
-                            "0000-00-00","00:00:00","0000-00-00","00:00:00",KdDokPerujukLab.getText()
+                            "0000-00-00","00:00:00","0000-00-00","00:00:00",KdDokPerujukLab.getText(),"",""
                         });
                     }                        
                 }
@@ -5925,7 +5925,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
                 }
 
                 jur.simpanJurnal(TNoRw.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),"U","PEMBAYARAN PASIEN RAWAT JALAN, DIPOSTING OLEH "+akses.getkode());
-                Sequel.menyimpan("tagihan_sadewa","'"+TNoRw.getText()+"','"+TNoRM.getText()+"','"+TPasien.getText()+"','"+alamat+"',concat('"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+
+                Sequel.menyimpan("tagihan_sadewa","'"+TNoRw.getText()+"','"+TNoRM.getText()+"','"+TPasien.getText().replaceAll("'","")+"','"+alamat.replaceAll("'","")+"',concat('"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+
                                 "',' ',CURTIME()),'Pelunasan','"+total+"','"+total+"','Sudah','"+akses.getkode()+"'","jumlah_tagihan=jumlah_tagihan+'"+total+"',jumlah_bayar=jumlah_bayar+'"+total+"'","no_nota='"+TNoRw.getText()+"'");
                 Valid.editTable(tabModeBilling,"reg_periksa","no_rawat",TNoRw,"status_bayar='Sudah Bayar'");
                 koneksi.setAutoCommit(true);
@@ -6135,7 +6135,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
     }   
     
     private void isSimpanHapus() {
-        int jawab=JOptionPane.showConfirmDialog(null, "Eeiiiiiits, udah bener belum data yang hendak dihapus..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+        int jawab=JOptionPane.showConfirmDialog(null, "Eeiiiiiits, udah bener belum data yang mau dihapus..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
         if(jawab==JOptionPane.YES_OPTION){
             try {
                 koneksi.setAutoCommit(false);

@@ -28,7 +28,7 @@ public class DlgSirkulasiNonMedis extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private Connection koneksi=koneksiDB.condb();
     private double ttltotalbeli=0,totalbeli=0,stok=0,aset=0,ttlaset=0,jumlahbeli=0,jumlahutd=0,totalutd=0,ttltotalutd=0,ttltotalpesan=0,totalpesan=0,jumlahpesan=0,jumlahkeluar,totalkeluar,ttltotalkeluar;
-    private DlgBarangIPSRS barang=new DlgBarangIPSRS(null,false);
+    private IPSRSBarang barang=new IPSRSBarang(null,false);
     private PreparedStatement ps,ps2;
     private ResultSet rs,rs2;
 
@@ -276,7 +276,7 @@ public class DlgSirkulasiNonMedis extends javax.swing.JDialog {
         panelisi1.setPreferredSize(new java.awt.Dimension(100, 56));
         panelisi1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(69, 23));
         panelisi1.add(label10);

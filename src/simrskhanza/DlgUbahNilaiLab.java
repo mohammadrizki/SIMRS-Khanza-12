@@ -44,7 +44,7 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
     private ResultSet rs;
     private int i=0;
     private String tanggal="",jam="";
-
+    
 
     /** Creates new form DlgPerawatan
      * @param parent
@@ -71,9 +71,9 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
              @Override
              public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
-             }
+             }              
         };
-
+        
         tbPemeriksaan.setModel(tabMode);
         //tampilPr();
 
@@ -100,9 +100,9 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
                 column.setMaxWidth(0);
             }
         }
-
+        
         tbPemeriksaan.setDefaultRenderer(Object.class, new WarnaTable());
-
+        
         jam();
     }
 
@@ -285,17 +285,17 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
 
     private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSimpanActionPerformed
         ChkJln.setSelected(false);
-        for(i=0;i<tbPemeriksaan.getRowCount();i++){
+        for(i=0;i<tbPemeriksaan.getRowCount();i++){ 
             Sequel.mengedit("detail_periksa_lab","no_rawat=? and kd_jenis_prw=? and tgl_periksa=? and jam=? and id_template=?","nilai=?,nilai_rujukan=?,keterangan=?,tgl_periksa=?,jam=?",10,new String[]{
                 tbPemeriksaan.getValueAt(i,1).toString(),tbPemeriksaan.getValueAt(i,3).toString(),tbPemeriksaan.getValueAt(i,4).toString(),Valid.SetTgl(Tanggal.getSelectedItem()+""),
                 CmbJam.getSelectedItem()+":"+CmbMenit.getSelectedItem()+":"+CmbDetik.getSelectedItem(),TNoRw.getText(),tbPemeriksaan.getValueAt(i,6).toString(),tanggal,jam,tbPemeriksaan.getValueAt(i,5).toString()
             });
         }
-
+        
         Sequel.mengedit("periksa_lab","no_rawat=? and tgl_periksa=? and jam=?","tgl_periksa=?,jam=?",5,new String[]{
             Valid.SetTgl(Tanggal.getSelectedItem()+""),CmbJam.getSelectedItem()+":"+CmbMenit.getSelectedItem()+":"+CmbDetik.getSelectedItem(),TNoRw.getText(),tanggal,jam
         });
-
+        
         Sequel.mengedit("permintaan_lab","no_rawat=? and tgl_hasil=? and jam_hasil=?","tgl_hasil=?,jam_hasil=?",5,new String[]{
             Valid.SetTgl(Tanggal.getSelectedItem()+""),CmbJam.getSelectedItem()+":"+CmbMenit.getSelectedItem()+":"+CmbDetik.getSelectedItem(),TNoRw.getText(),tanggal,jam
         });
@@ -364,7 +364,7 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
     private widget.Table tbPemeriksaan;
     // End of variables declaration//GEN-END:variables
 
-    public void setNoRm(String norwt,String tanggal,String jam) {
+    public void setNoRm(String norwt,String tanggal,String jam) {        
         try {
             TNoRw.setText(norwt);
             Sequel.cariIsi("select no_rkm_medis from reg_periksa where no_rawat=? ",TNoRM,TNoRw.getText());
@@ -375,7 +375,7 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
                     "select detail_periksa_lab.id_template,template_laboratorium.Pemeriksaan, detail_periksa_lab.nilai,template_laboratorium.satuan,detail_periksa_lab.nilai_rujukan,"+
                     "detail_periksa_lab.keterangan,detail_periksa_lab.kd_jenis_prw "+
                     "from detail_periksa_lab inner join template_laboratorium on detail_periksa_lab.id_template=template_laboratorium.id_template "+
-                    "where detail_periksa_lab.no_rawat=? and detail_periksa_lab.tgl_periksa=? and detail_periksa_lab.jam=?");
+                    "where detail_periksa_lab.no_rawat=? and detail_periksa_lab.tgl_periksa=? and detail_periksa_lab.jam=? order by template_laboratorium.urut");
             try {
                 ps.setString(1,TNoRw.getText());
                 ps.setString(2,tanggal);
@@ -384,9 +384,9 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
                 while(rs.next()){
                     tabMode.addRow(new Object[]{
                          "   "+rs.getString("Pemeriksaan"),rs.getString("nilai"),rs.getString("satuan"),
-                        rs.getString("nilai_rujukan"),"",rs.getString("id_template"),rs.getString("kd_jenis_prw")
+                        rs.getString("nilai_rujukan"),rs.getString("keterangan"),rs.getString("id_template"),rs.getString("kd_jenis_prw")
                     });
-                }
+                } 
             } catch (Exception e) {
                 System.out.println("Notif : "+e);
             } finally{
@@ -399,13 +399,13 @@ public final class DlgUbahNilaiLab extends javax.swing.JDialog {
             }
         } catch (Exception e) {
             System.out.println(e);
-        }
+        }         
     }
-
+    
     public void isCek(){
         BtnSimpan.setEnabled(akses.getperiksa_lab());
     }
-
+    
     private void jam(){
         ActionListener taskPerformer = new ActionListener(){
             private int nilai_jam;

@@ -94,13 +94,6 @@ public final class DlgJabatan extends javax.swing.JDialog {
                     }
                 }
             });
-        } 
-        try {
-            ps=koneksi.prepareStatement("select kd_jbtn, nm_jbtn "+
-                " from jabatan where  kd_jbtn like ? or "+
-                " nm_jbtn like ? order by kd_jbtn");
-        } catch (SQLException e) {
-            System.out.println(e);
         }
     }
 
@@ -308,7 +301,7 @@ public final class DlgJabatan extends javax.swing.JDialog {
         panelGlass9.setPreferredSize(new java.awt.Dimension(44, 44));
         panelGlass9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass9.add(jLabel6);
@@ -568,15 +561,30 @@ public final class DlgJabatan extends javax.swing.JDialog {
     private void tampil() {
         Valid.tabelKosong(tabMode);
         try{
-            ps.setString(1,"%"+TCari.getText().trim()+"%");
-            ps.setString(2,"%"+TCari.getText().trim()+"%");
-            rs=ps.executeQuery();
-            while(rs.next()){
-                String[] data={rs.getString(1),
-                               rs.getString(2)};
-                tabMode.addRow(data);
-            }
-        }catch(SQLException e){
+            ps=koneksi.prepareStatement("select kd_jbtn, nm_jbtn "+
+                    " from jabatan where  kd_jbtn like ? or "+
+                    " nm_jbtn like ? order by kd_jbtn");
+            try {
+                ps.setString(1,"%"+TCari.getText().trim()+"%");
+                ps.setString(2,"%"+TCari.getText().trim()+"%");
+                rs=ps.executeQuery();
+                while(rs.next()){
+                    tabMode.addRow(new String[]{
+                        rs.getString(1),rs.getString(2)
+                    });
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+            } finally{
+                if(rs!=null){
+                    rs.close();
+                }
+                
+                if(ps!=null){
+                    ps.close();
+                }
+            } 
+        }catch(Exception e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+tabMode.getRowCount());

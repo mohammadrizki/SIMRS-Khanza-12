@@ -29,8 +29,8 @@ public class DlgUbahPemesanan extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private Jurnal jur=new Jurnal();
     private Connection koneksi=koneksiDB.condb();
-    private PreparedStatement ps,pskonversi,pscaripesan,psdetailpesan,ps2,pscaribatch;
-    private ResultSet rs,rskonversi,rs2;
+    private PreparedStatement ps,pscaripesan,psdetailpesan,ps2;
+    private ResultSet rs,rs2;
     private riwayatobat Trackobat=new riwayatobat();
     private DlgCariDataKonversi datakonversi=new DlgCariDataKonversi(null,false);
     private double hargakonversi=0,meterai=0,ttl=0,y=0,w=0,ttldisk=0,tagihan=0,
@@ -356,7 +356,7 @@ public class DlgUbahPemesanan extends javax.swing.JDialog {
         panelisi1.add(BtnSimpan);
         BtnSimpan.setBounds(10, 70, 100, 30);
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(75, 23));
         panelisi1.add(label10);
@@ -743,7 +743,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, Silakan masukkan penerimaan...!!!!");
             tbDokter.requestFocus();
         }else{
-            int reply = JOptionPane.showConfirmDialog(null,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??\nBisa jadi stok menjadi tidak sinkron karena data stok sudah digunakan..!!","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            int reply = JOptionPane.showConfirmDialog(null,"Eeiiiiiits, udah bener belum data yang mau disimpan..??\nBisa jadi stok menjadi tidak sinkron karena data stok sudah digunakan..!!","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 sukses=true;
                 try {

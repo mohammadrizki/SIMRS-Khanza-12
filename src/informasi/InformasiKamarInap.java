@@ -3,7 +3,6 @@ import simrskhanza.DlgCariBangsal;
 import fungsi.WarnaTable;
 import fungsi.batasInput;
 import fungsi.koneksiDB;
-import fungsi.sekuel;
 import fungsi.validasi;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
@@ -25,7 +24,6 @@ import javax.swing.table.TableColumn;
 public class InformasiKamarInap extends javax.swing.JDialog {
     private final DefaultTableModel tabMode;
     private Connection koneksi=koneksiDB.condb();
-    private sekuel Sequel=new sekuel();
     private validasi Valid=new validasi();
     private DlgCariBangsal bangsal=new DlgCariBangsal(null,false);
     
@@ -243,7 +241,7 @@ public class InformasiKamarInap extends javax.swing.JDialog {
         });
         panelGlass11.add(btnBangsalCari);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass11.add(jLabel6);
@@ -320,7 +318,7 @@ public class InformasiKamarInap extends javax.swing.JDialog {
         panelCari.setPreferredSize(new java.awt.Dimension(44, 43));
         panelCari.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 2, 9));
 
-        R1.setBackground(new java.awt.Color(255, 253, 247));
+        R1.setBackground(new java.awt.Color(240, 250, 230));
         R1.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.pink));
         buttonGroup1.add(R1);
         R1.setSelected(true);
@@ -336,7 +334,7 @@ public class InformasiKamarInap extends javax.swing.JDialog {
         });
         panelCari.add(R1);
 
-        R2.setBackground(new java.awt.Color(255, 253, 247));
+        R2.setBackground(new java.awt.Color(240, 250, 230));
         R2.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.pink));
         buttonGroup1.add(R2);
         R2.setText("Tgl.Masuk :");
@@ -386,7 +384,7 @@ public class InformasiKamarInap extends javax.swing.JDialog {
         });
         panelCari.add(DTPCari2);
 
-        R3.setBackground(new java.awt.Color(255, 253, 247));
+        R3.setBackground(new java.awt.Color(240, 250, 230));
         R3.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.pink));
         buttonGroup1.add(R3);
         R3.setText("Pulang :");

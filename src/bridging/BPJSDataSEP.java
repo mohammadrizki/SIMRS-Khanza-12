@@ -75,7 +75,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
     private int i=0,pilihan=1,reply=0;
     private final Properties prop = new Properties();
     private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd");
-    private BPJSApi api=new BPJSApi();
+    private ApiBPJS api=new ApiBPJS();
     private BPJSCekReferensiFaskes faskes=new BPJSCekReferensiFaskes(null,false);
     private BPJSCekReferensiPenyakit penyakit=new BPJSCekReferensiPenyakit(null,false);
     private BPJSCekReferensiPoli poli=new BPJSCekReferensiPoli(null,false);
@@ -1035,7 +1035,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         internalFrame5.add(jLabel26);
         jLabel26.setBounds(6, 32, 100, 23);
 
-        TanggalPulang.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019 18:10:21" }));
+        TanggalPulang.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020 02:03:54" }));
         TanggalPulang.setDisplayFormat("dd-MM-yyyy HH:mm:ss");
         TanggalPulang.setName("TanggalPulang"); // NOI18N
         TanggalPulang.setOpaque(false);
@@ -1089,7 +1089,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         jLabel30.setBounds(0, 25, 102, 23);
 
         TanggalRujukKeluar.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalRujukKeluar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019" }));
+        TanggalRujukKeluar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020" }));
         TanggalRujukKeluar.setDisplayFormat("dd-MM-yyyy");
         TanggalRujukKeluar.setName("TanggalRujukKeluar"); // NOI18N
         TanggalRujukKeluar.setOpaque(false);
@@ -1392,11 +1392,11 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
             }
         });
 
@@ -1475,7 +1475,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         jLabel20.setBounds(187, 102, 65, 23);
 
         TanggalSEP.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalSEP.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019" }));
+        TanggalSEP.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020" }));
         TanggalSEP.setDisplayFormat("dd-MM-yyyy");
         TanggalSEP.setName("TanggalSEP"); // NOI18N
         TanggalSEP.setOpaque(false);
@@ -1495,7 +1495,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         jLabel22.setBounds(0, 102, 90, 23);
 
         TanggalRujuk.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalRujuk.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019" }));
+        TanggalRujuk.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020" }));
         TanggalRujuk.setDisplayFormat("dd-MM-yyyy");
         TanggalRujuk.setName("TanggalRujuk"); // NOI18N
         TanggalRujuk.setOpaque(false);
@@ -1904,7 +1904,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         jLabel38.setBounds(571, 132, 58, 23);
 
         TanggalKKL.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalKKL.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019" }));
+        TanggalKKL.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020" }));
         TanggalKKL.setDisplayFormat("dd-MM-yyyy");
         TanggalKKL.setName("TanggalKKL"); // NOI18N
         TanggalKKL.setOpaque(false);
@@ -2197,7 +2197,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -2211,14 +2211,14 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-06-2019" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "29-02-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
         DTPCari2.setPreferredSize(new java.awt.Dimension(95, 23));
         panelGlass9.add(DTPCari2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass9.add(jLabel6);
@@ -2488,7 +2488,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
                 System.out.println("Notifikasi Bridging : "+ex);
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Silakan pilih dulu data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Silakan pilih dulu data yang mau dihapus..!!");
         }            
 }//GEN-LAST:event_BtnHapusActionPerformed
 
@@ -2663,7 +2663,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
                 }
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Silakan pilih dulu data yang hendak diganti..!!");
+            JOptionPane.showMessageDialog(null,"Silakan pilih dulu data yang mau diganti..!!");
         } 
 }//GEN-LAST:event_BtnEditActionPerformed
 
@@ -2908,7 +2908,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         }        
     }//GEN-LAST:event_ppSEPBtnPrintActionPerformed
@@ -2919,7 +2919,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             WindowUpdatePulang.setLocationRelativeTo(internalFrame1);
             WindowUpdatePulang.setVisible(true);
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak diupdate tanggal pulangnya...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau diupdate tanggal pulangnya...!!!!");
             BtnBatal.requestFocus();
         }
         this.setCursor(Cursor.getDefaultCursor());
@@ -2987,7 +2987,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
                             kamarinap.setLocationRelativeTo(internalFrame1);
                             kamarinap.emptTeks();
                             kamarinap.isCek();
-                            kamarinap.setNoRm(TNoRw.getText()); 
+                            kamarinap.setNoRm(TNoRw.getText(),TNoRM.getText(),TPasien.getText()); 
                             kamarinap.setVisible(true);                    
                         }  
                     }
@@ -3063,7 +3063,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
                 }
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data peserta yang hendak dimapping transaksinya...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data peserta yang mau dimapping transaksinya...!!!!");
             BtnBatal.requestFocus();
         }
         this.setCursor(Cursor.getDefaultCursor());
@@ -3078,7 +3078,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             detail.setLocationRelativeTo(internalFrame1);
             detail.setVisible(true);
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP ...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP ...!!!!");
             BtnBatal.requestFocus();
         }
         this.setCursor(Cursor.getDefaultCursor());            
@@ -3171,7 +3171,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
                 }
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data peserta yang hendak dimapping transaksinya...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data peserta yang mau dimapping transaksinya...!!!!");
             BtnBatal.requestFocus();
         }
         this.setCursor(Cursor.getDefaultCursor());
@@ -3187,7 +3187,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             WindowRujukan.setLocationRelativeTo(internalFrame1);
             WindowRujukan.setVisible(true);
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dibuatkan rujukan...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dibuatkan rujukan...!!!!");
             BtnBatal.requestFocus();
         }
         this.setCursor(Cursor.getDefaultCursor());
@@ -3358,7 +3358,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         }   
     }//GEN-LAST:event_ppSEP1BtnPrintActionPerformed
@@ -3384,7 +3384,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         } 
     }//GEN-LAST:event_ppSEP2BtnPrintActionPerformed
@@ -3412,7 +3412,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         } 
     }//GEN-LAST:event_ppSEP3BtnPrintActionPerformed
@@ -3738,7 +3738,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         }  
     }//GEN-LAST:event_ppSEP4BtnPrintActionPerformed
@@ -3762,7 +3762,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         }  
     }//GEN-LAST:event_ppSEP5BtnPrintActionPerformed
@@ -3788,7 +3788,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         } 
     }//GEN-LAST:event_ppSEP6BtnPrintActionPerformed
@@ -3816,7 +3816,7 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
             }                
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
             BtnBatal.requestFocus();
         } 
     }//GEN-LAST:event_ppSEP7BtnPrintActionPerformed

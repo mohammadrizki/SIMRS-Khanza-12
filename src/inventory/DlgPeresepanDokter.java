@@ -499,7 +499,7 @@ public final class DlgPeresepanDokter extends javax.swing.JDialog {
         panelisi3.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi3.add(label9);
@@ -1053,8 +1053,11 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
             Valid.textKosong(KdDokter,"Dokter");
         }else if(NoResep.getText().trim().equals("")){
             Valid.textKosong(NoResep,"No.Resep");
+        }else if(ttl<=0){
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan masukkan terlebih dahulu obat yang mau diberikan...!!!");
+            TCari.requestFocus();
         }else{
-            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {                 
                 ChkJln.setSelected(false);    
                 Sequel.AutoComitFalse();
@@ -1220,7 +1223,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
             emptTeksobat();
         }else if(ChkRM.isSelected()==false){
             NoResep.setEditable(true);
-            NoResep.setBackground(new Color(255, 253, 247));
+            NoResep.setBackground(new Color(250,255,245));
             NoResep.setText("");
         }
     }//GEN-LAST:event_ChkRMItemStateChanged
@@ -1492,7 +1495,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
                 }                  
                 namajenis[z]=tbResep.getValueAt(i,7).toString();
                 aturan[z]=tbResep.getValueAt(i,8).toString();
-                industri[z]=tbResep.getValueAt(i,8).toString();
+                industri[z]=tbResep.getValueAt(i,9).toString();
                 try {
                     beli[z]=Double.parseDouble(tbResep.getValueAt(i,10).toString());
                 } catch (Exception e) {
@@ -1703,7 +1706,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
             }
         }else if(status.equals("ranap")){
             bangsal=akses.getkdbangsal();
-        }            
+        }  
     }
     
     public void setNoRm(String norwt,Date tanggal, String jam,String menit,String detik,String KodeDokter,String NamaDokter,String status) {        

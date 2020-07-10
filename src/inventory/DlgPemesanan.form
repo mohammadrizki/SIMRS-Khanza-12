@@ -200,13 +200,13 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="70" width="100" height="30"/>
+                  <AbsoluteConstraints x="10" y="62" width="100" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="widget.Label" name="label10">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Keyword :"/>
+                <Property name="text" type="java.lang.String" value="Key Word :"/>
                 <Property name="name" type="java.lang.String" value="label10" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[75, 23]"/>

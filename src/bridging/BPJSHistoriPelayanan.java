@@ -46,7 +46,7 @@ public final class BPJSHistoriPelayanan extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private int i=0;
     private DlgPasien pasien=new DlgPasien(null,false);
-    private BPJSApi api=new BPJSApi();
+    private ApiBPJS api=new ApiBPJS();
     private String URL="",link="";
     private HttpHeaders headers ;
     private HttpEntity requestEntity;
@@ -427,7 +427,7 @@ public final class BPJSHistoriPelayanan extends javax.swing.JDialog {
                             form4.setVisible(true);
                             this.setCursor(Cursor.getDefaultCursor());
                         }else{
-                            JOptionPane.showMessageDialog(null,"Maaf silakan pilih data terlebih dahulu..!!");
+                            JOptionPane.showMessageDialog(null,"Maaf silahkan pilih data terlebih dahulu..!!");
                         }
                         break;
                     case "Via Cek No.Rujukan RS di VClaim":
@@ -441,7 +441,7 @@ public final class BPJSHistoriPelayanan extends javax.swing.JDialog {
                             form5.setVisible(true);
                             this.setCursor(Cursor.getDefaultCursor());
                         }else{
-                            JOptionPane.showMessageDialog(null,"Maaf silakan pilih data terlebih dahulu..!!");
+                            JOptionPane.showMessageDialog(null,"Maaf silahkan pilih data terlebih dahulu..!!");
                         }
                         break;
                     

@@ -164,7 +164,7 @@ public final class DlgPembayaranPerAKunBayar2 extends javax.swing.JDialog {
         panelGlass5.setPreferredSize(new java.awt.Dimension(55, 55));
         panelGlass5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        label17.setText("Keyword :");
+        label17.setText("Key Word :");
         label17.setName("label17"); // NOI18N
         label17.setPreferredSize(new java.awt.Dimension(60, 23));
         panelGlass5.add(label17);

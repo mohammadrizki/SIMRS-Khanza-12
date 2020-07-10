@@ -610,7 +610,7 @@ public class CoronaPasien extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Bridging Kemenkes Pasien Teridentifikasi Corona ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Bridging Kemenkes Pasien Teridentifikasi Corona ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1798,7 +1798,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
     private void BtnKecamatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKecamatanActionPerformed
         if(KodeKabupaten.getText().equals("")||NamaKabupaten.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Silahkan pilih kabupaten terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null, "Silakan pilih kabupaten terlebih dahulu..!!");
             BtnKabupaten.requestFocus();
         }else{
             kecamatan.setCari(NamaKecamatan.getText());
@@ -1855,7 +1855,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
     private void BtnKabupatenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKabupatenActionPerformed
         if(KodePropinsi.getText().equals("")||NamaPropinsi.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Silahkan pilih propinsi terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null, "Silakan pilih propinsi terlebih dahulu..!!");
             BtnPropinsi.requestFocus();
         }else{
             kabupaten.setCari(NamaKabupaten.getText());

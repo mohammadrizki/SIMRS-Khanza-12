@@ -12,7 +12,7 @@
 
 package keuangan;
 
-import bridging.PcareApi;
+import bridging.ApiPcare;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kepegawaian.DlgCariPetugas;
@@ -67,7 +67,6 @@ public final class DlgCariPerawatanRalan extends javax.swing.JDialog {
     private String[] kode,nama,kategori;
     private double[] totaltnd,bagianrs,bhp,jmdokter,jmperawat,kso,menejemen;
     private int jml=0,i=0,index=0;
-    public  DlgJnsPerawatanRalan perawatan=new DlgJnsPerawatanRalan(null,false);
     public  DlgCariDokter dokter=new DlgCariDokter(null,false);
     public  DlgCariPetugas petugas=new DlgCariPetugas(null,false);
     private HttpHeaders headers;
@@ -76,7 +75,7 @@ public final class DlgCariPerawatanRalan extends javax.swing.JDialog {
     private JsonNode root;
     private JsonNode nameNode;
     private JsonNode response;
-    private PcareApi api=new PcareApi();
+    private ApiPcare api=new ApiPcare();
     private final Properties prop = new Properties();
 
     /**
@@ -493,7 +492,7 @@ public final class DlgCariPerawatanRalan extends javax.swing.JDialog {
         panelisi3.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi3.add(label9);
@@ -817,6 +816,7 @@ public final class DlgCariPerawatanRalan extends javax.swing.JDialog {
     private void BtnTambahTindakanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTambahTindakanActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));        
         //perawatan.setModal(true);
+        DlgJnsPerawatanRalan perawatan=new DlgJnsPerawatanRalan(null,false);
         perawatan.emptTeks();
         perawatan.isCek();
         perawatan.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);

@@ -36,7 +36,6 @@ import javax.swing.table.TableColumn;
  */
 public final class DlgCariPoli2 extends javax.swing.JDialog {
     private final DefaultTableModel tabMode;
-    private sekuel Sequel=new sekuel();
     private validasi Valid=new validasi();
     private Connection koneksi=koneksiDB.condb();
     private PreparedStatement ps;
@@ -99,7 +98,6 @@ public final class DlgCariPoli2 extends javax.swing.JDialog {
             });
         }
     }
-    private DlgPoli poli=new DlgPoli(null,false);
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -159,7 +157,7 @@ public final class DlgCariPoli2 extends javax.swing.JDialog {
         panelisi3.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi3.add(label9);
@@ -301,6 +299,7 @@ public final class DlgCariPoli2 extends javax.swing.JDialog {
 
     private void BtnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTambahActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        DlgPoli poli=new DlgPoli(null,false);
         poli.emptTeks();
         poli.isCek();
         poli.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);

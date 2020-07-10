@@ -433,7 +433,7 @@ public final class DlgPerkiraanBiayaRanap extends javax.swing.JDialog {
         });
         panelGlass5.add(BtnSeek2);
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelGlass5.add(label9);

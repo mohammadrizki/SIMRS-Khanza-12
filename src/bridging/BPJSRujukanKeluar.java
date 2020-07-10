@@ -70,7 +70,7 @@ public final class BPJSRujukanKeluar extends javax.swing.JDialog {
     private PreparedStatement ps;
     private ResultSet rs;
     private int i=0;
-    private BPJSApi api=new BPJSApi();
+    private ApiBPJS api=new ApiBPJS();
     private Date date = new Date();
     private BPJSCekReferensiFaskes faskes=new BPJSCekReferensiFaskes(null,false);
     private BPJSCekReferensiPenyakit penyakit=new BPJSCekReferensiPenyakit(null,false);
@@ -508,7 +508,7 @@ public final class BPJSRujukanKeluar extends javax.swing.JDialog {
         panelGlass9.setPreferredSize(new java.awt.Dimension(44, 44));
         panelGlass9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 9));
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass9.add(jLabel6);
@@ -776,7 +776,7 @@ public final class BPJSRujukanKeluar extends javax.swing.JDialog {
                 }
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Silakan pilih dulu data yang hendak dihapus..!!");
+            JOptionPane.showMessageDialog(null,"Silakan pilih dulu data yang mau dihapus..!!");
         }  
 }//GEN-LAST:event_BtnHapusActionPerformed
 
@@ -958,7 +958,7 @@ public final class BPJSRujukanKeluar extends javax.swing.JDialog {
             Valid.MyReport("rptBridgingRujukanBPJS.jasper",param,"::[ Surat Rujukan Keluar VClaim ]::");
             this.setCursor(Cursor.getDefaultCursor());
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data SEP yang hendak dicetak...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data SEP yang mau dicetak...!!!!");
         }   
     }//GEN-LAST:event_MnSuratRujukanActionPerformed
 

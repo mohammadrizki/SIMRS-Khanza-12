@@ -388,7 +388,7 @@ public final class DlgUbahPeriksaLab extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Ubah Data Hasil Periksa Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Ubah Data Hasil Periksa Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -567,7 +567,7 @@ public final class DlgUbahPeriksaLab extends javax.swing.JDialog {
         PanelInput.add(BtnCari1);
         BtnCari1.setBounds(713, 102, 28, 23);
 
-        Scroll1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)));
+        Scroll1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)));
         Scroll1.setName("Scroll1"); // NOI18N
 
         tbTarif.setName("tbTarif"); // NOI18N
@@ -651,7 +651,7 @@ public final class DlgUbahPeriksaLab extends javax.swing.JDialog {
         PanelInput.add(NmPerujuk);
         NmPerujuk.setBounds(177, 72, 180, 23);
 
-        jLabel15.setText("Tgl. Periksa :");
+        jLabel15.setText("Tgl.Periksa :");
         jLabel15.setName("jLabel15"); // NOI18N
         PanelInput.add(jLabel15);
         jLabel15.setBounds(375, 72, 87, 23);
@@ -668,14 +668,6 @@ public final class DlgUbahPeriksaLab extends javax.swing.JDialog {
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
-        tbPemeriksaan.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
         tbPemeriksaan.setName("tbPemeriksaan"); // NOI18N
         Scroll.setViewportView(tbPemeriksaan);
 
@@ -743,7 +735,7 @@ public final class DlgUbahPeriksaLab extends javax.swing.JDialog {
         }else if(jml==0){
             Valid.textKosong(Pemeriksaan,"Data Pemeriksaan");
         }else{
-            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 try {                    
                     koneksi.setAutoCommit(false);
@@ -985,7 +977,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
    try{
        tabMode.removeRow(tbPemeriksaan.getSelectedRow());
    }catch(Exception ex){
-       JOptionPane.showMessageDialog(null,"Pilih dulu data yang hendak dihapus..!!");
+       JOptionPane.showMessageDialog(null,"Pilih dulu data yang mau dihapus..!!");
    }
 }//GEN-LAST:event_BtnHapusActionPerformed
 

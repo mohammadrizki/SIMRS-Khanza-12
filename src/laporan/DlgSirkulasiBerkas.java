@@ -779,7 +779,7 @@ public class DlgSirkulasiBerkas extends javax.swing.JDialog {
         });
         panelGlass11.add(BtnSeek2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(80, 23));
         panelGlass11.add(jLabel6);
@@ -964,7 +964,7 @@ public class DlgSirkulasiBerkas extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             NoRm.requestFocus();
         }else if(NmPasien.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(TOut.getText().toString().equals("")){
             JOptionPane.showMessageDialog(null,"Maaf, Data berkas dengan No.R.M. "+NoRm.getText()+" belum kembali. Data belum bisa anda hapus...!!!!");
         }else{

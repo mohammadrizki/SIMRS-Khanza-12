@@ -464,7 +464,7 @@ public class HibahObatBHP extends javax.swing.JDialog {
         panelisi1.add(BtnSimpan);
         BtnSimpan.setBounds(10, 32, 100, 30);
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(75, 23));
         panelisi1.add(label10);
@@ -787,10 +787,10 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
         }else if(aktifkanbatch.equals("yes")&&(row>0)){
             Valid.textKosong(TCari,"No.Batch");
         }else if(index<=0){
-            JOptionPane.showMessageDialog(null,"Maaf, silakan masukkan data hibah...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan masukkan data hibah...!!!!");
             tbDokter.requestFocus();
         }else{
-            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 try {
                     Sequel.AutoComitFalse();
@@ -819,11 +819,11 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                                         if(aktifkanbatch.equals("yes")){
                                             Trackobat.catatRiwayat(tbDokter.getValueAt(i,2).toString(),Valid.SetAngka(tbDokter.getValueAt(i,10).toString()),0,"Hibah",akses.getkode(),kdgudang.getText(),"Simpan",tbDokter.getValueAt(i,11).toString(),NoFaktur.getText());
                                             Sequel.menyimpan("gudangbarang","'"+tbDokter.getValueAt(i,2).toString()+"','"+kdgudang.getText()+"','"+tbDokter.getValueAt(i,10).toString()+"','"+tbDokter.getValueAt(i,11).toString()+"','"+NoFaktur.getText()+"'", 
-                                                       "stok=stok+'"+tbDokter.getValueAt(i,10).toString()+"'","kode_brng='"+tbDokter.getValueAt(i,2).toString()+"' and kd_bangsal='"+kdgudang.getText()+"' and no_batch='"+tbDokter.getValueAt(i,11).toString()+"' and no_hibah='"+NoFaktur.getText()+"'");
+                                                       "stok=stok+'"+tbDokter.getValueAt(i,10).toString()+"'","kode_brng='"+tbDokter.getValueAt(i,2).toString()+"' and kd_bangsal='"+kdgudang.getText()+"' and no_batch='"+tbDokter.getValueAt(i,11).toString()+"' and no_faktur='"+NoFaktur.getText()+"'");
                                         }else{
                                             Trackobat.catatRiwayat(tbDokter.getValueAt(i,2).toString(),Valid.SetAngka(tbDokter.getValueAt(i,10).toString()),0,"Hibah",akses.getkode(),kdgudang.getText(),"Simpan","","");
                                             Sequel.menyimpan("gudangbarang","'"+tbDokter.getValueAt(i,2).toString()+"','"+kdgudang.getText()+"','"+tbDokter.getValueAt(i,10).toString()+"','',''", 
-                                                       "stok=stok+'"+tbDokter.getValueAt(i,10).toString()+"'","kode_brng='"+tbDokter.getValueAt(i,2).toString()+"' and kd_bangsal='"+kdgudang.getText()+"' and no_batch='' and no_hibah=''");
+                                                       "stok=stok+'"+tbDokter.getValueAt(i,10).toString()+"'","kode_brng='"+tbDokter.getValueAt(i,2).toString()+"' and kd_bangsal='"+kdgudang.getText()+"' and no_batch='' and no_faktur=''");
                                         }   
                                         simpanbatch();
                                     }else{

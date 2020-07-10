@@ -449,7 +449,7 @@ public final class PerpustakaanAnggota extends javax.swing.JDialog {
         panelGlass10.setPreferredSize(new java.awt.Dimension(44, 44));
         panelGlass10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 3, 9));
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass10.add(jLabel6);
@@ -1016,7 +1016,7 @@ private void EmailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Ema
                         "select no_anggota, nama_anggota, tmp_lahir, tgl_lahir, j_kel, alamat, no_telp, email,"+
                         "tgl_gabung, masa_berlaku, jenis_anggota, nomer_id from perpustakaan_anggota where no_anggota='"+NoAnggota.getText()+"'",param);
             }else{
-                JOptionPane.showMessageDialog(null,"Silakan pilih data yang hendak dicetak kartu anggotanya ..!!!");
+                JOptionPane.showMessageDialog(null,"Silakan pilih data yang mau dicetak kartu anggotanya ..!!!");
             }
         }
         this.setCursor(Cursor.getDefaultCursor());

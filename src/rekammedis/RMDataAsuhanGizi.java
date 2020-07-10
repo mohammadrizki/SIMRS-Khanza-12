@@ -557,7 +557,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         DTPCari2.setPreferredSize(new java.awt.Dimension(95, 23));
         panelGlass9.add(DTPCari2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(90, 23));
         panelGlass9.add(jLabel6);
@@ -637,7 +637,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
 
         scrollInput.setName("scrollInput"); // NOI18N
 
-        FormInput.setBackground(new java.awt.Color(255, 253, 247));
+        FormInput.setBackground(new java.awt.Color(250, 255, 245));
         FormInput.setBorder(null);
         FormInput.setName("FormInput"); // NOI18N
         FormInput.setPreferredSize(new java.awt.Dimension(100, 555));

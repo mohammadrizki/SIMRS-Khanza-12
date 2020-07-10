@@ -50,6 +50,8 @@ import net.sf.jasperreports.engine.export.JRExporterContext;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.view.JasperViewer;
 import uz.ncipro.calendar.JDateTimePicker;
+import widget.Button;
+import widget.TextArea;
 /**
  *
  * @author Owner
@@ -70,7 +72,8 @@ public final class validasi {
     private ResultSet rs;
     private final Calendar now = Calendar.getInstance();
     private final int year=(now.get(Calendar.YEAR));
-    private static final Properties prop = new Properties();  
+    private String[] nomina={"","satu","dua","tiga","empat","lima","enam",
+                         "tujuh","delapan","sembilan","sepuluh","sebelas"};
     
     public validasi(){
         super();
@@ -350,7 +353,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getText()+"'", update);                 
         }
@@ -358,7 +361,7 @@ public final class validasi {
     
     public void editTable(String table,String field_acuan,JTextField nilai_field,String update) {
         if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getText()+"'", update);                 
         }
@@ -368,7 +371,7 @@ public final class validasi {
         if(tabMode.getRowCount()==0){
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
         }else if(nilai_field.trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.trim().equals("")){            
             sek.mengedit(table,field_acuan+"="+nilai_field, update,i,a);                 
         }
@@ -379,7 +382,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getSelectedItem().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(nilai_field.getSelectedItem()!=""){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getSelectedItem()+"'", update);            
             
@@ -391,7 +394,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getText()+"'", update);            
             
@@ -427,7 +430,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.meghapus(table,field,nilai_field.getText());            
             
@@ -439,7 +442,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getSelectedItem().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(nilai_field.getSelectedItem()!=""){            
             String data=nilai_field.getSelectedItem().toString();
             sek.meghapus(table,field,data);     
@@ -450,6 +453,33 @@ public final class validasi {
         cmb.removeAllItems();
         try {
             ps=connect.prepareStatement("select "+field+" from "+table+" order by "+field);
+            try{
+                rs=ps.executeQuery();
+                while(rs.next()){
+                    String item=rs.getString(1);
+                    cmb.addItem(item);
+                    a++;
+                }          
+            }catch(Exception e){
+                System.out.println("Notifikasi : "+e);
+            }finally{
+                if(rs != null){
+                    rs.close();
+                }
+                
+                if(ps != null){
+                    ps.close();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Notifikasi : "+e);
+        }
+    }
+    
+    public void loadCombo(JComboBox cmb,String query){
+        cmb.removeAllItems();
+        try {
+            ps=connect.prepareStatement(query);
             try{
                 rs=ps.executeQuery();
                 while(rs.next()){
@@ -883,6 +913,14 @@ public final class validasi {
             kiri.requestFocus();
         }
     }
+    
+    public void pindah(KeyEvent evt, Button kiri, TextArea kanan) {
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            kanan.requestFocus();
+        }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
+            kiri.requestFocus();
+        }
+    }
 
     public void pindah(java.awt.event.KeyEvent evt,JDateTimePicker kiri,JTextField kanan){
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
@@ -936,17 +974,15 @@ public final class validasi {
         String os = System.getProperty("os.name").toLowerCase();
         Runtime rt = Runtime.getRuntime();                                
         try{ 
-            Properties prop = new Properties();
-            prop.loadFromXML(new FileInputStream("setting/database.xml"));
             if(os.contains("win")) {
-                rt.exec( "rundll32 url.dll,FileProtocolHandler " + "http://"+koneksiDB.HOSTHYBRIDWEB()+":"+prop.getProperty("PORTWEB")+"/"+prop.getProperty("HYBRIDWEB")+"/"+url);
+                rt.exec( "rundll32 url.dll,FileProtocolHandler " + "http://"+koneksiDB.HOSTHYBRIDWEB()+":"+koneksiDB.PORTWEB()+"/"+koneksiDB.HYBRIDWEB()+"/"+url);
             }else if (os.contains("mac")) {
-                rt.exec( "open " + "http://"+koneksiDB.HOSTHYBRIDWEB()+":"+prop.getProperty("PORTWEB")+"/"+prop.getProperty("HYBRIDWEB")+"/"+url);
+                rt.exec( "open " + "http://"+koneksiDB.HOSTHYBRIDWEB()+":"+koneksiDB.PORTWEB()+"/"+koneksiDB.HYBRIDWEB()+"/"+url);
             }else if (os.contains("nix") || os.contains("nux")) {
                 String[] browsers = {"x-www-browser","epiphany", "firefox", "mozilla", "konqueror","chrome","chromium","netscape","opera","links","lynx","midori"};
                 // Build a command string which looks like "browser1 "url" || browser2 "url" ||..."
                 StringBuilder cmd = new StringBuilder();
-                for(i=0; i<browsers.length; i++) cmd.append(i==0  ? "" : " || ").append(browsers[i]).append(" \"").append("http://").append(koneksiDB.HOSTHYBRIDWEB()+":"+prop.getProperty("PORTWEB")).append("/").append(prop.getProperty("HYBRIDWEB")).append("/").append(url).append( "\" ");
+                for(i=0; i<browsers.length; i++) cmd.append(i==0  ? "" : " || ").append(browsers[i]).append(" \"").append("http://").append(koneksiDB.HOSTHYBRIDWEB()+":"+koneksiDB.PORTWEB()).append("/").append(koneksiDB.HYBRIDWEB()).append("/").append(url).append( "\" ");
                 rt.exec(new String[] { "sh", "-c", cmd.toString() });
             } 
         }catch (Exception e){
@@ -958,8 +994,6 @@ public final class validasi {
         String os = System.getProperty("os.name").toLowerCase();
         Runtime rt = Runtime.getRuntime();                                
         try{ 
-            Properties prop = new Properties();
-            prop.loadFromXML(new FileInputStream("setting/database.xml"));
             if(os.contains("win")) {
                 rt.exec( "rundll32 url.dll,FileProtocolHandler "+url);
             }else if (os.contains("mac")) {
@@ -978,9 +1012,7 @@ public final class validasi {
     
     public void printUrl(String url) throws URISyntaxException{
         try{
-           Properties prop = new Properties();
-           prop.loadFromXML(new FileInputStream("setting/database.xml"));            
-           desktop.print(new File(new java.net.URI("http://"+koneksiDB.HOSTHYBRIDWEB()+":"+prop.getProperty("PORTWEB")+"/"+url)));  
+           desktop.print(new File(new java.net.URI("http://"+koneksiDB.HOSTHYBRIDWEB()+":"+koneksiDB.PORTWEB()+"/"+url)));  
         }catch (Exception e) {
            System.out.println(e);
         }
@@ -989,7 +1021,7 @@ public final class validasi {
     public void SetTgl(DefaultTableModel tabMode,JTable table,JDateTimePicker dtp,int i){
         j=table.getSelectedRow();
         try {
-           Date dtpa = new SimpleDateFormat("yyyy-MM-dd").parse(tabMode.getValueAt(j,i).toString());
+           Date dtpa = new SimpleDateFormat("yyyy-MM-dd").parse(tabMode.getValueAt(j,i).toString().replaceAll("'",""));
            dtp.setDate(dtpa);
         } catch (ParseException ex) {
            dtp.setDate(new Date());
@@ -997,6 +1029,7 @@ public final class validasi {
     }
     
     public String SetTgl(String original){
+        original=original.replaceAll("'","");
         s = "";
         try {
             s=original.substring(6,10)+"-"+original.substring(3,5)+"-"+original.substring(0,2);
@@ -1005,7 +1038,18 @@ public final class validasi {
         return s;
     }
     
+    public String SetTglJam(String original){
+        original=original.replaceAll("'","");
+        s = "";
+        try {
+            s=original.substring(6,10)+"-"+original.substring(3,5)+"-"+original.substring(0,2)+" "+original.substring(11,19);
+        }catch (Exception e) {
+        }   
+        return s;
+    }
+    
     public String SetTgl3(String original){
+        original=original.replaceAll("'","");
         s = "";
         try {
             s=original.substring(8,10)+"-"+original.substring(5,7)+"-"+original.substring(0,4);
@@ -1025,7 +1069,7 @@ public final class validasi {
     
     public void SetTgl(JDateTimePicker dtp,String tgl){            
         try {
-           Date dtpa = new SimpleDateFormat("yyyy-MM-dd").parse(tgl);
+           Date dtpa = new SimpleDateFormat("yyyy-MM-dd").parse(tgl.replaceAll("'",""));
            dtp.setDate(dtpa);
         } catch (ParseException ex) {
            dtp.setDate(new Date());
@@ -1034,7 +1078,7 @@ public final class validasi {
     
     public void SetTgl2(JDateTimePicker dtp,String tgl){            
         try {
-           Date dtpa = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(tgl);
+           Date dtpa = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(tgl.replaceAll("'",""));
            dtp.setDate(dtpa);
         } catch (ParseException ex) {
            dtp.setDate(new Date());
@@ -1043,7 +1087,7 @@ public final class validasi {
     
     public Date SetTgl2(String tgl){
         try {
-           Date dtpa = new SimpleDateFormat("yyyy-MM-dd").parse(tgl);
+           Date dtpa = new SimpleDateFormat("yyyy-MM-dd").parse(tgl.replaceAll("'",""));
            return dtpa;
         } catch (ParseException ex) {
            return new Date();
@@ -1140,5 +1184,51 @@ public final class validasi {
             return Math.round(number);
         }
     }
+    
+    public String terbilang(double angka){
+        if(angka<12)
+        {
+          return nomina[(int)angka];
+        }
+        
+        if(angka>=12 && angka <=19)
+        {
+            return nomina[(int)angka%10] +" belas ";
+        }
+        
+        if(angka>=20 && angka <=99)
+        {
+            return nomina[(int)angka/10] +" puluh "+nomina[(int)angka%10];
+        }
+        
+        if(angka>=100 && angka <=199)
+        {
+            return "seratus "+ terbilang(angka%100);
+        }
+        
+        if(angka>=200 && angka <=999)
+        {
+            return nomina[(int)angka/100]+" ratus "+terbilang(angka%100);
+        }
+        
+        if(angka>=1000 && angka <=1999)
+        {
+            return "seribu "+ terbilang(angka%1000);
+        }
+        
+        if(angka >= 2000 && angka <=999999)
+        {
+            return terbilang((int)angka/1000)+" ribu "+ terbilang(angka%1000);
+        }
+        
+        if(angka >= 1000000 && angka <=999999999)
+        {
+            return terbilang((int)angka/1000000)+" juta "+ terbilang(angka%1000000);
+        }
+        
+        return "";
+    }
+
+    
        
 }

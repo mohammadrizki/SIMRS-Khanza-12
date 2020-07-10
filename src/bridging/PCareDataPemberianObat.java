@@ -43,7 +43,7 @@ public class PCareDataPemberianObat extends javax.swing.JDialog {
     private ObjectMapper mapper = new ObjectMapper();
     private JsonNode root;
     private JsonNode nameNode;
-    private PcareApi api=new PcareApi();
+    private ApiPcare api=new ApiPcare();
     private Jurnal jur=new Jurnal();
     private double ttlhpp=0,ttljual=0;
     private riwayatobat Trackobat=new riwayatobat();
@@ -281,7 +281,7 @@ public class PCareDataPemberianObat extends javax.swing.JDialog {
         });
         panelGlass8.add(DTPCari2);
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(62, 23));
         panelGlass8.add(label10);
@@ -575,10 +575,17 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                             "and tgl_perawatan='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString()+"' "+
                             "and jam='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()+"'");
                         
-                        Trackobat.catatRiwayat(tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString(),
+                        if(aktifkanbatch.equals("yes")){
+                            Sequel.mengedit("data_batch","no_batch=? and kode_brng=? and no_faktur=?","sisa=sisa+?",3,new String[]{
+                                tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString(),
+                                tbDokter.getValueAt(tbDokter.getSelectedRow(),16).toString(),
+                                tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString(),
+                                tbDokter.getValueAt(tbDokter.getSelectedRow(),17).toString()
+                            });
+                            Trackobat.catatRiwayat(tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString(),
                                 Valid.SetAngka(tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString()),
                                 0,"Pemberian Obat",akses.getkode(),tbDokter.getValueAt(tbDokter.getSelectedRow(),15).toString(),"Hapus",tbDokter.getValueAt(tbDokter.getSelectedRow(),16).toString(),tbDokter.getValueAt(tbDokter.getSelectedRow(),17).toString());
-                        Sequel.menyimpan("gudangbarang","'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString()+"',"+
+                            Sequel.menyimpan("gudangbarang","'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString()+"',"+
                                 "'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),15).toString()+"',"+
                                 "'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString()+"',"+
                                 "'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),16).toString()+"',"+
@@ -587,14 +594,19 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                                 "kode_brng='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString()+"' and "+
                                 "kd_bangsal='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),15).toString()+"' and "+
                                 "no_batch='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),16).toString()+"' and "+
-                                "no_faktur='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),17).toString()+"'");                    
-                        if(aktifkanbatch.equals("yes")){
-                            Sequel.mengedit("data_batch","no_batch=? and kode_brng=? and no_faktur=?","sisa=sisa+?",3,new String[]{
-                                tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString(),
-                                tbDokter.getValueAt(tbDokter.getSelectedRow(),16).toString(),
-                                tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString(),
-                                tbDokter.getValueAt(tbDokter.getSelectedRow(),17).toString()
-                            });
+                                "no_faktur='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),17).toString()+"'"); 
+                        }else{
+                            Trackobat.catatRiwayat(tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString(),
+                                Valid.SetAngka(tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString()),
+                                0,"Pemberian Obat",akses.getkode(),tbDokter.getValueAt(tbDokter.getSelectedRow(),15).toString(),"Hapus","","");
+                            Sequel.menyimpan("gudangbarang","'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString()+"',"+
+                                "'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),15).toString()+"',"+
+                                "'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString()+"',"+
+                                "'',''", 
+                                "stok=stok+'"+tbDokter.getValueAt(tbDokter.getSelectedRow(),11).toString()+"'",
+                                "kode_brng='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),7).toString()+"' and "+
+                                "kd_bangsal='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),15).toString()+"' and "+
+                                "no_batch='' and no_faktur=''"); 
                         }
                         Sequel.queryu2("delete from pcare_obat_diberikan where "+
                             "no_rawat='"+tbDokter.getValueAt(tbDokter.getSelectedRow(),3).toString()+"' "+
@@ -628,7 +640,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             } 
         }            
     }else{            
-        JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data peserta...!!!!");
+        JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data peserta...!!!!");
         TCari.requestFocus();
     }    
 }//GEN-LAST:event_BtnHapusActionPerformed

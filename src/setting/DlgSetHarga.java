@@ -1235,7 +1235,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         panelisi5.setPreferredSize(new java.awt.Dimension(100, 44));
         panelisi5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi5.add(label9);
@@ -1632,7 +1632,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         panelisi6.setPreferredSize(new java.awt.Dimension(100, 44));
         panelisi6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label11.setText("Keyword :");
+        label11.setText("Key Word :");
         label11.setName("label11"); // NOI18N
         label11.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi6.add(label11);
@@ -1858,7 +1858,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
                 ranapvipumum.requestFocus();
             }else if(ranapvvipumum.getText().trim().equals("")){
-                JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
             }else if(! ranapvvipumum.getText().trim().equals("")){
                 Sequel.queryu("delete from setpenjualanumum");
                 tampilpengaturanhargaumum();
@@ -1869,7 +1869,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
                 ranapvip.requestFocus();
             }else if(ranapvvip.getText().trim().equals("")){
-                JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
             }else if(! ranapvvip.getText().trim().equals("")){
                 Sequel.queryu("delete from setpenjualan where kdjns='"+kdjns.getText()+"'");
                 tampil();
@@ -1880,7 +1880,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
                 ranapvipperbarang.requestFocus();
             }else if(ranapvvipperbarang.getText().trim().equals("")){
-                JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
             }else if(! ranapvvipperbarang.getText().trim().equals("")){
                 Sequel.queryu("delete from setpenjualanperbarang where kode_brng='"+kdbarang.getText()+"'");
                 tampilpengaturanhargaperbarang();

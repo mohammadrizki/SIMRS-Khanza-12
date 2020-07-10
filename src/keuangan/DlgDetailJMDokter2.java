@@ -283,7 +283,7 @@ public class DlgDetailJMDokter2 extends javax.swing.JDialog {
         });
         panelisi4.add(Tgl2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(90, 23));
         panelisi4.add(jLabel6);

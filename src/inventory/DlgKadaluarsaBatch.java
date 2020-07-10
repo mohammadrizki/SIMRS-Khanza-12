@@ -192,7 +192,7 @@ public class DlgKadaluarsaBatch extends javax.swing.JDialog {
         tanggal2.setPreferredSize(new java.awt.Dimension(90, 23));
         panelisi1.add(tanggal2);
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(69, 23));
         panelisi1.add(label10);

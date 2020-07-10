@@ -89,6 +89,7 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
             });
         }
     }
+    
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -150,7 +151,7 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
         panelisi3.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
         panelisi3.add(label9);
@@ -361,10 +362,10 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
         LCount.setText(""+tabMode.getRowCount());
     }
 
-    public void emptTeks() {
+    public void emptTeks() {   
         TCari.requestFocus();
     }
-
+    
     public void setNoRawat(String norawat){
         this.norawat=norawat;
     }
@@ -372,5 +373,5 @@ public final class RMCariHasilRadiologi extends javax.swing.JDialog {
     public JTable getTable(){
         return tbKamar;
     }
-
+    
 }

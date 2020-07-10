@@ -60,7 +60,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         Object[] row={
             "P","No.Kantung","Komponen","G.D.","Rhesus","Aftap","Kadaluarsa",
             "Asal Darah","Status","Jasa Sarana","Paket BHP",
-            "KSO","Menejemen","Biaya"};
+            "KSO","Manajemen","Biaya"};
         tabMode=new DefaultTableModel(null,row){
             @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -458,7 +458,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         });
         panelisi1.add(CmbCariResus);
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(61, 23));
         panelisi1.add(label9);
@@ -677,7 +677,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         panelisi7.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label13.setText("Keyword :");
+        label13.setText("Key Word :");
         label13.setName("label13"); // NOI18N
         label13.setPreferredSize(new java.awt.Dimension(60, 23));
         panelisi7.add(label13);
@@ -761,7 +761,7 @@ public class UTDPenyerahanDarah extends javax.swing.JDialog {
         panelisi8.setPreferredSize(new java.awt.Dimension(100, 43));
         panelisi8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label17.setText("Keyword :");
+        label17.setText("Key Word :");
         label17.setName("label17"); // NOI18N
         label17.setPreferredSize(new java.awt.Dimension(60, 23));
         panelisi8.add(label17);
@@ -1190,7 +1190,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, Silakan masukkan data penyerahan darah...!!!!");
             TCari.requestFocus();
         }else{
-            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 if(verifikasi_penyerahan_darah_di_kasir.equals("No")){
                     status="Sudah Dibayar";
@@ -1263,7 +1263,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                         Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select Penyerahan_Darah from set_akun")+"','PENJUALAN DARAH UTD','0','"+ttl+"'","Rekening");    
                         Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select kd_rek from akun_bayar where nama_bayar=?",CmbAkun.getSelectedItem().toString())+"','CARA BAYAR','"+ttl+"','0'","Rekening"); 
                         jur.simpanJurnal(nopenyerahan.getText(),Valid.SetTgl(tanggal.getSelectedItem()+""),"U","PENJUALAN DARAH DI UTD"+", OLEH "+akses.getkode());                                                
-                        Sequel.menyimpan("tagihan_sadewa","'"+nopenyerahan.getText()+"','-','"+nmpengambil.getText()+"','-',concat('"+Valid.SetTgl(tanggal.getSelectedItem()+"")+
+                        Sequel.menyimpan("tagihan_sadewa","'"+nopenyerahan.getText()+"','-','"+nmpengambil.getText().replaceAll("'","")+"','-',concat('"+Valid.SetTgl(tanggal.getSelectedItem()+"")+
                                 "',' ',CURTIME()),'Pelunasan','"+ttl+"','"+ttl+"','Sudah','"+akses.getkode()+"'","No.Nota");
                     }
                     

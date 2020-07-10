@@ -65,7 +65,7 @@ public final class PCareKegiatanKelompok extends javax.swing.JDialog {
     private JsonNode root;
     private JsonNode nameNode;
     private JsonNode response;
-    private PcareApi api=new PcareApi();
+    private ApiPcare api=new ApiPcare();
     private DlgPasien pasien=new DlgPasien(null,false);
     private double total=0;
     
@@ -687,7 +687,7 @@ public final class PCareKegiatanKelompok extends javax.swing.JDialog {
         DTPCari2.setPreferredSize(new java.awt.Dimension(90, 23));
         panelGlass9.add(DTPCari2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass9.add(jLabel6);

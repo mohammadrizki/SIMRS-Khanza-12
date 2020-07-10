@@ -289,7 +289,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pengiriman Tagihan Inhealth ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pengiriman Tagihan Inhealth ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -703,7 +703,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         if(tbSJP.getSelectedRow()!= -1){
             isMenu();
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data yang hendak ditampilkan tagihannya...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data yang mau ditampilkan tagihannya...!!!!");
         }
     }//GEN-LAST:event_ChkAccorActionPerformed
 
@@ -879,11 +879,11 @@ public final class InhealthTagihan extends javax.swing.JDialog {
             FormMenu.setVisible(true);  
             TabTarif.setVisible(true);  
             ChkAccor.setVisible(true);
-        }else if(ChkAccor.isSelected()==false){           
-            ChkAccor.setVisible(false);            
+        }else if(ChkAccor.isSelected()==false){   
+            ChkAccor.setVisible(false);
             PanelAccor.setPreferredSize(new Dimension(15,HEIGHT));
             FormMenu.setVisible(false);  
-            TabTarif.setVisible(false);      
+            TabTarif.setVisible(false);    
             ChkAccor.setVisible(true);
         }
     }

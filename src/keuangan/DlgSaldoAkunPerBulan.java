@@ -107,7 +107,7 @@ public class DlgSaldoAkunPerBulan extends javax.swing.JDialog {
         ThnCari.setPreferredSize(new java.awt.Dimension(80, 23));
         panelisi1.add(ThnCari);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelisi1.add(jLabel6);

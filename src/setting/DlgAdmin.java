@@ -1,11 +1,11 @@
 /*
-  Dilarang keras menggandakan/mengcopy/menyebarkan/membajak/mendecompile
+  Dilarang keras menggandakan/mengcopy/menyebarkan/membajak/mendecompile 
   Software ini dalam bentuk apapun tanpa seijin pembuat software
   (Khanza.Soft Media). Bagi yang sengaja membajak softaware ini ta
   npa ijin, kami sumpahi sial 1000 turunan, miskin sampai 500 turu
   nan. Selalu mendapat kecelakaan sampai 400 turunan. Anak pertama
   nya cacat tidak punya kaki sampai 300 turunan. Susah cari jodoh
-  sampai umur 50 tahun sampai 200 turunan. Ya Alloh maafkan kami
+  sampai umur 50 tahun sampai 200 turunan. Ya Alloh maafkan kami 
   karena telah berdoa buruk, semua ini kami lakukan karena kami ti
   dak pernah rela karya kami dibajak tanpa ijin.
  */
@@ -21,8 +21,8 @@ import fungsi.validasi;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -37,6 +37,8 @@ public class DlgAdmin extends javax.swing.JDialog {
     private Connection koneksi=koneksiDB.condb();
     private sekuel Sequel=new sekuel();
     private validasi Valid=new validasi();
+    private ResultSet rs;
+    private PreparedStatement ps;
 
     /** Creates new form DlgAdmin
      * @param parent
@@ -47,7 +49,7 @@ public class DlgAdmin extends javax.swing.JDialog {
         this.setLocation(10,10);
         setSize(457,249);
 
-        Object[] row={"Username",
+        Object[] row={"ID Admin",
                       "Password"};
         tabMode=new DefaultTableModel(null,row){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
@@ -139,7 +141,7 @@ public class DlgAdmin extends javax.swing.JDialog {
         panelGlass7.setPreferredSize(new java.awt.Dimension(44, 47));
         panelGlass7.setLayout(null);
 
-        jLabel3.setText("Username :");
+        jLabel3.setText("ID Admin :");
         jLabel3.setName("jLabel3"); // NOI18N
         panelGlass7.add(jLabel3);
         jLabel3.setBounds(0, 12, 69, 23);
@@ -285,7 +287,7 @@ public class DlgAdmin extends javax.swing.JDialog {
 
     private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSimpanActionPerformed
         if(TKd.getText().trim().equals("")){
-            Valid.textKosong(TKd,"Username");
+            Valid.textKosong(TKd,"ID Admin");
         }else if(TNm.getText().trim().equals("")){
             Valid.textKosong(TNm,"Password");
         }else if(tabMode.getRowCount()==0){
@@ -293,7 +295,7 @@ public class DlgAdmin extends javax.swing.JDialog {
             tampil();
             emptTeks();
         }else if(tabMode.getRowCount()>0){
-            JOptionPane.showMessageDialog(null,"Maaf, hanya diijinkan satu Admin Utama ...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Hanya diijinkan satu Admin Utama ...!!!!");
             TKd.requestFocus();
         }
 }//GEN-LAST:event_BtnSimpanActionPerformed
@@ -321,7 +323,7 @@ public class DlgAdmin extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TKd.requestFocus();
         }else if(TNm.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(! TNm.getText().trim().equals("")){
             Sequel.queryu("delete from admin");
             tampil();
@@ -435,22 +437,27 @@ public class DlgAdmin extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     public void tampil() {
-        String sql="select AES_DECRYPT(usere,'nur'),AES_DECRYPT(passworde,'windi') from admin";
-        prosesCari(sql);
-    }
-
-    private void prosesCari(String sql) {
         Valid.tabelKosong(tabMode);
         try{
-            java.sql.Statement stat=koneksi.createStatement();
-            ResultSet rs=stat.executeQuery(sql);
-            while(rs.next()){
-                String kd=rs.getString(1);
-                String nm=rs.getString(2);
-                String[] data={kd,nm};
-                tabMode.addRow(data);
-             }
-        }catch(SQLException e){
+            ps=koneksi.prepareStatement("select AES_DECRYPT(usere,'nur'),AES_DECRYPT(passworde,'windi') from admin");
+            try {
+                rs=ps.executeQuery();
+                while(rs.next()){
+                    tabMode.addRow(new String[]{
+                        rs.getString(1),rs.getString(2)
+                    });
+                 }
+            } catch (Exception e) {
+                System.out.println("Notifikasi : "+e);
+            } finally{
+                if(rs!=null){
+                    rs.close();
+                }
+                if(ps!=null){
+                    ps.close();
+                }
+            }
+        }catch(Exception e){
             System.out.println("Notifikasi : "+e);
         }
     }

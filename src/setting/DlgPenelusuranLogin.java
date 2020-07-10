@@ -270,7 +270,7 @@ public class DlgPenelusuranLogin extends javax.swing.JDialog {
         DTPCari2.setPreferredSize(new java.awt.Dimension(95, 23));
         panelGlass9.add(DTPCari2);
 
-        jLabel6.setText("Keyword :");
+        jLabel6.setText("Key Word :");
         jLabel6.setName("jLabel6"); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(80, 23));
         panelGlass9.add(jLabel6);
@@ -351,7 +351,7 @@ public class DlgPenelusuranLogin extends javax.swing.JDialog {
                     tampil();
                 }catch(Exception e){
                     System.out.println("Notifikasi : "+e);
-                    JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang hendak anda hapus...\n Klik data pada table untuk memilih data...!!!!");
+                    JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
                 }
             }
         }else if(TabRawat.getSelectedIndex()==1){
@@ -364,7 +364,7 @@ public class DlgPenelusuranLogin extends javax.swing.JDialog {
                     tampil2();
                 }catch(Exception e){
                     System.out.println("Notifikasi : "+e);
-                    JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang hendak anda hapus...\n Klik data pada table untuk memilih data...!!!!");
+                    JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
                 }
             }
         }

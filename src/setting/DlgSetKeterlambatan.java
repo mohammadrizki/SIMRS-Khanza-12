@@ -347,7 +347,7 @@ public class DlgSetKeterlambatan extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             Toleransi.requestFocus();
         }else if(Toleransi.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(! Toleransi.getText().trim().equals("")){
             Sequel.queryu("delete from set_keterlambatan");
             tampil();

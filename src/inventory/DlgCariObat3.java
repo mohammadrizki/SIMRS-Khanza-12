@@ -318,7 +318,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         }else if(kdgudang.getText().equals("")){
             Valid.textKosong(Jeniskelas,"Lokasi");
         }else{
-            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang hendak disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
+            int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 try {  
                     koneksi.setAutoCommit(false); 
@@ -434,26 +434,41 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 psretur.setString(4,tbObat.getValueAt(i,16).toString());
                                 rsretur=psretur.executeQuery();
                                 if(rsretur.next()){
-                                    Trackobat.catatRiwayat(tbObat.getValueAt(i,1).toString(),0,rsretur.getDouble("jml"),"Retur Pasien",akses.getkode(),kdgudang.getText(),"Hapus",tbObat.getValueAt(i,15).toString(),tbObat.getValueAt(i,16).toString());
-                                    psupdategudang= koneksi.prepareStatement("update gudangbarang set stok=stok-? where kode_brng=? and kd_bangsal=? and no_batch=? and no_faktur=?");           
-                                    try {
-                                        psupdategudang.setDouble(1,rsretur.getDouble("jml"));
-                                        psupdategudang.setString(2,tbObat.getValueAt(i,1).toString());
-                                        psupdategudang.setString(3,kdgudang.getText());
-                                        psupdategudang.setString(4,tbObat.getValueAt(i,15).toString());
-                                        psupdategudang.setString(5,tbObat.getValueAt(i,16).toString());
-                                        psupdategudang.executeUpdate(); 
-                                    } catch (Exception e) {
-                                        System.out.println("Notofikasi : "+e);
-                                    } finally{
-                                        if(psupdategudang != null){
-                                            psupdategudang.close();
-                                        }
-                                    }
                                     if(aktifkanbatch.equals("yes")){
+                                        Trackobat.catatRiwayat(tbObat.getValueAt(i,1).toString(),0,rsretur.getDouble("jml"),"Retur Pasien",akses.getkode(),kdgudang.getText(),"Hapus",tbObat.getValueAt(i,15).toString(),tbObat.getValueAt(i,16).toString());
                                         Sequel.mengedit("data_batch","no_batch=? and no_faktur=? and kode_brng=?","sisa=sisa-?",4,new String[]{
                                             ""+rsretur.getDouble("jml"),tbObat.getValueAt(i,15).toString(),tbObat.getValueAt(i,16).toString(),tbObat.getValueAt(i,1).toString()
                                         });
+                                        psupdategudang= koneksi.prepareStatement("update gudangbarang set stok=stok-? where kode_brng=? and kd_bangsal=? and no_batch=? and no_faktur=?");           
+                                        try {
+                                            psupdategudang.setDouble(1,rsretur.getDouble("jml"));
+                                            psupdategudang.setString(2,tbObat.getValueAt(i,1).toString());
+                                            psupdategudang.setString(3,kdgudang.getText());
+                                            psupdategudang.setString(4,tbObat.getValueAt(i,15).toString());
+                                            psupdategudang.setString(5,tbObat.getValueAt(i,16).toString());
+                                            psupdategudang.executeUpdate(); 
+                                        } catch (Exception e) {
+                                            System.out.println("Notofikasi : "+e);
+                                        } finally{
+                                            if(psupdategudang != null){
+                                                psupdategudang.close();
+                                            }
+                                        }
+                                    }else{
+                                        Trackobat.catatRiwayat(tbObat.getValueAt(i,1).toString(),0,rsretur.getDouble("jml"),"Retur Pasien",akses.getkode(),kdgudang.getText(),"Hapus","","");
+                                        psupdategudang= koneksi.prepareStatement("update gudangbarang set stok=stok-? where kode_brng=? and kd_bangsal=? and no_batch='' and no_faktur=''");           
+                                        try {
+                                            psupdategudang.setDouble(1,rsretur.getDouble("jml"));
+                                            psupdategudang.setString(2,tbObat.getValueAt(i,1).toString());
+                                            psupdategudang.setString(3,kdgudang.getText());
+                                            psupdategudang.executeUpdate(); 
+                                        } catch (Exception e) {
+                                            System.out.println("Notofikasi : "+e);
+                                        } finally{
+                                            if(psupdategudang != null){
+                                                psupdategudang.close();
+                                            }
+                                        }
                                     }
                                 }  
                             } catch (Exception e) {
@@ -493,26 +508,41 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 psimpanretur.setString(6,tbObat.getValueAt(i,16).toString());
                                 psimpanretur.executeUpdate();
 
-                                Trackobat.catatRiwayat(tbObat.getValueAt(i,1).toString(),retur,0,"Retur Pasien",akses.getkode(),kdgudang.getText(),"Simpan",tbObat.getValueAt(i,15).toString(),tbObat.getValueAt(i,16).toString());
-                                psupdategudang2= koneksi.prepareStatement("update gudangbarang set stok=stok+? where kode_brng=? and kd_bangsal=? and no_batch=? and no_faktur=?");
-                                try {
-                                    psupdategudang2.setDouble(1,retur);
-                                    psupdategudang2.setString(2,tbObat.getValueAt(i,1).toString());
-                                    psupdategudang2.setString(3,kdgudang.getText());
-                                    psupdategudang2.setString(4,tbObat.getValueAt(i,15).toString());
-                                    psupdategudang2.setString(5,tbObat.getValueAt(i,16).toString());
-                                    psupdategudang2.executeUpdate();
-                                } catch (Exception e) {
-                                    System.out.println("Notofikasi : "+e);
-                                } finally{
-                                    if(psupdategudang2 != null){
-                                        psupdategudang2.close();
-                                    }
-                                }
                                 if(aktifkanbatch.equals("yes")){
+                                    Trackobat.catatRiwayat(tbObat.getValueAt(i,1).toString(),retur,0,"Retur Pasien",akses.getkode(),kdgudang.getText(),"Simpan",tbObat.getValueAt(i,15).toString(),tbObat.getValueAt(i,16).toString());
                                     Sequel.mengedit("data_batch","no_batch=? and no_faktur=? and kode_brng=?","sisa=sisa+?",4,new String[]{
                                         ""+retur,tbObat.getValueAt(i,15).toString(),tbObat.getValueAt(i,16).toString(),tbObat.getValueAt(i,1).toString()
                                     });
+                                    psupdategudang2= koneksi.prepareStatement("update gudangbarang set stok=stok+? where kode_brng=? and kd_bangsal=? and no_batch=? and no_faktur=?");
+                                    try {
+                                        psupdategudang2.setDouble(1,retur);
+                                        psupdategudang2.setString(2,tbObat.getValueAt(i,1).toString());
+                                        psupdategudang2.setString(3,kdgudang.getText());
+                                        psupdategudang2.setString(4,tbObat.getValueAt(i,15).toString());
+                                        psupdategudang2.setString(5,tbObat.getValueAt(i,16).toString());
+                                        psupdategudang2.executeUpdate();
+                                    } catch (Exception e) {
+                                        System.out.println("Notofikasi : "+e);
+                                    } finally{
+                                        if(psupdategudang2 != null){
+                                            psupdategudang2.close();
+                                        }
+                                    }
+                                }else{
+                                    Trackobat.catatRiwayat(tbObat.getValueAt(i,1).toString(),retur,0,"Retur Pasien",akses.getkode(),kdgudang.getText(),"Simpan","","");
+                                    psupdategudang2= koneksi.prepareStatement("update gudangbarang set stok=stok+? where kode_brng=? and kd_bangsal=? and no_batch='' and no_faktur=''");
+                                    try {
+                                        psupdategudang2.setDouble(1,retur);
+                                        psupdategudang2.setString(2,tbObat.getValueAt(i,1).toString());
+                                        psupdategudang2.setString(3,kdgudang.getText());
+                                        psupdategudang2.executeUpdate();
+                                    } catch (Exception e) {
+                                        System.out.println("Notofikasi : "+e);
+                                    } finally{
+                                        if(psupdategudang2 != null){
+                                            psupdategudang2.close();
+                                        }
+                                    }
                                 }
                             } catch (Exception e) {
                                 System.out.println("Notofikasi : "+e);

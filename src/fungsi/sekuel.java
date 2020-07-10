@@ -51,7 +51,7 @@ import uz.ncipro.calendar.JDateTimePicker;
 public final class sekuel {
     private javax.swing.ImageIcon icon = null;
     private javax.swing.ImageIcon iconThumbnail = null;
-    private String folder,AKTIFKANTRACKSQL=koneksiDB.AKTIFKANTRACKSQL();    
+    private String folder,AKTIFKANTRACKSQL = koneksiDB.AKTIFKANTRACKSQL();
     private final Connection connect=koneksiDB.condb();
     private PreparedStatement ps;
     private ResultSet rs;
@@ -827,7 +827,7 @@ public final class sekuel {
                 ps.executeUpdate();
              }catch(Exception e){
                 System.out.println("Notifikasi : "+e);
-                JOptionPane.showMessageDialog(null,"Maaf, Pilih dulu data yang hendak anda edit...\n Klik data pada table untuk memilih...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Pilih dulu data yang mau anda edit...\n Klik data pada table untuk memilih...!!!!");
              }finally{
                 if(ps != null){
                     ps.close();

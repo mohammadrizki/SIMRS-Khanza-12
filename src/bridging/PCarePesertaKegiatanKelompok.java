@@ -53,7 +53,7 @@ public class PCarePesertaKegiatanKelompok extends javax.swing.JDialog {
     private JsonNode nameNode;
     private JsonNode response;
     private final Properties prop = new Properties();
-    private PcareApi api=new PcareApi();
+    private ApiPcare api=new ApiPcare();
     private StringBuilder htmlContent;
     
     /** Creates new form DlgProgramStudi
@@ -290,7 +290,7 @@ public class PCarePesertaKegiatanKelompok extends javax.swing.JDialog {
         });
         panelGlass8.add(DTPCari2);
 
-        label10.setText("Keyword :");
+        label10.setText("Key Word :");
         label10.setName("label10"); // NOI18N
         label10.setPreferredSize(new java.awt.Dimension(62, 23));
         panelGlass8.add(label10);
@@ -591,7 +591,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 }
             }             
         }else{            
-            JOptionPane.showMessageDialog(null,"Maaf, silakan pilih data peserta...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data peserta...!!!!");
             TCari.requestFocus();
         }
     }else if(TabRawat.getSelectedIndex()==1){

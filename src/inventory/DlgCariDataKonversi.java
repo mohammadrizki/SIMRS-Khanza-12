@@ -181,7 +181,7 @@ public final class DlgCariDataKonversi extends javax.swing.JDialog {
         });
         panelisi3.add(NamaSatuanKecil);
 
-        label9.setText("Keyword :");
+        label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(62, 23));
         panelisi3.add(label9);
