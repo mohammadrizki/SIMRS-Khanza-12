@@ -32,7 +32,7 @@ public class koneksiDB {
                 dataSource.setPassword(EnkripsiAES.decrypt(prop.getProperty("PAS")));
                 connection=dataSource.getConnection();
                 System.out.println("  Koneksi Berhasil. Sorry Bro loading, silakan baca dulu.... \n\n"+
-                        "	 Software ini adalah Software Menejemen Rumah Sakit/Klinik/\n" +
+                        "	 Software ini adalah Software Manajemen Rumah Sakit/Klinik/\n" +
                         "  Puskesmas yang  gratis dan boleh digunakan siapa saja tanpa dikenai \n" +
                         "  biaya apapun. Dilarang keras memperjualbelikan/mengambil \n" +
                         "  keuntungan dari software ini dalam bentuk apapun tanpa seijin pembuat \n" +

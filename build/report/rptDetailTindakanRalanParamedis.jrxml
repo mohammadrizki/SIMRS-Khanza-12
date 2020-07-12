@@ -210,7 +210,7 @@ rawat_jl_pr.tgl_perawatan between $P{tanggal1} and $P{tanggal2} and poliklinik.n
 					<font fontName="Tahoma" size="8" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Menejemen]]></text>
+				<text><![CDATA[Manajemen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="1129" y="0" width="55" height="16" forecolor="#000000" backcolor="#F0F0DC" uuid="135c7ddc-7f3c-440e-b1b0-a3871a032d6f"/>

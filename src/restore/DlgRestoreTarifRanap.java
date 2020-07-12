@@ -48,7 +48,7 @@ public final class DlgRestoreTarifRanap extends javax.swing.JDialog {
         
         Object[] row={"P","Kode Tindakan","Nama Tnd/Prw/Tagihan","Kategori",
                       "J.S.Rumah Sakit","BHP/Paket Obat","J.Medis Dr",
-                      "J.Medis Pr","KSO","Menejemen","Ttl Biaya Dr",
+                      "J.Medis Pr","KSO","Manajemen","Ttl Biaya Dr",
                       "Ttl Biaya Pr","Ttl Biaya Dr & Pr","Jenis Bayar",
                       "Kamar","Kelas"};
         tabMode=new DefaultTableModel(null,row){

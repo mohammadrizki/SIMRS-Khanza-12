@@ -768,7 +768,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             JmDokter.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),7).toString());
                             JmPerawat.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),8).toString());
                             KSO.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),9).toString());
-                            Menejemen.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),10).toString());
+                            Manajemen.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),10).toString());
                             TTnd.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),4).toString());
                             TKdPrw.requestFocus();  
                         }else if(TabRawat.getSelectedIndex()==1){
@@ -779,7 +779,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             JmDokter.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),7).toString());
                             JmPerawat.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),8).toString());
                             KSO.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),9).toString());
-                            Menejemen.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),10).toString());
+                            Manajemen.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),10).toString());
                             TTnd.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),4).toString());
                             TKdPrw1.requestFocus(); 
                         }else if(TabRawat.getSelectedIndex()==2){
@@ -790,7 +790,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             JmDokter.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),7).toString());
                             JmPerawat.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),8).toString());
                             KSO.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),9).toString());
-                            Menejemen.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),10).toString());
+                            Manajemen.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),10).toString());
                             TTnd.setText(perawatan.getTable().getValueAt(perawatan.getTable().getSelectedRow(),4).toString());
                             TKdPrw2.requestFocus(); 
                         }
@@ -825,7 +825,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             JmDokter.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),10).toString());
                             JmPerawat.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),11).toString());
                             KSO.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),12).toString());
-                            Menejemen.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),13).toString());
+                            Manajemen.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),13).toString());
                             TTnd.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),7).toString());
                             TKdPrw.requestFocus();
                         }else if(TabRawat.getSelectedIndex()==1){
@@ -836,7 +836,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             JmDokter.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),10).toString());
                             JmPerawat.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),11).toString());
                             KSO.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),12).toString());
-                            Menejemen.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),13).toString());
+                            Manajemen.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),13).toString());
                             TTnd.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),7).toString());
                             TKdPrw1.requestFocus();
                         }else if(TabRawat.getSelectedIndex()==2){
@@ -847,7 +847,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             JmDokter.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),10).toString());
                             JmPerawat.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),11).toString());
                             KSO.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),12).toString());
-                            Menejemen.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),13).toString());
+                            Manajemen.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),13).toString());
                             TTnd.setText(perawatan2.getTable().getValueAt(perawatan2.getTable().getSelectedRow(),7).toString());
                             TKdPrw2.requestFocus();
                         }
@@ -927,7 +927,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         JmPerawat = new javax.swing.JTextField();
         TTnd = new javax.swing.JTextField();
         KSO = new javax.swing.JTextField();
-        Menejemen = new javax.swing.JTextField();
+        Manajemen = new javax.swing.JTextField();
         internalFrame1 = new widget.InternalFrame();
         jPanel3 = new javax.swing.JPanel();
         panelGlass8 = new widget.panelisi();
@@ -1174,9 +1174,9 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         KSO.setText("0");
         KSO.setName("KSO"); // NOI18N
 
-        Menejemen.setEditable(false);
-        Menejemen.setText("0");
-        Menejemen.setName("Menejemen"); // NOI18N
+        Manajemen.setEditable(false);
+        Manajemen.setText("0");
+        Manajemen.setName("Manajemen"); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -3342,7 +3342,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             if(Sequel.menyimpantf("rawat_inap_dr","?,?,?,?,?,?,?,?,?,?,?","Data",11,new String[]{
                                 TNoRw.getText(),TKdPrw.getText(),KdDok.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),
                                 cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem(),
-                                BagianRS.getText(),Bhp.getText(),JmDokter.getText(),KSO.getText(),Menejemen.getText(),TTnd.getText()
+                                BagianRS.getText(),Bhp.getText(),JmDokter.getText(),KSO.getText(),Manajemen.getText(),TTnd.getText()
                             })==true){
 
                                 Sequel.queryu("delete from tampjurnal");
@@ -3378,7 +3378,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             if(Sequel.menyimpantf("rawat_inap_pr","?,?,?,?,?,?,?,?,?,?,?","Data",11,new String[]{
                                 TNoRw.getText(),TKdPrw1.getText(),kdptg.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),
                                 cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem(),
-                                BagianRS.getText(),Bhp.getText(),JmPerawat.getText(),KSO.getText(),Menejemen.getText(),TTnd.getText()
+                                BagianRS.getText(),Bhp.getText(),JmPerawat.getText(),KSO.getText(),Manajemen.getText(),TTnd.getText()
                             })==true){
 
                                 Sequel.queryu("delete from tampjurnal");
@@ -3416,7 +3416,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             if(Sequel.menyimpantf("rawat_inap_drpr","?,?,?,?,?,?,?,?,?,?,?,?,?","Data",13,new String[]{
                                 TNoRw.getText(),TKdPrw2.getText(),KdDok2.getText(),kdptg2.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),
                                 cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem(),
-                                BagianRS.getText(),Bhp.getText(),JmDokter.getText(),JmPerawat.getText(),KSO.getText(),Menejemen.getText(),TTnd.getText()
+                                BagianRS.getText(),Bhp.getText(),JmDokter.getText(),JmPerawat.getText(),KSO.getText(),Manajemen.getText(),TTnd.getText()
                             })==true){
 
                                 Sequel.queryu("delete from tampjurnal");
@@ -4177,7 +4177,7 @@ private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                                 "',kd_dokter='"+KdDok.getText()+"',material='"+BagianRS.getText()+
                                                 "',bhp='"+Bhp.getText()+"',tarif_tindakandr='"+JmDokter.getText()+"',biaya_rawat='"+TTnd.getText()+
                                                 "',tgl_perawatan='"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+"',jam_rawat='"+cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem()+"',"+
-                                                        "kso='"+KSO.getText()+"',menejemen='"+Menejemen.getText()+"'")==true){
+                                                        "kso='"+KSO.getText()+"',menejemen='"+Manajemen.getText()+"'")==true){
 
                                     Sequel.queryu("delete from tampjurnal");
                                     if(Valid.SetAngka(tbRawatDr.getValueAt(tbRawatDr.getSelectedRow(),9).toString())>0){
@@ -4240,7 +4240,7 @@ private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                         "',nip='"+kdptg.getText()+"',material='"+BagianRS.getText()+
                                         "',bhp='"+Bhp.getText()+"',tarif_tindakanpr='"+JmPerawat.getText()+"',biaya_rawat='"+TTnd.getText()+
                                         "',tgl_perawatan='"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+"',jam_rawat='"+cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem()+"',"+
-                                        "kso='"+KSO.getText()+"',menejemen='"+Menejemen.getText()+"'")==true){
+                                        "kso='"+KSO.getText()+"',menejemen='"+Manajemen.getText()+"'")==true){
 
                                     Sequel.queryu("delete from tampjurnal");
                                     if(Valid.SetAngka(tbRawatPr.getValueAt(tbRawatPr.getSelectedRow(),9).toString())>0){
@@ -4305,7 +4305,7 @@ private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                         "',nip='"+kdptg2.getText()+"',kd_dokter='"+KdDok2.getText()+"',material='"+BagianRS.getText()+
                                         "',bhp='"+Bhp.getText()+"',tarif_tindakanpr='"+JmPerawat.getText()+"',tarif_tindakandr='"+JmDokter.getText()+"',biaya_rawat='"+TTnd.getText()+
                                         "',tgl_perawatan='"+Valid.SetTgl(DTPTgl.getSelectedItem()+"")+"',jam_rawat='"+cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem()+"',"+
-                                        "kso='"+KSO.getText()+"',menejemen='"+Menejemen.getText()+"'")==true){
+                                        "kso='"+KSO.getText()+"',menejemen='"+Manajemen.getText()+"'")==true){
 
                                     Sequel.queryu("delete from tampjurnal");
                                     if(Valid.SetAngka(tbRawatDrPr.getValueAt(tbRawatDrPr.getSelectedRow(),11).toString())>0){
@@ -5462,7 +5462,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
     private widget.TextBox KdDok;
     private widget.TextBox KdDok2;
     private widget.Label LCount;
-    private javax.swing.JTextField Menejemen;
+    private javax.swing.JTextField Manajemen;
     private widget.PanelBiasa PanelAccor;
     private javax.swing.JPanel PanelInput1;
     private javax.swing.JPanel PanelInput2;
@@ -6009,7 +6009,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 Sequel.cariIsi("select tarif_tindakandr from jns_perawatan_inap where kd_jenis_prw=? ",JmDokter,TKdPrw.getText());
                 Sequel.cariIsi("select tarif_tindakanpr from jns_perawatan_inap where kd_jenis_prw=? ",JmPerawat,TKdPrw.getText());
                 Sequel.cariIsi("select kso from jns_perawatan_inap where kd_jenis_prw=? ",KSO,TKdPrw.getText());
-                Sequel.cariIsi("select menejemen from jns_perawatan_inap where kd_jenis_prw=? ",Menejemen,TKdPrw.getText());
+                Sequel.cariIsi("select menejemen from jns_perawatan_inap where kd_jenis_prw=? ",Manajemen,TKdPrw.getText());
                 Sequel.cariIsi("select total_byrdr from jns_perawatan_inap where kd_jenis_prw=? ",TTnd,TKdPrw.getText());
             }
         }else if(TabRawat.getSelectedIndex()==1){
@@ -6020,7 +6020,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 Sequel.cariIsi("select tarif_tindakandr from jns_perawatan_inap where kd_jenis_prw=? ",JmDokter,TKdPrw1.getText());
                 Sequel.cariIsi("select tarif_tindakanpr from jns_perawatan_inap where kd_jenis_prw=? ",JmPerawat,TKdPrw1.getText());
                 Sequel.cariIsi("select kso from jns_perawatan_inap where kd_jenis_prw=? ",KSO,TKdPrw1.getText());
-                Sequel.cariIsi("select menejemen from jns_perawatan_inap where kd_jenis_prw=? ",Menejemen,TKdPrw1.getText());
+                Sequel.cariIsi("select menejemen from jns_perawatan_inap where kd_jenis_prw=? ",Manajemen,TKdPrw1.getText());
                 Sequel.cariIsi("select total_byrpr from jns_perawatan_inap where kd_jenis_prw=? ",TTnd,TKdPrw1.getText());
             }
         }else if(TabRawat.getSelectedIndex()==2){
@@ -6031,7 +6031,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 Sequel.cariIsi("select tarif_tindakandr from jns_perawatan_inap where kd_jenis_prw=? ",JmDokter,TKdPrw2.getText());
                 Sequel.cariIsi("select tarif_tindakanpr from jns_perawatan_inap where kd_jenis_prw=? ",JmPerawat,TKdPrw2.getText());
                 Sequel.cariIsi("select kso from jns_perawatan_inap where kd_jenis_prw=? ",KSO,TKdPrw2.getText());
-                Sequel.cariIsi("select menejemen from jns_perawatan_inap where kd_jenis_prw=? ",Menejemen,TKdPrw2.getText());
+                Sequel.cariIsi("select menejemen from jns_perawatan_inap where kd_jenis_prw=? ",Manajemen,TKdPrw2.getText());
                 Sequel.cariIsi("select total_byrdrpr from jns_perawatan_inap where kd_jenis_prw=? ",TTnd,TKdPrw2.getText());
             }
         }

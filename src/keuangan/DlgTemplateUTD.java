@@ -50,7 +50,7 @@ public final class DlgTemplateUTD extends javax.swing.JDialog {
 
         Object[] row={"Sub Pelayanan","Nilai Rujukan","J.S. Rmh Skt","Paket BHP",
                       "J.M. Perujuk","J.M. Dokter","J.M. Laborat",
-                      "K.S.O.","Menejemen","Biaya Item","",""};
+                      "K.S.O.","Manajemen","Biaya Item","",""};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = true;

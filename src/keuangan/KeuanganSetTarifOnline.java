@@ -61,7 +61,7 @@ public final class KeuanganSetTarifOnline extends javax.swing.JDialog {
                       "J.Medis Dr",
                       "J.Medis Pr",
                       "KSO",
-                      "Menejemen",
+                      "Manajemen",
                       "Ttl Biaya Dr",
                       "Ttl Biaya Pr",
                       "Ttl Biaya Dr & Pr",

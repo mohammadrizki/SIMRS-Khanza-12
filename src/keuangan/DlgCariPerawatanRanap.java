@@ -98,7 +98,7 @@ public final class DlgCariPerawatanRanap extends javax.swing.JDialog {
         setSize(656,250);
 
         Object[] row={"P","Kode","Nama Perawatan","Kategori Perawatan","Tarif/Biaya",
-                      "Bagian RS","BHP","JM Dokter","JM Perawat","KSO","Menejemen","Kelas"};
+                      "Bagian RS","BHP","JM Dokter","JM Perawat","KSO","Manajemen","Kelas"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;

@@ -236,7 +236,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeTindakanDr=new DefaultTableModel(null,new Object[]{
                 "P","Kode","Nama Perawatan","Kategori","Tarif","Bagian RS","BHP",
-                "JM Dokter","JM Perawat","KSO","Menejemen","Tanggal","Jam"
+                "JM Dokter","JM Perawat","KSO","Manajemen","Tanggal","Jam"
             }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -302,7 +302,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeTindakanPr=new DefaultTableModel(null,new Object[]{
                 "P","Kode","Nama Perawatan","Kategori","Tarif","Bagian RS","BHP",
-                "JM Dokter","JM Perawat","KSO","Menejemen","Tanggal","Jam"
+                "JM Dokter","JM Perawat","KSO","Manajemen","Tanggal","Jam"
             }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -368,7 +368,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeTindakanDrPr=new DefaultTableModel(null,new Object[]{
                 "P","Kode","Nama Perawatan","Kategori","Tarif","Bagian RS","BHP",
-                "JM Dokter","JM Perawat","KSO","Menejemen","Tanggal","Jam"
+                "JM Dokter","JM Perawat","KSO","Manajemen","Tanggal","Jam"
             }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -434,7 +434,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeRadiologi=new DefaultTableModel(null,new Object[]{
             "P","Kode Periksa","Nama Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk",
-            "Tarif Dokter","Tarif Petugas","Kso","Menejemen","Tanggal","Jam","No.Order"
+            "Tarif Dokter","Tarif Petugas","Kso","Manajemen","Tanggal","Jam","No.Order"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -479,7 +479,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeLaborat=new DefaultTableModel(null,new Object[]{
             "P","Kode Periksa","Nama Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk",
-            "Tarif Dokter","Tarif Petugas","Kso","Menejemen","Tanggal","Jam","No.Order"
+            "Tarif Dokter","Tarif Petugas","Kso","Manajemen","Tanggal","Jam","No.Order"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -523,7 +523,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeDetailLaborat=new DefaultTableModel(null,new Object[]{
             "P","ID Periksa","Nama Sub Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk",
-            "Tarif Dokter","Tarif Petugas","Kso","Menejemen","Tanggal","Jam","No.Order","Kode Jenis"
+            "Tarif Dokter","Tarif Petugas","Kso","Manajemen","Tanggal","Jam","No.Order","Kode Jenis"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -661,7 +661,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeDetailLaboratBayar=new DefaultTableModel(null,new Object[]{
             "P","ID Periksa","Nama Sub Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk",
-            "Tarif Dokter","Tarif Petugas","Kso","Menejemen","Tanggal","Jam","No.Order","Kode Jenis"
+            "Tarif Dokter","Tarif Petugas","Kso","Manajemen","Tanggal","Jam","No.Order","Kode Jenis"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -703,7 +703,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeTindakanDrBayar=new DefaultTableModel(null,new Object[]{
                 "P","Kode","Nama Perawatan","Kategori","Tarif","Bagian RS","BHP",
-                "JM Dokter","JM Perawat","KSO","Menejemen","Tanggal","Jam"
+                "JM Dokter","JM Perawat","KSO","Manajemen","Tanggal","Jam"
             }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -772,7 +772,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeTindakanPrBayar=new DefaultTableModel(null,new Object[]{
                 "P","Kode","Nama Perawatan","Kategori","Tarif","Bagian RS","BHP",
-                "JM Dokter","JM Perawat","KSO","Menejemen","Tanggal","Jam"
+                "JM Dokter","JM Perawat","KSO","Manajemen","Tanggal","Jam"
             }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -838,7 +838,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeTindakanDrPrBayar=new DefaultTableModel(null,new Object[]{
                 "P","Kode","Nama Perawatan","Kategori","Tarif","Bagian RS","BHP",
-                "JM Dokter","JM Perawat","KSO","Menejemen","Tanggal","Jam"
+                "JM Dokter","JM Perawat","KSO","Manajemen","Tanggal","Jam"
             }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -907,7 +907,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
                 
         TabModeRadiologiBayar=new DefaultTableModel(null,new Object[]{
             "P","Kode Periksa","Nama Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk",
-            "Tarif Dokter","Tarif Petugas","Kso","Menejemen","Tanggal","Jam","No.Order"
+            "Tarif Dokter","Tarif Petugas","Kso","Manajemen","Tanggal","Jam","No.Order"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -952,7 +952,7 @@ public class DlgBilingParsialRalan extends javax.swing.JDialog {
         
         TabModeLaboratBayar=new DefaultTableModel(null,new Object[]{
             "P","Kode Periksa","Nama Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk",
-            "Tarif Dokter","Tarif Petugas","Kso","Menejemen","Tanggal","Jam","No.Order"
+            "Tarif Dokter","Tarif Petugas","Kso","Manajemen","Tanggal","Jam","No.Order"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;

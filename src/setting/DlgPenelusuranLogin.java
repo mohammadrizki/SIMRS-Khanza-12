@@ -331,7 +331,7 @@ public class DlgPenelusuranLogin extends javax.swing.JDialog {
         tbObat1.setName("tbObat1"); // NOI18N
         Scroll1.setViewportView(tbObat1);
 
-        TabRawat.addTab("Penulusan SQL Simpan, Ganti, Hapus", Scroll1);
+        TabRawat.addTab("Penelusuran SQL Simpan, Ganti, Hapus", Scroll1);
 
         internalFrame1.add(TabRawat, java.awt.BorderLayout.CENTER);
 

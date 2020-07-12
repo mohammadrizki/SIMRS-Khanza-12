@@ -9375,7 +9375,7 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
                         PropinsiPj.setText(rs.getString("propinsipj"));
                     }
                 } catch (Exception e) {
-                    System.out.println("Notofikasi : "+e);
+                    System.out.println("Notifikasi : "+e);
                 } finally{
                     if(rs != null){
                         rs.close();
@@ -9491,7 +9491,7 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
                         PropinsiPj.setText(rs.getString("propinsipj"));
                     }
                 } catch (Exception e) {
-                    System.out.println("Notofikasi : "+e);
+                    System.out.println("Notifikasi : "+e);
                 } finally{
                     if(rs != null){
                         rs.close();

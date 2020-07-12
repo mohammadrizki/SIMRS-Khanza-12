@@ -51,7 +51,7 @@ public final class DlgRestoreTarifRalan extends javax.swing.JDialog {
                       "BHP/Paket Obat",
                       "J.Medis Dr",
                       "J.Medis Pr",
-                      "KSO","Menejemen",
+                      "KSO","Manajemen",
                       "Ttl Biaya Dr",
                       "Ttl Biaya Pr",
                       "Ttl Biaya Dr & Pr",

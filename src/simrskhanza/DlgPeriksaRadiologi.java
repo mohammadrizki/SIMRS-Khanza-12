@@ -83,7 +83,7 @@ public final class DlgPeriksaRadiologi extends javax.swing.JDialog {
         initComponents();
         
         tabMode=new DefaultTableModel(null,new Object[]{
-            "P","Kode Periksa","Nama Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk","Tarif Dokter","Tarif Petugas","Kso","Menejemen",
+            "P","Kode Periksa","Nama Pemeriksaan","Tarif","Bagian RS","BHP","Tarif Perujuk","Tarif Dokter","Tarif Petugas","Kso","Manajemen",
             "Proyeksi","kV","mAS","FFD","BSF","Inak","Jml Penyinaran","Dosis Radiasi"
         }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){

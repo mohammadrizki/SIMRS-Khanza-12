@@ -70,7 +70,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRalanDokter=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","Kode Dokter",
             "Dokter Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM Dokter","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM Dokter","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -134,7 +134,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRalanParamedis=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","NIP",
             "Paramedis Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM Paramedis","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM Paramedis","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -198,7 +198,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRalanDokterParamedis=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","Kode Dokter",
             "Dokter Yg Menangani","NIP","Paramedis Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM Dokter","JM Paramedis","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM Dokter","JM Paramedis","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -269,7 +269,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRanapDokter=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","Kode Dokter",
             "Dokter Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM Dokter","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM Dokter","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -333,7 +333,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRanapParamedis=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","NIP",
             "Paramedis Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM Paramedis","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM Paramedis","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -397,7 +397,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRanapDokterParamedis=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","Kode Dokter",
             "Dokter Yg Menangani","NIP","Paramedis Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM Dokter","JM Paramedis","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM Dokter","JM Paramedis","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -468,7 +468,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeRadiologi=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Prk","Pemeriksaan","Kode P.J.",
             "Dokter P.J.Rad","NIP","Petugas Rad","Kode Perujuk","Dokter Perujuk","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM P.J.Rad","JM Petugas","JM Perujuk","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM P.J.Rad","JM Petugas","JM Perujuk","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -546,7 +546,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeLaborat=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Prk","Pemeriksaan","Kode P.J.",
             "Dokter P.J.Lab","NIP","Petugas Lab","Kode Perujuk","Dokter Perujuk","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM P.J.Lab","JM Petugas","JM Perujuk","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM P.J.Lab","JM Petugas","JM Perujuk","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -624,7 +624,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tabModeDetailLaborat=new DefaultTableModel(null,new Object[]{
             "No.","No.Rawat","No.R.M.","Nama Pasien","Id","Pemeriksaan","Kode P.J.",
             "Dokter P.J.Lab","NIP","Petugas Lab","Kode Perujuk","Dokter Perujuk","Tanggal","Jam","Cara Bayar","Ruangan",
-            "Jasa Sarana","Paket BHP","JM P.J.Lab","JM Petugas","JM Perujuk","KSO","Menejemen","Total"}){
+            "Jasa Sarana","Paket BHP","JM P.J.Lab","JM Petugas","JM Perujuk","KSO","Manajemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,

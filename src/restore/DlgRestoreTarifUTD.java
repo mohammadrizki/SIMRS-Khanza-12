@@ -47,7 +47,7 @@ public final class DlgRestoreTarifUTD extends javax.swing.JDialog {
         initComponents();
         
         Object[] row={"P","Kode Periksa","Nama Pemeriksaan","J.S.Rumah Sakit","Paket BHP",
-            "J.M.Perujuk","J.M. Dokter","J.M. Petugas","K.S.O.","Menejemen",
+            "J.M.Perujuk","J.M. Dokter","J.M. Petugas","K.S.O.","Manajemen",
             "Total Tarif","Jenis Bayar"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){

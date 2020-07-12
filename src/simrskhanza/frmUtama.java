@@ -322,9 +322,9 @@ import keuangan.DlgPiutangPercaraBayar;
 import keuangan.DlgPiutangRalan;
 import keuangan.DlgPiutangRanap;
 import keuangan.DlgRBKSO;
-import keuangan.DlgRBMenejemen;
+import keuangan.DlgRBManajemen;
 import keuangan.DlgRHKSO;
-import keuangan.DlgRHMenejemen;
+import keuangan.DlgRHManajemen;
 import keuangan.DlgRekapPembayaranPerPoli;
 import keuangan.DlgRekapPoliAnak;
 import keuangan.DlgRincianPiutangPasien;
@@ -1036,8 +1036,8 @@ public class frmUtama extends javax.swing.JFrame {
         btnAkunPiutang = new widget.ButtonBig();
         btnRHKSO = new widget.ButtonBig();
         btnRBKSO = new widget.ButtonBig();
-        btnRHMenejemen = new widget.ButtonBig();
-        btnRBMenejemen = new widget.ButtonBig();
+        btnRHManajemen = new widget.ButtonBig();
+        btnRBManajemen = new widget.ButtonBig();
         btnCekEligibilitasInhealth = new widget.ButtonBig();
         btnReferensiKamarInhealth = new widget.ButtonBig();
         btnCekInhealthPoli = new widget.ButtonBig();
@@ -1502,7 +1502,7 @@ public class frmUtama extends javax.swing.JFrame {
         label35.setPreferredSize(new java.awt.Dimension(105, 23));
         panelisi2.add(label35);
 
-        cmbMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "[A] Registrasi, Tagihan Ranap & Ralan, Pelayanan & Billing Pasien", "[B] Input Data Tindakan, Obat & BHP Via Barcode No.Rawat", "[C] Presensi, Manajemen & Penggajian Pegawai Rumah Sakit", "[D] Transaksi Inventory Obat, BHP Medis, Alat Kesehatan Pasien", "[E] Transaksi Inventory Barang Non Medis dan Penunjang ( Lab & RO )", "[F] Aset, Inventaris Barang & Instalasi Kesehatan Lingkungan", "[G] Menejemen Parkir Kendaraan Pasien & Karyawan", "[H] Olah Data Tagihan Rawat Inap & Rawat Jalan", "[I] Olah Data Penyakit, Laporan DKK, Laporal RL & Laporan Internal", "[J] Tarif Pelayanan, Menejemen Keuangan & Akuntansi", "[K] Bridging VClaim, Aplicare, PCare, INACBG, Kemenkes & Pihak Ke 3", "[L] Olah Data Pasien", "[M] Unit Pelayanan Tranfusi Darah", "[N] Analisa, Dashboard & Info Grafik", "[O] Manajemen Surat Masuk & Keluar, Pengumuman E-Pasien", "[P] Manajemen Perpustakaan & Koleksi Pustaka Digital", "[Q] Toko / Minimarket / Koperasi", "[R] Pengelolaan Data Filantropi, CSR, Zakat, Infaq & Shodaqoh", "[S] Pengaturan Program Aplikasi HMS" }));
+        cmbMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "[A] Registrasi, Tagihan Ranap & Ralan, Pelayanan & Billing Pasien", "[B] Input Data Tindakan, Obat & BHP Via Barcode No.Rawat", "[C] Presensi, Manajemen & Penggajian Pegawai Rumah Sakit", "[D] Transaksi Inventory Obat, BHP Medis, Alat Kesehatan Pasien", "[E] Transaksi Inventory Barang Non Medis dan Penunjang ( Lab & RO )", "[F] Aset, Inventaris Barang & Instalasi Kesehatan Lingkungan", "[G] Manajemen Parkir Kendaraan Pasien & Karyawan", "[H] Olah Data Tagihan Rawat Inap & Rawat Jalan", "[I] Olah Data Penyakit, Laporan DKK, Laporal RL & Laporan Internal", "[J] Tarif Pelayanan, Manajemen Keuangan & Akuntansi", "[K] Bridging VClaim, Aplicare, PCare, INACBG, Kemenkes & Pihak Ke 3", "[L] Olah Data Pasien", "[M] Unit Pelayanan Tranfusi Darah", "[N] Analisa, Dashboard & Info Grafik", "[O] Manajemen Surat Masuk & Keluar, Pengumuman E-Pasien", "[P] Manajemen Perpustakaan & Koleksi Pustaka Digital", "[Q] Toko / Minimarket / Koperasi", "[R] Pengelolaan Data Filantropi, CSR, Zakat, Infaq & Shodaqoh", "[S] Pengaturan Program Aplikasi HMS" }));
         cmbMenu.setName("cmbMenu"); // NOI18N
         cmbMenu.setPreferredSize(new java.awt.Dimension(470, 23));
         cmbMenu.addItemListener(new java.awt.event.ItemListener() {
@@ -3962,25 +3962,25 @@ public class frmUtama extends javax.swing.JFrame {
             }
         });
 
-        btnRHMenejemen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/48x48/address-book.png"))); // NOI18N
-        btnRHMenejemen.setText("Harian Manajemen");
-        btnRHMenejemen.setIconTextGap(0);
-        btnRHMenejemen.setName("btnRHMenejemen"); // NOI18N
-        btnRHMenejemen.setPreferredSize(new java.awt.Dimension(200, 90));
-        btnRHMenejemen.addActionListener(new java.awt.event.ActionListener() {
+        btnRHManajemen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/48x48/address-book.png"))); // NOI18N
+        btnRHManajemen.setText("Harian Manajemen");
+        btnRHManajemen.setIconTextGap(0);
+        btnRHManajemen.setName("btnRHManajemen"); // NOI18N
+        btnRHManajemen.setPreferredSize(new java.awt.Dimension(200, 90));
+        btnRHManajemen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRHMenejemenActionPerformed(evt);
+                btnRHManajemenActionPerformed(evt);
             }
         });
 
-        btnRBMenejemen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/48x48/address-book.png"))); // NOI18N
-        btnRBMenejemen.setText("Bulanan Manajemen");
-        btnRBMenejemen.setIconTextGap(0);
-        btnRBMenejemen.setName("btnRBMenejemen"); // NOI18N
-        btnRBMenejemen.setPreferredSize(new java.awt.Dimension(200, 90));
-        btnRBMenejemen.addActionListener(new java.awt.event.ActionListener() {
+        btnRBManajemen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/48x48/address-book.png"))); // NOI18N
+        btnRBManajemen.setText("Bulanan Manajemen");
+        btnRBManajemen.setIconTextGap(0);
+        btnRBManajemen.setName("btnRBManajemen"); // NOI18N
+        btnRBManajemen.setPreferredSize(new java.awt.Dimension(200, 90));
+        btnRBManajemen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRBMenejemenActionPerformed(evt);
+                btnRBManajemenActionPerformed(evt);
             }
         });
 
@@ -11040,29 +11040,29 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_btnRBKSOActionPerformed
 
-    private void btnRHMenejemenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRHMenejemenActionPerformed
+    private void btnRHManajemenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRHManajemenActionPerformed
         isTutup();
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        DlgRHMenejemen rhmenejemen=new DlgRHMenejemen(this,false);
+        DlgRHManajemen rhmenejemen=new DlgRHManajemen(this,false);
         rhmenejemen.isCek();
         rhmenejemen.setSize(PanelUtama.getWidth(),PanelUtama.getHeight());
         rhmenejemen.setLocationRelativeTo(PanelUtama);
         rhmenejemen.setVisible(true);
         DlgHome.dispose();
         this.setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_btnRHMenejemenActionPerformed
+    }//GEN-LAST:event_btnRHManajemenActionPerformed
 
-    private void btnRBMenejemenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRBMenejemenActionPerformed
+    private void btnRBManajemenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRBManajemenActionPerformed
         isTutup();
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        DlgRBMenejemen rbmenejemen=new DlgRBMenejemen(this,false);
+        DlgRBManajemen rbmenejemen=new DlgRBManajemen(this,false);
         rbmenejemen.isCek();
         rbmenejemen.setSize(PanelUtama.getWidth(),PanelUtama.getHeight());
         rbmenejemen.setLocationRelativeTo(PanelUtama);
         rbmenejemen.setVisible(true);
         DlgHome.dispose();
         this.setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_btnRBMenejemenActionPerformed
+    }//GEN-LAST:event_btnRBManajemenActionPerformed
 
     private void btnCekEligibilitasInhealthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCekEligibilitasInhealthActionPerformed
         isTutup();
@@ -16588,7 +16588,7 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
     private widget.ButtonBig btnRBDokter;
     private widget.ButtonBig btnRBJasaSarana;
     private widget.ButtonBig btnRBKSO;
-    private widget.ButtonBig btnRBMenejemen;
+    private widget.ButtonBig btnRBManajemen;
     private widget.ButtonBig btnRBPaketBHP;
     private widget.ButtonBig btnRBParamedis;
     private widget.ButtonBig btnRBiayaIpsrs;
@@ -16597,7 +16597,7 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
     private widget.ButtonBig btnRHKSO;
     private widget.ButtonBig btnRHKeluarIpsrs;
     private widget.ButtonBig btnRHMasukIpsrs;
-    private widget.ButtonBig btnRHMenejemen;
+    private widget.ButtonBig btnRHManajemen;
     private widget.ButtonBig btnRHPaketBHP;
     private widget.ButtonBig btnRHParamedis;
     private widget.ButtonBig btnRalan;
@@ -17858,12 +17858,12 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
             }
 
             if(akses.getharian_menejemen()==true){
-                Panelmenu.add(btnRHMenejemen);
+                Panelmenu.add(btnRHManajemen);
                 jmlmenu++;
             }
 
             if(akses.getbulanan_menejemen()==true){
-                Panelmenu.add(btnRBMenejemen);
+                Panelmenu.add(btnRBManajemen);
                 jmlmenu++;
             }
 
@@ -21116,12 +21116,12 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
         }
 
         if(akses.getharian_menejemen()==true){
-            Panelmenu.add(btnRHMenejemen);
+            Panelmenu.add(btnRHManajemen);
             jmlmenu++;
         }
 
         if(akses.getbulanan_menejemen()==true){
-            Panelmenu.add(btnRBMenejemen);
+            Panelmenu.add(btnRBManajemen);
             jmlmenu++;
         }
 
@@ -24720,15 +24720,15 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
         }
 
         if(akses.getharian_menejemen()==true){
-            if(btnRHMenejemen.getText().toLowerCase().trim().contains(TCari.getText().toLowerCase().trim())){
-                Panelmenu.add(btnRHMenejemen);
+            if(btnRHManajemen.getText().toLowerCase().trim().contains(TCari.getText().toLowerCase().trim())){
+                Panelmenu.add(btnRHManajemen);
                 jmlmenu++;
             }
         }
 
         if(akses.getbulanan_menejemen()==true){
-            if(btnRBMenejemen.getText().toLowerCase().trim().contains(TCari.getText().toLowerCase().trim())){
-                Panelmenu.add(btnRBMenejemen);
+            if(btnRBManajemen.getText().toLowerCase().trim().contains(TCari.getText().toLowerCase().trim())){
+                Panelmenu.add(btnRBManajemen);
                 jmlmenu++;
             }
         }

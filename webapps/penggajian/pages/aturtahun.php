@@ -103,7 +103,7 @@
                                 <td width='17%'><div align='center'>Tahun Gaji</div></td>
                                 <td width='17%'><div align='center'>Bulan gaji</div></td>
                                 <td width='17%'><div align='center'>Jumlah Hari</div></td>
-                                <td width='17%'><div align='center'>Jumlah Akhad</div></td>
+                                <td width='17%'><div align='center'>Jumlah Minggu</div></td>
                                 <td width='17%'><div align='center'>Normal Masuk</div></td>
                                 <td width='15%'><div align='center'>Proses</div></td>
                             </tr>";

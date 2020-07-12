@@ -1480,12 +1480,12 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[H]Bulanan KSO",rs.getBoolean("bulanan_kso")});
                     }
                     
-                    if("[H]Harian Menejemen".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[H]Harian Menejemen",rs.getBoolean("harian_menejemen")});
+                    if("[H]Harian Manajemen".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[H]Harian Manajemen",rs.getBoolean("harian_menejemen")});
                     }
                     
-                    if("[H]Bulanan Menejemen".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[H]Bulanan Menejemen",rs.getBoolean("bulanan_menejemen")});
+                    if("[H]Bulanan Manajemen".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[H]Bulanan Manajemen",rs.getBoolean("bulanan_menejemen")});
                     }
                     
                     if("[H]Piutang Ralan".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -4099,11 +4099,11 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","bulanan_kso='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
-            if("[H]Harian Menejemen".equals(tbUser.getValueAt(i,1).toString())){
+            if("[H]Harian Manajemen".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","harian_menejemen='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
-            if("[H]Bulanan Menejemen".equals(tbUser.getValueAt(i,1).toString())){
+            if("[H]Bulanan Manajemen".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","bulanan_menejemen='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 

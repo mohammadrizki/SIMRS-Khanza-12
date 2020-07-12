@@ -363,7 +363,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 }
                             }
                         } catch (Exception e) {
-                            System.out.println("Notofikasi : "+e);
+                            System.out.println("Notifikasi : "+e);
                         } finally{
                             if(rscariharga != null){
                                 rscariharga.close();
@@ -416,7 +416,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                             pshapusobat.setString(5,tbObat.getValueAt(i,16).toString());
                             pshapusobat.executeUpdate();
                         } catch (Exception e) {
-                            System.out.println("Notofikasi : "+e);
+                            System.out.println("Notifikasi : "+e);
                         } finally{
                             if(pshapusobat != null){
                                 pshapusobat.close();
@@ -448,7 +448,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                             psupdategudang.setString(5,tbObat.getValueAt(i,16).toString());
                                             psupdategudang.executeUpdate(); 
                                         } catch (Exception e) {
-                                            System.out.println("Notofikasi : "+e);
+                                            System.out.println("Notifikasi : "+e);
                                         } finally{
                                             if(psupdategudang != null){
                                                 psupdategudang.close();
@@ -463,7 +463,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                             psupdategudang.setString(3,kdgudang.getText());
                                             psupdategudang.executeUpdate(); 
                                         } catch (Exception e) {
-                                            System.out.println("Notofikasi : "+e);
+                                            System.out.println("Notifikasi : "+e);
                                         } finally{
                                             if(psupdategudang != null){
                                                 psupdategudang.close();
@@ -491,7 +491,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 pshapusretur.setString(4,tbObat.getValueAt(i,16).toString());
                                 pshapusretur.executeUpdate();  
                             } catch (Exception e) {
-                                System.out.println("Notofikasi : "+e);
+                                System.out.println("Notifikasi : "+e);
                             } finally{
                                 if(pshapusretur != null){
                                     pshapusretur.close();
@@ -522,7 +522,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                         psupdategudang2.setString(5,tbObat.getValueAt(i,16).toString());
                                         psupdategudang2.executeUpdate();
                                     } catch (Exception e) {
-                                        System.out.println("Notofikasi : "+e);
+                                        System.out.println("Notifikasi : "+e);
                                     } finally{
                                         if(psupdategudang2 != null){
                                             psupdategudang2.close();
@@ -537,7 +537,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                         psupdategudang2.setString(3,kdgudang.getText());
                                         psupdategudang2.executeUpdate();
                                     } catch (Exception e) {
-                                        System.out.println("Notofikasi : "+e);
+                                        System.out.println("Notifikasi : "+e);
                                     } finally{
                                         if(psupdategudang2 != null){
                                             psupdategudang2.close();
@@ -545,7 +545,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                     }
                                 }
                             } catch (Exception e) {
-                                System.out.println("Notofikasi : "+e);
+                                System.out.println("Notifikasi : "+e);
                             } finally{
                                 if(psimpanretur != null){
                                     psimpanretur.close();
@@ -671,7 +671,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 psobatsimpan.executeUpdate();  
                             }
                         } catch (Exception e) {
-                            System.out.println("Notofikasi : "+e);
+                            System.out.println("Notifikasi : "+e);
                         } finally{
                             if(psobatsimpan != null){
                                 psobatsimpan.close();
@@ -884,7 +884,7 @@ private void TanggalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_T
                         }
                     } catch (Exception e) {
                         stokmasuk=0;
-                        System.out.println("Notofikasi : "+e);
+                        System.out.println("Notifikasi : "+e);
                     } finally{
                         if(rsstokmasuk != null){
                             rsstokmasuk.close();
@@ -955,7 +955,7 @@ private void TanggalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_T
                         siang=0;
                         sore=0;
                         malam=0;
-                        System.out.println("Notofikasi : "+e);
+                        System.out.println("Notifikasi : "+e);
                     } finally{
                         if(rspemberian != null){
                             rspemberian.close();
@@ -980,7 +980,7 @@ private void TanggalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_T
                         }
                     } catch (Exception e) {
                         keluar=0;
-                        System.out.println("Notofikasi : "+e);
+                        System.out.println("Notifikasi : "+e);
                     } finally{
                         if(rskeluar != null){
                             rskeluar.close();
@@ -1005,7 +1005,7 @@ private void TanggalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_T
                             retur=rsretur.getDouble("jml");
                         }
                     } catch (Exception e) {
-                        System.out.println("Notofikasi : "+e);
+                        System.out.println("Notifikasi : "+e);
                     } finally{
                         if(rsretur != null){
                             rsretur.close();
@@ -1132,7 +1132,7 @@ private void TanggalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_T
                                 }
                             }
                         } catch (Exception e) {
-                            System.out.println("Notofikasi : "+e);
+                            System.out.println("Notifikasi : "+e);
                         } finally{
                             if(rscariharga != null){
                                 rscariharga.close();

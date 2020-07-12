@@ -44,7 +44,7 @@ public final class DlgRestoreTarifLab extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        Object[] row={"P","Kode Periksa","Nama Pemeriksaan","J.S. RS","Paket BHP","J.M. Perujuk","J.M. Dokter","J.M. Petugas","K.S.O.","Menejemen","Total Tarif","Jenis Bayar","Kelas"};
+        Object[] row={"P","Kode Periksa","Nama Pemeriksaan","J.S. RS","Paket BHP","J.M. Perujuk","J.M. Dokter","J.M. Petugas","K.S.O.","Manajemen","Total Tarif","Jenis Bayar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;

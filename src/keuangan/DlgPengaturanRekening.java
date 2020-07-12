@@ -121,8 +121,8 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
                 "Kode Akun","Nama Akun Utang Jasa Paramedis","Kode Akun","Nama Akun Beban KSO",
                 "Kode Akun","Nama Akun Utang KSO","Kode Akun","Nama Akun HPP Persediaan Ralan",
                 "Kode Akun","Nama Akun Persediaan BHP Ralan","Kode Akun","Nama Akun Beban Jasa Sarana",
-                "Kode Akun","Nama Akun Utang Jasa Sarana","Kode Akun","Nama Akun Utang Beban Jasa Menejemen",
-                "Kode Akun","Nama Akun Utang Jasa Menejemen"
+                "Kode Akun","Nama Akun Utang Jasa Sarana","Kode Akun","Nama Akun Utang Beban Jasa Manajemen",
+                "Kode Akun","Nama Akun Utang Jasa Manajemen"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
@@ -207,8 +207,8 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
                 "Kode Akun","Nama Akun Utang Jasa Paramedis","Kode Akun","Nama Akun Beban KSO",
                 "Kode Akun","Nama Akun Utang KSO","Kode Akun","Nama Akun HPP Persediaan Ranap",
                 "Kode Akun","Nama Akun Persediaan BHP Ranap","Kode Akun","Nama Akun Beban Jasa Sarana",
-                "Kode Akun","Nama Akun Utang Jasa Sarana","Kode Akun","Nama Akun Utang Beban Jasa Menejemen",
-                "Kode Akun","Nama Akun Utang Jasa Menejemen"
+                "Kode Akun","Nama Akun Utang Jasa Sarana","Kode Akun","Nama Akun Utang Beban Jasa Manajemen",
+                "Kode Akun","Nama Akun Utang Jasa Manajemen"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };

@@ -342,8 +342,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Penulusan SQL Simpan, Ganti, Hapus">
-                    <Property name="tabTitle" type="java.lang.String" value="Penulusan SQL Simpan, Ganti, Hapus"/>
+                  <JTabbedPaneConstraints tabName="Penelusuran SQL Simpan, Ganti, Hapus">
+                    <Property name="tabTitle" type="java.lang.String" value="Penelusuran SQL Simpan, Ganti, Hapus"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>

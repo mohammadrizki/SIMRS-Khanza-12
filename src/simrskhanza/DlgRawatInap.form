@@ -44,11 +44,11 @@
         <Property name="name" type="java.lang.String" value="KSO" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="Menejemen">
+    <Component class="javax.swing.JTextField" name="Manajemen">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="text" type="java.lang.String" value="0"/>
-        <Property name="name" type="java.lang.String" value="Menejemen" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="Manajemen" noResource="true"/>
       </Properties>
     </Component>
   </NonVisualComponents>
