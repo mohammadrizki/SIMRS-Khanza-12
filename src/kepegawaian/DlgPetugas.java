@@ -518,7 +518,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
         jLabel16.setPreferredSize(new java.awt.Dimension(80, 23));
         panelGlass9.add(jLabel16);
 
-        CmbCrStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "MENIKAH", "SINGLE", "JANDA", "DUDHA" }));
+        CmbCrStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
         CmbCrStts.setLightWeightPopupEnabled(false);
         CmbCrStts.setName("CmbCrStts"); // NOI18N
         CmbCrStts.setPreferredSize(new java.awt.Dimension(120, 23));
@@ -684,7 +684,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
         FormInput.add(jLabel19);
         jLabel19.setBounds(646, 12, 100, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "SINGLE", "JANDA", "DUDHA", "JOMBLO" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI", "JOMBLO" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {

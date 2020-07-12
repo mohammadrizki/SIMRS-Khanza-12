@@ -2042,7 +2042,7 @@ public final class BPJSCekNoRujukanPCare extends javax.swing.JDialog {
         FormKelengkapanPasien.add(jLabel19);
         jLabel19.setBounds(228, 85, 65, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "BELUM MENIKAH", "JANDA", "DUDHA" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {
