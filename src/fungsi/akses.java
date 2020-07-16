@@ -142,7 +142,8 @@ public final class akses {
             zis_dapur_rumah_penerima_dankes=false,zis_kursi_rumah_penerima_dankes=false,zis_kategori_phbs_penerima_dankes=false,
             zis_elektronik_penerima_dankes=false,zis_ternak_penerima_dankes=false,zis_jenis_simpanan_penerima_dankes=false,penilaian_awal_keperawatan_anak=false,
             zis_kategori_asnaf_penerima_dankes=false,master_masalah_keperawatan_anak=false,master_imunisasi=false,zis_patologis_penerima_dankes=false,
-            pcare_cek_kartu=false,surat_bebas_narkoba=false;
+            pcare_cek_kartu=false,surat_bebas_narkoba=false,surat_keterangan_covid=false,pemakaian_air_tanah=false,grafik_air_tanah_pertanggal=false,
+            grafik_air_tanah_perbulan=false;
     
     public static void setData(String user, String pass) {
        try {
@@ -1469,6 +1470,10 @@ public final class akses {
                         akses.zis_patologis_penerima_dankes=rs2.getBoolean("zis_patologis_penerima_dankes");
                         akses.pcare_cek_kartu=rs2.getBoolean("pcare_cek_kartu");
                         akses.surat_bebas_narkoba=rs2.getBoolean("surat_bebas_narkoba");
+                        akses.surat_keterangan_covid=rs2.getBoolean("surat_keterangan_covid");
+                        akses.pemakaian_air_tanah=rs2.getBoolean("pemakaian_air_tanah");
+                        akses.grafik_air_tanah_pertanggal=rs2.getBoolean("grafik_air_tanah_pertanggal");
+                        akses.grafik_air_tanah_perbulan=rs2.getBoolean("grafik_air_tanah_perbulan");
                     }else if((rs.getRow()==0)&&(rs2.getRow()==0)){
                         akses.kode="";
                         akses.penyakit= false;
@@ -2829,4 +2834,8 @@ public final class akses {
     public static boolean getzis_patologis_penerima_dankes(){return akses.zis_patologis_penerima_dankes;}
     public static boolean getpcare_cek_kartu(){return akses.pcare_cek_kartu;}
     public static boolean getsurat_bebas_narkoba(){return akses.surat_bebas_narkoba;}
+    public static boolean getsurat_keterangan_covid(){return akses.surat_keterangan_covid;}
+    public static boolean getpemakaian_air_tanah(){return akses.pemakaian_air_tanah;}
+    public static boolean getgrafik_air_tanah_pertanggal(){return akses.grafik_air_tanah_pertanggal;}
+    public static boolean getgrafik_air_tanah_perbulan(){return akses.grafik_air_tanah_perbulan;}
 }   
