@@ -720,6 +720,45 @@ public final class DlgRawatInap extends javax.swing.JDialog {
             public void windowDeactivated(WindowEvent e) {}
         });
         
+        perawatan.dokter2.addWindowListener(new WindowListener(){
+            @Override
+            public void windowOpened(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                kdptg2.setText(perawatan.dokter2.getTable().getValueAt(perawatan.dokter2.getTable().getSelectedRow(),0).toString());
+                TPerawat2.setText(perawatan.dokter2.getTable().getValueAt(perawatan.dokter2.getTable().getSelectedRow(),1).toString());
+                kdptg2.requestFocus();
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
+        
         perawatan.petugas.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {}
@@ -749,6 +788,45 @@ public final class DlgRawatInap extends javax.swing.JDialog {
             public void windowActivated(WindowEvent e) {}
             @Override
             public void windowDeactivated(WindowEvent e) {}
+        });
+        
+        perawatan.petugas2.addWindowListener(new WindowListener(){
+            @Override
+            public void windowOpened(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                KdDok2.setText(perawatan.petugas2.getTable().getValueAt(perawatan.petugas2.getTable().getSelectedRow(),0).toString());
+                TDokter2.setText(perawatan.petugas2.getTable().getValueAt(perawatan.petugas2.getTable().getSelectedRow(),1).toString());
+                KdDok2.requestFocus();
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
         });
                 
         perawatan.addWindowListener(new WindowListener() {
@@ -996,6 +1074,8 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         TNmPrw2 = new widget.TextBox();
         btnTindakan6 = new widget.Button();
         btnTindakan7 = new widget.Button();
+        BtnSeekDokter3 = new widget.Button();
+        BtnSeekPetugas3 = new widget.Button();
         internalFrame5 = new widget.InternalFrame();
         Scroll3 = new widget.ScrollPane();
         tbPemeriksaan = new widget.Table();
@@ -1357,7 +1437,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         panelGlass10.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-06-2020" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-07-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -1371,7 +1451,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         panelGlass10.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-06-2020" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-07-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -1742,6 +1822,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
 
         BtnSeekPetugas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnSeekPetugas2.setMnemonic('5');
+        BtnSeekPetugas2.setText("Petugas");
         BtnSeekPetugas2.setToolTipText("ALt+5");
         BtnSeekPetugas2.setName("BtnSeekPetugas2"); // NOI18N
         BtnSeekPetugas2.addActionListener(new java.awt.event.ActionListener() {
@@ -1750,14 +1831,14 @@ public final class DlgRawatInap extends javax.swing.JDialog {
             }
         });
         panelGlass11.add(BtnSeekPetugas2);
-        BtnSeekPetugas2.setBounds(849, 40, 28, 23);
+        BtnSeekPetugas2.setBounds(800, 10, 100, 23);
 
         TPerawat2.setEditable(false);
         TPerawat2.setBackground(new java.awt.Color(202, 202, 202));
         TPerawat2.setHighlighter(null);
         TPerawat2.setName("TPerawat2"); // NOI18N
         panelGlass11.add(TPerawat2);
-        TPerawat2.setBounds(240, 40, 606, 23);
+        TPerawat2.setBounds(240, 40, 480, 23);
 
         jLabel12.setText("Pelaksana :");
         jLabel12.setName("jLabel12"); // NOI18N
@@ -1778,10 +1859,11 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         TDokter2.setHighlighter(null);
         TDokter2.setName("TDokter2"); // NOI18N
         panelGlass11.add(TDokter2);
-        TDokter2.setBounds(240, 10, 606, 23);
+        TDokter2.setBounds(240, 10, 480, 23);
 
         BtnSeekDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnSeekDokter2.setMnemonic('4');
+        BtnSeekDokter2.setText("Dokter");
         BtnSeekDokter2.setToolTipText("ALt+4");
         BtnSeekDokter2.setName("BtnSeekDokter2"); // NOI18N
         BtnSeekDokter2.addActionListener(new java.awt.event.ActionListener() {
@@ -1790,7 +1872,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
             }
         });
         panelGlass11.add(BtnSeekDokter2);
-        BtnSeekDokter2.setBounds(849, 10, 28, 23);
+        BtnSeekDokter2.setBounds(710, 40, 90, 23);
 
         jLabel29.setText("Tindakan/Tagihan :");
         jLabel29.setName("jLabel29"); // NOI18N
@@ -1844,6 +1926,32 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         });
         panelGlass11.add(btnTindakan7);
         btnTindakan7.setBounds(849, 70, 28, 23);
+
+        BtnSeekDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
+        BtnSeekDokter3.setMnemonic('4');
+        BtnSeekDokter3.setText("Dokter");
+        BtnSeekDokter3.setToolTipText("ALt+4");
+        BtnSeekDokter3.setName("BtnSeekDokter3"); // NOI18N
+        BtnSeekDokter3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSeekDokter3ActionPerformed(evt);
+            }
+        });
+        panelGlass11.add(BtnSeekDokter3);
+        BtnSeekDokter3.setBounds(710, 10, 90, 23);
+
+        BtnSeekPetugas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
+        BtnSeekPetugas3.setMnemonic('5');
+        BtnSeekPetugas3.setText("Petugas");
+        BtnSeekPetugas3.setToolTipText("ALt+5");
+        BtnSeekPetugas3.setName("BtnSeekPetugas3"); // NOI18N
+        BtnSeekPetugas3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSeekPetugas3ActionPerformed(evt);
+            }
+        });
+        panelGlass11.add(BtnSeekPetugas3);
+        BtnSeekPetugas3.setBounds(800, 40, 100, 23);
 
         internalFrame4.add(panelGlass11, java.awt.BorderLayout.PAGE_START);
 
@@ -2893,7 +3001,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         TPasien.setBounds(283, 10, 260, 23);
 
         DTPTgl.setForeground(new java.awt.Color(50, 70, 50));
-        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-06-2020" }));
+        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-07-2020" }));
         DTPTgl.setDisplayFormat("dd-MM-yyyy");
         DTPTgl.setName("DTPTgl"); // NOI18N
         DTPTgl.setOpaque(false);
@@ -4566,11 +4674,11 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
 
     private void BtnSeekPetugas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeekPetugas2ActionPerformed
         akses.setform("DlgRawatInap");
-        perawatan.petugas.emptTeks();
-        perawatan.petugas.isCek();
-        perawatan.petugas.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-        perawatan.petugas.setLocationRelativeTo(internalFrame1);
-        perawatan.petugas.setVisible(true);
+        perawatan.petugas2.emptTeks();
+        perawatan.petugas2.isCek();
+        perawatan.petugas2.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+        perawatan.petugas2.setLocationRelativeTo(internalFrame1);
+        perawatan.petugas2.setVisible(true);
     }//GEN-LAST:event_BtnSeekPetugas2ActionPerformed
 
     private void KdDok2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDok2KeyPressed
@@ -4585,11 +4693,11 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
 
     private void BtnSeekDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeekDokter2ActionPerformed
         akses.setform("DlgRawatInap");
-        perawatan.dokter.emptTeks();
-        perawatan.dokter.isCek();
-        perawatan.dokter.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-        perawatan.dokter.setLocationRelativeTo(internalFrame1);
-        perawatan.dokter.setVisible(true);
+        perawatan.dokter2.emptTeks();
+        perawatan.dokter2.isCek();
+        perawatan.dokter2.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+        perawatan.dokter2.setLocationRelativeTo(internalFrame1);
+        perawatan.dokter2.setVisible(true);
     }//GEN-LAST:event_BtnSeekDokter2ActionPerformed
 
     private void TKdPrw2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdPrw2KeyPressed
@@ -5400,6 +5508,24 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
         }
     }//GEN-LAST:event_BtnMonitoringAsuhanGiziActionPerformed
 
+    private void BtnSeekDokter3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeekDokter3ActionPerformed
+        akses.setform("DlgRawatInap");
+        perawatan.dokter.emptTeks();
+        perawatan.dokter.isCek();
+        perawatan.dokter.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+        perawatan.dokter.setLocationRelativeTo(internalFrame1);
+        perawatan.dokter.setVisible(true);
+    }//GEN-LAST:event_BtnSeekDokter3ActionPerformed
+
+    private void BtnSeekPetugas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeekPetugas3ActionPerformed
+        akses.setform("DlgRawatInap");
+        perawatan.petugas.emptTeks();
+        perawatan.petugas.isCek();
+        perawatan.petugas.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+        perawatan.petugas.setLocationRelativeTo(internalFrame1);
+        perawatan.petugas.setVisible(true);
+    }//GEN-LAST:event_BtnSeekPetugas3ActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -5443,8 +5569,10 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
     private widget.Button BtnSKDP;
     private widget.Button BtnSeekDokter;
     private widget.Button BtnSeekDokter2;
+    private widget.Button BtnSeekDokter3;
     private widget.Button BtnSeekPetugas;
     private widget.Button BtnSeekPetugas2;
+    private widget.Button BtnSeekPetugas3;
     private widget.Button BtnSimpan;
     private widget.CekBox ChkAccor;
     private widget.CekBox ChkInput;
