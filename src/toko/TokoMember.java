@@ -202,7 +202,7 @@ public final class TokoMember extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Member Toko / Minimarket / Koperasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Member Toko / Minimarket / Koperasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -211,7 +211,7 @@ public final class TokoMember extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbPetugas.setAutoCreateRowSorter(true);
-        tbPetugas.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPetugas.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPetugas.setComponentPopupMenu(Popup);
         tbPetugas.setName("tbPetugas"); // NOI18N
         tbPetugas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -818,7 +818,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     "select no_member, nama, jk, tmp_lahir, tgl_lahir, alamat, no_telp, email from tokomember "+
                     "where no_member='"+NoMember.getText()+"'",param);
             }else{
-                JOptionPane.showMessageDialog(null,"Silakan pilih data yang mau dicetak kartu anggotanya ..!!!");
+                JOptionPane.showMessageDialog(null,"Silahkan pilih data yang mau dicetak kartu anggotanya ..!!!");
             }
         }
         this.setCursor(Cursor.getDefaultCursor());

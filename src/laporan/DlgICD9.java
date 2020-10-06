@@ -171,7 +171,7 @@ public final class DlgICD9 extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data ICD 9 Prosedur Tindakan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data ICD 9 Prosedur Tindakan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -179,7 +179,7 @@ public final class DlgICD9 extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbPenyakit.setAutoCreateRowSorter(true);
-        tbPenyakit.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPenyakit.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPenyakit.setName("tbPenyakit"); // NOI18N
         tbPenyakit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -426,7 +426,7 @@ public final class DlgICD9 extends javax.swing.JDialog {
         jLabel9.setBounds(0, 42, 100, 23);
 
         ScrollCiri.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ScrollCiri.setForeground(new java.awt.Color(50, 50, 50));
+        ScrollCiri.setForeground(new java.awt.Color(50,50,50));
         ScrollCiri.setName("ScrollCiri"); // NOI18N
 
         Panjang.setBorder(null);

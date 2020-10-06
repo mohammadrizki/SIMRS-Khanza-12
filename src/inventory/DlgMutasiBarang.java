@@ -38,7 +38,7 @@ public class DlgMutasiBarang extends javax.swing.JDialog {
     private WarnaTable2 warna=new WarnaTable2();
     public boolean tampilkanpermintaan=false;
     private boolean sukses=false;
-    private String aktifkanbatch="no";
+    private String aktifkanbatch="no",DEPOAKTIFOBAT="";
     private DlgPindahGudang pindah=new DlgPindahGudang(null,false);
 
     /** Creates new form DlgProgramStudi
@@ -160,9 +160,11 @@ public class DlgMutasiBarang extends javax.swing.JDialog {
         
         try {
             aktifkanbatch = koneksiDB.AKTIFKANBATCHOBAT();
+            DEPOAKTIFOBAT = koneksiDB.DEPOAKTIFOBAT();
         } catch (Exception e) {
             System.out.println("E : "+e);
             aktifkanbatch = "no";
+            DEPOAKTIFOBAT = "";
         }
     }
 
@@ -251,7 +253,7 @@ public class DlgMutasiBarang extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Mutasi Antar Gudang Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Mutasi Antar Gudang Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1241,6 +1243,13 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 
     public void isCek(){
         BtnSimpan.setEnabled(akses.getmutasi_barang());
+        if(!akses.getkode().equals("Admin Utama")){
+            if(!DEPOAKTIFOBAT.equals("")){
+                kddari.setText(DEPOAKTIFOBAT);
+                nmdari.setText(Sequel.cariIsi("select nm_bangsal from bangsal where kd_bangsal=?",DEPOAKTIFOBAT));
+                btnDari.setEnabled(false);
+            }
+        }
     }
 
     private void getData() {

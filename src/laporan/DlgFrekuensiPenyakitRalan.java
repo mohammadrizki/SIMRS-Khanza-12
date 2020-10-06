@@ -451,7 +451,7 @@ public class DlgFrekuensiPenyakitRalan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Rekap Frekuensi Penyakit Di Rawat Jalan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Rekap Frekuensi Penyakit Di Rawat Jalan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1088,7 +1088,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             cf.setVisible(true);                
             
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
         }        
         
     }//GEN-LAST:event_ppGrafikTerbanyakBatangActionPerformed
@@ -1283,7 +1283,7 @@ private void ppGrafikTerbanyakPieActionPerformed(java.awt.event.ActionEvent evt)
             cf.setVisible(true);        
             
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
         }    
 }//GEN-LAST:event_ppGrafikTerbanyakPieActionPerformed
 
@@ -1488,7 +1488,7 @@ private void ppGrafikTerkecilBatangActionPerformed(java.awt.event.ActionEvent ev
             cf.setVisible(true);                  
             
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
         }     
 }//GEN-LAST:event_ppGrafikTerkecilBatangActionPerformed
 
@@ -1682,7 +1682,7 @@ private void ppGrafikTerkecilPieActionPerformed(java.awt.event.ActionEvent evt) 
             cf.setVisible(true);          
             
         }else{
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan urutkan secara Descanding/Besar Ke Kecil dengan menklik pada kolom jumlah..!!!!");
         }    
 }//GEN-LAST:event_ppGrafikTerkecilPieActionPerformed
 

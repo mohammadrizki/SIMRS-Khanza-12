@@ -142,7 +142,7 @@
             <Component class="widget.Table" name="tbJnsPerawatan">
               <Properties>
                 <Property name="autoCreateRowSorter" type="boolean" value="true"/>
-                <Property name="toolTipText" type="java.lang.String" value="Silakan klik untuk memilih data yang hendak diedit ataupun dihapus"/>
+                <Property name="toolTipText" type="java.lang.String" value="Silahkan klik untuk memilih data yang mau diedit ataupun dihapus"/>
                 <Property name="componentPopupMenu" type="javax.swing.JPopupMenu" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="Popup"/>
                 </Property>
@@ -749,16 +749,16 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="widget.TextBox" name="Manajemen">
+                <Component class="widget.TextBox" name="Menejemen">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0"/>
                     <Property name="highlighter" type="javax.swing.text.Highlighter" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="null"/>
                     </Property>
-                    <Property name="name" type="java.lang.String" value="Manajemen" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="Menejemen" noResource="true"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ManajemenKeyPressed"/>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MenejemenKeyPressed"/>
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

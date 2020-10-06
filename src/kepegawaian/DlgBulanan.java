@@ -18,7 +18,6 @@ import fungsi.validasi;
 import fungsi.akses;
 import java.awt.Cursor;
 import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
@@ -480,7 +479,7 @@ public final class DlgBulanan extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Rekap Presensi Bulanan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Rekap Presensi Bulanan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -489,7 +488,7 @@ public final class DlgBulanan extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbBangsal.setAutoCreateRowSorter(true);
-        tbBangsal.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbBangsal.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbBangsal.setName("tbBangsal"); // NOI18N
         tbBangsal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -932,6 +931,24 @@ public final class DlgBulanan extends javax.swing.JDialog {
                 param.put("logo",Sequel.cariGambar("select logo from setting")); 
                 String say=" rekap_presensi.jam_datang like '%"+ThnCari.getSelectedItem()+"-"+BlnCari.getSelectedItem()+"%' ";
                 try{
+                      param.put("keterlambatan",Sequel.cariIsi("select concat(round((sum(TIME_TO_SEC(`keterlambatan`))-mod(sum(TIME_TO_SEC(`keterlambatan`)),3600))/3600),':',round((mod(sum(TIME_TO_SEC(`keterlambatan`)),3600)-mod(mod(sum(TIME_TO_SEC(`keterlambatan`)),3600),60))/60),':',round(mod(mod(sum(TIME_TO_SEC(`keterlambatan`)),3600),60)))"+
+                            " from pegawai inner join rekap_presensi inner join departemen on pegawai.departemen=departemen.dep_id and pegawai.id=rekap_presensi.id  where "+
+                            " departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and pegawai.nik like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and pegawai.nama like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.shift like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.status like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.keterlambatan like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.jam_datang like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.jam_pulang like '%"+TCari.getText().trim()+"%' and "+say)); 
+                      param.put("durasi",Sequel.cariIsi("select concat(round((sum(TIME_TO_SEC(`durasi`))-mod(sum(TIME_TO_SEC(`durasi`)),3600))/3600),':',round((mod(sum(TIME_TO_SEC(`durasi`)),3600)-mod(mod(sum(TIME_TO_SEC(`durasi`)),3600),60))/60),':',round(mod(mod(sum(TIME_TO_SEC(`durasi`)),3600),60)))"+
+                            " from pegawai inner join rekap_presensi inner join departemen on pegawai.departemen=departemen.dep_id and pegawai.id=rekap_presensi.id  where "+
+                            " departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and pegawai.nik like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and pegawai.nama like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.shift like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.status like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.durasi like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.jam_datang like '%"+TCari.getText().trim()+"%' and "+say+
+                            "or departemen.nama like '%"+Departemen.getSelectedItem().toString().replaceAll("Semua","")+"%' and rekap_presensi.jam_pulang like '%"+TCari.getText().trim()+"%' and "+say)); 
                       pilih = (String)JOptionPane.showInputDialog(null,"Urutkan berdasakan","Laporan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"NIP","Nama","Shift","Jam Datang","Jam Pulang","Status","Keterlambatan","Durasi","Catatan"},"NIP");
                       switch (pilih) {
                             case "NIP":

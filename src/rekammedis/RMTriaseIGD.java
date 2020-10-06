@@ -351,12 +351,12 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
         TCariSkala1.setDocument(new batasInput((int)100).getKata(TCariSkala1));
         TCariSkala3.setDocument(new batasInput((int)100).getKata(TCariSkala3));
         KeteranganKedatangan.setDocument(new batasInput((int)100).getKata(KeteranganKedatangan));
-        PrimerSuhu.setDocument(new batasInput((byte)3).getKata(PrimerSuhu));
-        SekunderSuhu.setDocument(new batasInput((byte)3).getKata(SekunderSuhu));
+        PrimerSuhu.setDocument(new batasInput((byte)5).getKata(PrimerSuhu));
+        SekunderSuhu.setDocument(new batasInput((byte)5).getKata(SekunderSuhu));
         PrimerNyeri.setDocument(new batasInput((byte)5).getKata(PrimerNyeri));
         SekunderNyeri.setDocument(new batasInput((byte)5).getKata(SekunderNyeri));
-        PrimerTensi.setDocument(new batasInput((byte)7).getKata(PrimerTensi));
-        SekunderTensi.setDocument(new batasInput((byte)7).getKata(SekunderTensi));
+        PrimerTensi.setDocument(new batasInput((byte)8).getKata(PrimerTensi));
+        SekunderTensi.setDocument(new batasInput((byte)8).getKata(SekunderTensi));
         PrimerNadi.setDocument(new batasInput((byte)3).getKata(PrimerNadi));
         SekunderNadi.setDocument(new batasInput((byte)3).getKata(SekunderNadi));
         PrimerSaturasi.setDocument(new batasInput((byte)3).getKata(PrimerSaturasi));
@@ -668,7 +668,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Triase IGD ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Triase IGD ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -1755,7 +1755,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbTriase.setAutoCreateRowSorter(true);
-        tbTriase.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTriase.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTriase.setName("tbTriase"); // NOI18N
         tbTriase.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2501,7 +2501,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis. Tidak ada data yang bisa anda print...!!!!");
             TCari.requestFocus();
         }else if(tabMode.getRowCount()!=0){ 
-            keputusan = (String)JOptionPane.showInputDialog(null,"Silakan pilih laporan..!","Laporan Triase IGD",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Laporan 1","Laporan 2"},"Laporan 1");
+            keputusan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih laporan..!","Laporan Triase IGD",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Laporan 1","Laporan 2"},"Laporan 1");
             switch (keputusan) {
                 case "Laporan 1":
                     Map<String, Object> param = new HashMap<>(); 
@@ -3674,7 +3674,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
             tampilskala1();
             tampilskala2();
         }else{
-            JOptionPane.showMessageDialog(null,"Silakan pilih pemeriksaan terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih pemeriksaan terlebih dahulu..!!");
         }
     }//GEN-LAST:event_BtnCariSkala1ActionPerformed
 
@@ -3846,7 +3846,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
             tampilskala4();
             tampilskala5();
         }else{
-            JOptionPane.showMessageDialog(null,"Silakan pilih pemeriksaan terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih pemeriksaan terlebih dahulu..!!");
         }
     }//GEN-LAST:event_BtnCariSkala2ActionPerformed
 
@@ -4111,7 +4111,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
                         System.out.println("Notif : "+e);
                     }
                                 
-                    pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih Lembar/PDF Triase Skala 1..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 1","PDF Triase Skala 1"},"Lambar Triase Skala 1");
+                    pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih Lembar/PDF Triase Skala 1..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 1","PDF Triase Skala 1"},"Lambar Triase Skala 1");
                     switch (pilihan) {
                         case "Lembar Triase Skala 1":
                               Valid.MyReport("rptLembarTriaseSkala1.jasper","report","::[ Triase Skala 1 ]::",param);
@@ -4227,7 +4227,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
                         System.out.println("Notif : "+e);
                     }
                                 
-                    pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih Lembar/PDF Triase Skala 2..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 2","PDF Triase Skala 2"},"Lambar Triase Skala 2");
+                    pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih Lembar/PDF Triase Skala 2..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 2","PDF Triase Skala 2"},"Lambar Triase Skala 2");
                     switch (pilihan) {
                         case "Lembar Triase Skala 2":
                               Valid.MyReport("rptLembarTriaseSkala2.jasper","report","::[ Triase Skala 2 ]::",param);
@@ -4342,7 +4342,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
                         System.out.println("Notif : "+e);
                     }
                                 
-                    pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih Lembar/PDF Triase Skala 3..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 3","PDF Triase Skala 3"},"Lembar Triase Skala 3");
+                    pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih Lembar/PDF Triase Skala 3..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 3","PDF Triase Skala 3"},"Lembar Triase Skala 3");
                     switch (pilihan) {
                         case "Lembar Triase Skala 3":
                               Valid.MyReport("rptLembarTriaseSkala3.jasper","report","::[ Triase Skala 3 ]::",param);
@@ -4457,7 +4457,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
                         System.out.println("Notif : "+e);
                     }
                                 
-                    pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih Lembar/PDF Triase Skala 4..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 4","PDF Triase Skala 4"},"Lembar Triase Skala 4");
+                    pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih Lembar/PDF Triase Skala 4..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 4","PDF Triase Skala 4"},"Lembar Triase Skala 4");
                     switch (pilihan) {
                         case "Lembar Triase Skala 4":
                               Valid.MyReport("rptLembarTriaseSkala4.jasper","report","::[ Triase Skala 4 ]::",param);
@@ -4572,7 +4572,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
                         System.out.println("Notif : "+e);
                     }
                                 
-                    pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih Lembar/PDF Triase Skala 5..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 5","PDF Triase Skala 5"},"Lembar Triase Skala 5");
+                    pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih Lembar/PDF Triase Skala 5..!","Pilihan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Lembar Triase Skala 5","PDF Triase Skala 5"},"Lembar Triase Skala 5");
                     switch (pilihan) {
                         case "Lembar Triase Skala 5":
                               Valid.MyReport("rptLembarTriaseSkala5.jasper","report","::[ Triase Skala 5 ]::",param);
@@ -4584,7 +4584,7 @@ public final class RMTriaseIGD extends javax.swing.JDialog {
                 }
                 this.setCursor(Cursor.getDefaultCursor());
             }else{
-                JOptionPane.showMessageDialog(null,"Silakan pilih terlebih dahulu data yang mau dicetak data personal triasenya..!!!");
+                JOptionPane.showMessageDialog(null,"Silahkan pilih terlebih dahulu data yang mau dicetak data personal triasenya..!!!");
             }
         }
     }//GEN-LAST:event_BtnPrint1ActionPerformed

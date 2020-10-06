@@ -16,7 +16,7 @@ include_once('layout/header.php');
     </audio>
 
     <section class="content">
-        <div class="container-fluid" style="margin: 5%;">
+        <div class="container-fluid" style="margin: 120px;">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="">
@@ -24,7 +24,7 @@ include_once('layout/header.php');
                 			<p class="col-orange font-36">ANJUNGAN PASIEN MANDIRI</p>
             			</div>
                         <div class="body">
-
+                          
                       		<div class="row">
                 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     				<a href="pendaftaran.php" style="text-decoration: none;">
@@ -66,7 +66,7 @@ include_once('layout/header.php');
                     				</a>
                 				</div>
             				</div>
-
+                          
             				<div class="row">
                 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     				<a href="denah.php" style="text-decoration: none;">
@@ -108,12 +108,12 @@ include_once('layout/header.php');
                     				</a>
                 				</div>
             				</div>
-
+                          
             				<div class="block-header align-center" style="margin-top: 80px;">
-                				<p class="col-red font-18">Silakan pilih layanan dan informasi.</p>
-                				<p class="col-red font-18">Hubungi kami jika mengalami kesulitan.</p>
-            				</div>
-
+                				<p class="col-red font-18">Sentuh tombol diatas untuk memilih layanan dan informasi.</p>
+                				<p class="col-red font-18">Silahkan hubungi petugas jika anda mengalami kesulitan.</p>
+            				</div>                          
+                          
                         </div>
                     </div>
                 </div>

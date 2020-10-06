@@ -258,7 +258,7 @@ public class DlgCariReturPiutang extends javax.swing.JDialog {
 
         ppHapus.setBackground(new java.awt.Color(255, 255, 254));
         ppHapus.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppHapus.setForeground(new java.awt.Color(50, 50, 50));
+        ppHapus.setForeground(new java.awt.Color(50,50,50));
         ppHapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppHapus.setText("Hapus Piutang");
         ppHapus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -281,7 +281,7 @@ public class DlgCariReturPiutang extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Cari Retur Piutang Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Cari Retur Piutang Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -300,7 +300,7 @@ public class DlgCariReturPiutang extends javax.swing.JDialog {
 
             }
         ));
-        tbRetur.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbRetur.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbRetur.setComponentPopupMenu(jPopupMenu1);
         tbRetur.setName("tbRetur"); // NOI18N
         scrollPane1.setViewportView(tbRetur);
@@ -844,7 +844,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                     }
                 }
                 
-                if(sukses=true){
+                if(sukses==true){
                     Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select Retur_Piutang_Obat from set_akun")+"','RETUR PIUTANG','0','"+Sequel.cariIsi("select sum(subtotal) from detreturpiutang where no_retur_piutang='"+rs.getString("no_retur_piutang")+"'")+"'","Rekening");    
                     Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select Kontra_Retur_Piutang_Obat from set_akun")+"','KAS DI TANGAN','"+Sequel.cariIsi("select sum(subtotal) from detreturpiutang where no_retur_piutang='"+rs.getString("no_retur_piutang")+"'")+"','0'","Rekening"); 
                     sukses=jur.simpanJurnal(rs.getString(1),Sequel.cariIsi("select current_date()"),"U","BATAL RETUR PENJUALAN DI "+Sequel.cariIsi("select nm_bangsal from bangsal where kd_bangsal='"+rs.getString("kd_bangsal")+"'").toUpperCase()+", OLEH "+akses.getkode());

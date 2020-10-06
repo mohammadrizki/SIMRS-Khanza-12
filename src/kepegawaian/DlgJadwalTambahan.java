@@ -178,7 +178,7 @@ public class DlgJadwalTambahan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pengaturan Jadwal Tambahan Pegawai ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pengaturan Jadwal Tambahan Pegawai ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -573,7 +573,7 @@ public class DlgJadwalTambahan extends javax.swing.JDialog {
                 param.put("jd30","("+konversi(Integer.parseInt(ThnCari.getSelectedItem().toString()),Integer.parseInt(BlnCari.getSelectedItem().toString()),30)+")");
                 param.put("jd31","("+konversi(Integer.parseInt(ThnCari.getSelectedItem().toString()),Integer.parseInt(BlnCari.getSelectedItem().toString()),31)+")");
                 try{
-                    pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih model cetak..!","Jadwal",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Tampilkan Semua", "Tanpa departemen & jabatan"},"Tampilkan Semua");
+                    pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih model cetak..!","Jadwal",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Tampilkan Semua", "Tanpa departemen & jabatan"},"Tampilkan Semua");
                     switch (pilihan) {
                         case "Tampilkan Semua":
                             Valid.MyReport("rptJadwalPegawai.jasper","report","::[ Jadwal Masuk Tambahan Pegawai ]::",param);            

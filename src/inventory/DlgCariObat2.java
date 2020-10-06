@@ -92,11 +92,11 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         this.setLocation(10,2);
         setSize(656,250);
 
-        Object[] row={"K","Jumlah","Kode","Nama Barang","Satuan","Kandungan",
+        tabMode=new DefaultTableModel(null,new Object[]{
+            "K","Jumlah","Kode","Nama Barang","Satuan","Kandungan",
             "Harga(Rp)","Jenis Obat","Emb","Tslh","Stok","I.F.","H.Beli",
             "Aturan Pakai","Kategori","Golongan","No.Batch","No.Faktur","Kadaluarsa"
-        };
-        tabMode=new DefaultTableModel(null,row){
+        }){
             @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
                 if ((colIndex==0)||(colIndex==1)||(colIndex==8)||(colIndex==9)||(colIndex==13)||(colIndex==16)||(colIndex==17)) {
@@ -499,7 +499,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Popup.setName("Popup"); // NOI18N
 
         ppBersihkan.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppBersihkan.setForeground(new java.awt.Color(50, 50, 50));
+        ppBersihkan.setForeground(new java.awt.Color(50,50,50));
         ppBersihkan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppBersihkan.setText("Bersihkan Jumlah");
         ppBersihkan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -514,7 +514,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Popup.add(ppBersihkan);
 
         ppStok.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppStok.setForeground(new java.awt.Color(50, 50, 50));
+        ppStok.setForeground(new java.awt.Color(50,50,50));
         ppStok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppStok.setText("Tampilkan Semua Stok");
         ppStok.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -529,7 +529,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Popup.add(ppStok);
 
         ppStok1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppStok1.setForeground(new java.awt.Color(50, 50, 50));
+        ppStok1.setForeground(new java.awt.Color(50,50,50));
         ppStok1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppStok1.setText("Tampilkan Stok Lokasi Lain");
         ppStok1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -572,7 +572,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -866,7 +866,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
 
         TabRawat.setBackground(new java.awt.Color(255, 255, 253));
         TabRawat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)));
-        TabRawat.setForeground(new java.awt.Color(50, 50, 50));
+        TabRawat.setForeground(new java.awt.Color(50,50,50));
         TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -880,7 +880,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
-        tbObat.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbObat.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbObat.setComponentPopupMenu(Popup);
         tbObat.setName("tbObat"); // NOI18N
         tbObat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -912,7 +912,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Scroll2.setOpaque(true);
         Scroll2.setPreferredSize(new java.awt.Dimension(454, 90));
 
-        tbObatRacikan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbObatRacikan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbObatRacikan.setName("tbObatRacikan"); // NOI18N
         tbObatRacikan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -928,7 +928,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Scroll3.setOpaque(true);
 
         tbDetailObatRacikan.setAutoCreateRowSorter(true);
-        tbDetailObatRacikan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbDetailObatRacikan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbDetailObatRacikan.setName("tbDetailObatRacikan"); // NOI18N
         tbDetailObatRacikan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -984,15 +984,15 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
                             tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),4).toString().equals("")||
                             tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),5).toString().equals("")||
                             tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),6).toString().equals("")){
-                        JOptionPane.showMessageDialog(null,"Silakan lengkapi data racikan..!!");
+                        JOptionPane.showMessageDialog(null,"Silahkan lengkapi data racikan..!!");
                     }else{
                         tampildetailracikanobat();
                     }
                 }else{
-                    JOptionPane.showMessageDialog(null,"Silakan pilih racikan..!!");
+                    JOptionPane.showMessageDialog(null,"Silahkan pilih racikan..!!");
                 }
             }else{
-                JOptionPane.showMessageDialog(null,"Silakan masukkan racikan..!!");
+                JOptionPane.showMessageDialog(null,"Silahkan masukkan racikan..!!");
             }
         }  
 }//GEN-LAST:event_BtnCariActionPerformed
@@ -1214,7 +1214,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                                 Double.parseDouble(tbObat.getValueAt(i,9).toString())+(Double.parseDouble(tbObat.getValueAt(i,6).toString())*
                                                 Double.parseDouble(tbObat.getValueAt(i,1).toString()))),
                                             "Ranap",kdgudang.getText(),tbObat.getValueAt(i,16).toString(),tbObat.getValueAt(i,17).toString() 
-                                        })==true){        
+                                        })==true){    
                                             ttljual=ttljual+Double.parseDouble(tbObat.getValueAt(i,8).toString())+
                                                     Double.parseDouble(tbObat.getValueAt(i,9).toString())+(Double.parseDouble(tbObat.getValueAt(i,6).toString())*
                                                             Double.parseDouble(tbObat.getValueAt(i,1).toString()));
@@ -1378,7 +1378,6 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                                     Double.parseDouble(tbDetailObatRacikan.getValueAt(i,10).toString()));
                                     ttlhpp=ttlhpp+(Double.parseDouble(tbDetailObatRacikan.getValueAt(i,5).toString())*
                                                     Double.parseDouble(tbDetailObatRacikan.getValueAt(i,10).toString()));
-
                                     if(aktifkanbatch.equals("yes")){
                                         Sequel.mengedit("data_batch","no_batch=? and kode_brng=? and no_faktur=?","sisa=sisa-?",4,new String[]{
                                             ""+Double.parseDouble(tbDetailObatRacikan.getValueAt(i,10).toString()),tbDetailObatRacikan.getValueAt(i,16).toString(),tbDetailObatRacikan.getValueAt(i,1).toString(),tbDetailObatRacikan.getValueAt(i,17).toString()
@@ -1625,7 +1624,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                     aturanpakai.setVisible(true);
                 }else if(i==3){
                     if(tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),1).equals("")){
-                        JOptionPane.showMessageDialog(null,"Silakan masukkan nama racikan..!!");
+                        JOptionPane.showMessageDialog(null,"Silahkan masukkan nama racikan..!!");
                         tbObatRacikan.requestFocus();
                     }else{
                         metoderacik.isCek();
@@ -1647,13 +1646,13 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                                 tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),3).toString().equals("")||
                                 tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),4).toString().equals("")||
                                 tbObatRacikan.getValueAt(tbObatRacikan.getSelectedRow(),5).toString().equals("")){
-                            JOptionPane.showMessageDialog(null,"Silakan lengkapi data racikan..!!");
+                            JOptionPane.showMessageDialog(null,"Silahkan lengkapi data racikan..!!");
                         }else{
                             tampildetailracikanobat();
                             TCari.requestFocus();
                         }
                     }else{
-                        JOptionPane.showMessageDialog(null,"Silakan pilih racikan..!!");
+                        JOptionPane.showMessageDialog(null,"Silahkan pilih racikan..!!");
                     }
                 }
             }
@@ -1782,7 +1781,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                 }
             }
         }else{
-            JOptionPane.showMessageDialog(null,"Silakan pilih No.Racikan terlebih dahulu");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih No.Racikan terlebih dahulu");
         }  
     }//GEN-LAST:event_tbDetailObatRacikanKeyPressed
 
@@ -1988,7 +1987,11 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                 golongan[jml]=tbObat.getValueAt(i,15).toString();
                 nobatch[jml]=tbObat.getValueAt(i,16).toString();
                 nofaktur[jml]=tbObat.getValueAt(i,17).toString();
-                kadaluarsa[jml]=tbObat.getValueAt(i,18).toString();
+                try {
+                    kadaluarsa[jml]=tbObat.getValueAt(i,18).toString();
+                } catch (Exception e) {
+                    kadaluarsa[jml]="0000-00-00";
+                }
                 jml++;
             }
         }
@@ -2914,7 +2917,11 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                 golongan[z]=tbDetailObatRacikan.getValueAt(i,15).toString();
                 nobatch[z]=tbDetailObatRacikan.getValueAt(i,16).toString();
                 nofaktur[z]=tbDetailObatRacikan.getValueAt(i,17).toString();
-                kadaluarsa[z]=tbDetailObatRacikan.getValueAt(i,18).toString();
+                try {
+                    kadaluarsa[z]=tbObat.getValueAt(i,18).toString();
+                } catch (Exception e) {
+                    kadaluarsa[z]="0000-00-00";
+                }
                 z++;
             }
         }

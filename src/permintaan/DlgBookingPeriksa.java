@@ -548,7 +548,7 @@ public class DlgBookingPeriksa extends javax.swing.JFrame {
         WindowBalas.setUndecorated(true);
         WindowBalas.setResizable(false);
 
-        internalFrame5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pengecekan Data Pasien & Ketersediaan Kuota Periksa ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pengecekan Data Pasien & Ketersediaan Kuota Periksa ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame5.setLayout(new java.awt.BorderLayout(1, 1));
 
         panelGlass6.setPreferredSize(new java.awt.Dimension(44, 54));
@@ -1569,10 +1569,10 @@ public class DlgBookingPeriksa extends javax.swing.JFrame {
                     tbObat.requestFocus();
                 }   
             }else{
-                JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
+                JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
             } 
         }else{
-            JOptionPane.showMessageDialog(rootPane,"Silakan validasi yang belum dibalas..!!");
+            JOptionPane.showMessageDialog(rootPane,"Silahkan validasi yang belum dibalas..!!");
         }   
     }//GEN-LAST:event_BtnJawabActionPerformed
 
@@ -1601,7 +1601,7 @@ public class DlgBookingPeriksa extends javax.swing.JFrame {
                 tampil();
             }
         }else{
-            JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
         }
     }//GEN-LAST:event_BtnHapusActionPerformed
 
@@ -1966,7 +1966,7 @@ public class DlgBookingPeriksa extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane,"Gagal merubah pesan balasan, silahkan cek kembali isi balasan..!!");
             }
         }else{
-            JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
         }
     }//GEN-LAST:event_BtnPrint1ActionPerformed
 
@@ -2418,7 +2418,7 @@ public class DlgBookingPeriksa extends javax.swing.JFrame {
                 if(Sequel.menyimpantf2("booking_periksa_diterima","?,?","Booking Diterima",2,new String[]{NoBooking.getText(),TNo.getText()})==true){
                     if(Sequel.menyimpantf2("booking_registrasi","?,?,?,?,?,?,?,?,?,?,?","Pasien dan Tanggal",11,new String[]{
                             TanggalBooking.getText(),TanggalBooking.getText().toString().substring(11,19),TNo.getText(),
-                            TanggalPeriksa.getText(),KdDokter.getText(),KdPoli.getText(),NoReg.getText(),kdpnj.getText(),"0",
+                            TanggalPeriksa.getText(),KdDokter.getText(),KdPoli.getText(),NoReg.getText(),kdpnj.getText(),"1",
                             TanggalPeriksa.getText()+" "+TanggalBooking.getText().toString().substring(11,19),"belum"
                         })==true){
                         if(Sequel.menyimpantf2("personal_pasien","?,'-',aes_encrypt(?,'windi')","Password Pasien",2,new String[]{TNo.getText(),EnkripsiAES.encrypt(TNo.getText())})==false){
@@ -2442,7 +2442,7 @@ public class DlgBookingPeriksa extends javax.swing.JFrame {
                         if(Sequel.menyimpantf2("booking_periksa_diterima","?,?","Booking Diterima",2,new String[]{NoBooking.getText(),TNo.getText()})==true){
                             if(Sequel.menyimpantf2("booking_registrasi","?,?,?,?,?,?,?,?,?,?,?","Pasien dan Tanggal",11,new String[]{
                                     TanggalBooking.getText(),TanggalBooking.getText().toString().substring(11,19),TNo.getText(),
-                                    TanggalPeriksa.getText(),KdDokter.getText(),KdPoli.getText(),NoReg.getText(),kdpnj.getText(),"0",
+                                    TanggalPeriksa.getText(),KdDokter.getText(),KdPoli.getText(),NoReg.getText(),kdpnj.getText(),"1",
                                     TanggalPeriksa.getText()+" "+TanggalBooking.getText().toString().substring(11,19),"belum"
                                 })==true){
                                 if(Sequel.menyimpantf2("personal_pasien","?,'-',aes_encrypt(?,'windi')","Password Pasien",2,new String[]{TNo.getText(),EnkripsiAES.encrypt(TNo.getText())})==false){

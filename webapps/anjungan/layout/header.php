@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 0);
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
+error_reporting(E_ERROR | E_WARNING | E_PARSE); 
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +40,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
     <!-- Sweet Alert Css -->
     <link href="<?php echo URL; ?>/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-
+  
     <!-- Jquery-UI Css -->
     <link href="<?php echo URL; ?>/css/jquery-ui.min.css" rel="stylesheet">
 
@@ -55,7 +55,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 </head>
 
-<body class="theme-green ls-closed">
+<body class="theme-red ls-closed">
     <!-- Top Bar -->
     <nav class="navbar">
         <div class="container-fluid">

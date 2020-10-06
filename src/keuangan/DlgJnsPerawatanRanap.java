@@ -65,7 +65,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
 
         Object[] row={"P","Kode Tindakan","Nama Tnd/Prw/Tagihan","Kategori",
                       "J.S.Rumah Sakit","BHP/Paket Obat","J.Medis Dr",
-                      "J.Medis Pr","KSO","Manajemen","Ttl Biaya Dr",
+                      "J.Medis Pr","KSO","Menejemen","Ttl Biaya Dr",
                       "Ttl Biaya Pr","Ttl Biaya Dr & Pr","Jenis Bayar",
                       "Kamar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
@@ -120,7 +120,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         TJmlPr.setDocument(new batasInput((int)20).getOnlyAngka(TJmlPr));
         TJmlDrPr.setDocument(new batasInput((int)20).getOnlyAngka(TJmlPr));
         KSO.setDocument(new batasInput((int)20).getOnlyAngka(KSO));
-        Manajemen.setDocument(new batasInput((int)20).getOnlyAngka(Manajemen));
+        Menejemen.setDocument(new batasInput((int)20).getOnlyAngka(Menejemen));
         kdpnj.setDocument(new batasInput((int)3).getKata(kdpnj));
         KdKamar.setDocument(new batasInput((int)5).getKata(KdKamar));
 
@@ -313,7 +313,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         jLabel15 = new widget.Label();
         BhpMedis = new widget.TextBox();
         jLabel17 = new widget.Label();
-        Manajemen = new widget.TextBox();
+        Menejemen = new widget.TextBox();
         KSO = new widget.TextBox();
         jLabel16 = new widget.Label();
         jLabel5 = new widget.Label();
@@ -324,7 +324,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
 
         MnRestore.setBackground(new java.awt.Color(255, 255, 254));
         MnRestore.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnRestore.setForeground(new java.awt.Color(50, 50, 50));
+        MnRestore.setForeground(new java.awt.Color(50,50,50));
         MnRestore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnRestore.setText("Data Sampah");
         MnRestore.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -347,7 +347,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Tarif Tindakan/Perawatan/Tagihan Rawat Inap ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Tarif Tindakan/Perawatan/Tagihan Rawat Inap ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -356,7 +356,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbJnsPerawatan.setAutoCreateRowSorter(true);
-        tbJnsPerawatan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbJnsPerawatan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbJnsPerawatan.setComponentPopupMenu(jPopupMenu1);
         tbJnsPerawatan.setName("tbJnsPerawatan"); // NOI18N
         tbJnsPerawatan.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -827,22 +827,22 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(BhpMedis);
         BhpMedis.setBounds(162, 132, 200, 23);
 
-        jLabel17.setText("Manajemen : Rp.");
+        jLabel17.setText("Menejemen : Rp.");
         jLabel17.setName("jLabel17"); // NOI18N
         FormInput.add(jLabel17);
         jLabel17.setBounds(412, 102, 110, 23);
 
-        Manajemen.setText("0");
-        Manajemen.setToolTipText("Tekan ENTER untuk lanjut ke field berikutnya, tekan PAGE UP untuk ke field sebelumnya, hanya bisa angka");
-        Manajemen.setHighlighter(null);
-        Manajemen.setName("Manajemen"); // NOI18N
-        Manajemen.addKeyListener(new java.awt.event.KeyAdapter() {
+        Menejemen.setText("0");
+        Menejemen.setToolTipText("Tekan ENTER untuk lanjut ke field berikutnya, tekan PAGE UP untuk ke field sebelumnya, hanya bisa angka");
+        Menejemen.setHighlighter(null);
+        Menejemen.setName("Menejemen"); // NOI18N
+        Menejemen.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                ManajemenKeyPressed(evt);
+                MenejemenKeyPressed(evt);
             }
         });
-        FormInput.add(Manajemen);
-        Manajemen.setBounds(525, 102, 200, 23);
+        FormInput.add(Menejemen);
+        Menejemen.setBounds(525, 102, 200, 23);
 
         KSO.setText("0");
         KSO.setToolTipText("Tekan ENTER untuk lanjut ke field berikutnya, tekan PAGE UP untuk ke field sebelumnya, hanya bisa angka");
@@ -1008,12 +1008,12 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
             Valid.textKosong(TTndPr,"Tarif tindakan perawat");
         }else if(KSO.getText().trim().equals("")){
             Valid.textKosong(KSO,"K.S.O.");
-        }else if(Manajemen.getText().trim().equals("")){
-            Valid.textKosong(Manajemen,"Manajemen");
+        }else if(Menejemen.getText().trim().equals("")){
+            Valid.textKosong(Menejemen,"Menejemen");
         }else{
             Sequel.menyimpan("jns_perawatan_inap","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","Kode Jenis",16,new String[]{
                 TKd.getText(),TNm.getText(),KdKtg.getText(),BagianRs.getText(),BhpMedis.getText(),TTndDr.getText(),
-                TTndPr.getText(),KSO.getText(),Manajemen.getText(),TJmlDr.getText(),TJmlPr.getText(),TJmlDrPr.getText(),
+                TTndPr.getText(),KSO.getText(),Menejemen.getText(),TJmlDr.getText(),TJmlPr.getText(),TJmlDrPr.getText(),
                 kdpnj.getText(),KdKamar.getText(),"1",Kelas.getSelectedItem().toString()
             });
             BtnCariActionPerformed(evt);
@@ -1076,13 +1076,13 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
             Valid.textKosong(TTndPr,"Tarif tindakan perawat");
         }else if(KSO.getText().trim().equals("")){
             Valid.textKosong(KSO,"K.S.O.");
-        }else if(Manajemen.getText().trim().equals("")){
-            Valid.textKosong(Manajemen,"Manajemen");
+        }else if(Menejemen.getText().trim().equals("")){
+            Valid.textKosong(Menejemen,"Menejemen");
         }else{
             Sequel.mengedit("jns_perawatan_inap","kd_jenis_prw=?","kd_jenis_prw=?,nm_perawatan=?,kd_kategori=?,material=?,tarif_tindakandr=?,"+
                     "tarif_tindakanpr=?,total_byrdr=?,total_byrpr=?,kd_pj=?,kd_bangsal=?,total_byrdrpr=?,bhp=?,kso=?,menejemen=?,kelas=?",16,new String[]{
                         TKd.getText(),TNm.getText(),KdKtg.getText(),BagianRs.getText(),TTndDr.getText(),TTndPr.getText(),TJmlDr.getText(),
-                        TJmlPr.getText(),kdpnj.getText(),KdKamar.getText(),TJmlDrPr.getText(),BhpMedis.getText(),KSO.getText(),Manajemen.getText(),
+                        TJmlPr.getText(),kdpnj.getText(),KdKamar.getText(),TJmlDrPr.getText(),BhpMedis.getText(),KSO.getText(),Menejemen.getText(),
                         Kelas.getSelectedItem().toString(),tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),1).toString()                        
                     });
             if(tabMode.getRowCount()!=0){BtnCariActionPerformed(evt);}
@@ -1264,7 +1264,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             isjml();
         }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             isjml();
-            Manajemen.requestFocus();
+            Menejemen.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
             isjml();
             BagianRs.requestFocus();
@@ -1278,7 +1278,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         restore.setVisible(true);
     }//GEN-LAST:event_MnRestoreActionPerformed
 
-    private void ManajemenKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ManajemenKeyPressed
+    private void MenejemenKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MenejemenKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
             isjml();
         }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
@@ -1288,7 +1288,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             isjml();
             BhpMedis.requestFocus();
         }
-    }//GEN-LAST:event_ManajemenKeyPressed
+    }//GEN-LAST:event_MenejemenKeyPressed
 
     private void KSOKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KSOKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
@@ -1298,7 +1298,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             TTndPr.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
             isjml();
-            Manajemen.requestFocus();
+            Menejemen.requestFocus();
         }
     }//GEN-LAST:event_KSOKeyPressed
 
@@ -1351,7 +1351,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private widget.TextBox KdKtg;
     private widget.ComboBox Kelas;
     private widget.Label LCount;
-    private widget.TextBox Manajemen;
+    private widget.TextBox Menejemen;
     private javax.swing.JMenuItem MnRestore;
     private widget.TextBox NmKamar;
     private widget.TextBox NmKtg;
@@ -1457,7 +1457,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         BagianRs.setText("0");
         BhpMedis.setText("0");
         KSO.setText("0");
-        Manajemen.setText("0");
+        Menejemen.setText("0");
         TTndDr.setText("0");
         TTndPr.setText("0");
         TJmlDr.setText("0");
@@ -1480,7 +1480,7 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             TTndDr.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),6).toString())));
             TTndPr.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),7).toString())));
             KSO.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),8).toString())));
-            Manajemen.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),9).toString())));
+            Menejemen.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),9).toString())));
             TJmlDr.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),10).toString())));
             TJmlPr.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),11).toString())));
             TJmlDrPr.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),12).toString())));
@@ -1499,31 +1499,31 @@ private void btnBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private void isjml(){
         DecimalFormat df2 = new DecimalFormat("####");
 
-        if((! BagianRs.getText().equals(""))&&(! TTndDr.getText().equals(""))&&(! BhpMedis.getText().equals(""))&&(! KSO.getText().equals(""))&&(! Manajemen.getText().equals(""))){
+        if((! BagianRs.getText().equals(""))&&(! TTndDr.getText().equals(""))&&(! BhpMedis.getText().equals(""))&&(! KSO.getText().equals(""))&&(! Menejemen.getText().equals(""))){
             double x=Double.parseDouble(BagianRs.getText().trim());
             double y=Double.parseDouble(TTndDr.getText().trim());
             double z=Double.parseDouble(BhpMedis.getText().trim());
             double p=Double.parseDouble(KSO.getText().trim());
-            double q=Double.parseDouble(Manajemen.getText().trim());
+            double q=Double.parseDouble(Menejemen.getText().trim());
             TJmlDr.setText(df2.format(x+y+z+p+q));
         }
 
-        if((! BagianRs.getText().equals(""))&&(! TTndPr.getText().equals(""))&&(! BhpMedis.getText().equals(""))&&(! KSO.getText().equals(""))&&(! Manajemen.getText().equals(""))){
+        if((! BagianRs.getText().equals(""))&&(! TTndPr.getText().equals(""))&&(! BhpMedis.getText().equals(""))&&(! KSO.getText().equals(""))&&(! Menejemen.getText().equals(""))){
             double x=Double.parseDouble(BagianRs.getText().trim());
             double y=Double.parseDouble(TTndPr.getText().trim());
             double z=Double.parseDouble(BhpMedis.getText().trim());
             double p=Double.parseDouble(KSO.getText().trim());
-            double q=Double.parseDouble(Manajemen.getText().trim());
+            double q=Double.parseDouble(Menejemen.getText().trim());
             TJmlPr.setText(df2.format(x+y+z+p+q));
         }
         
-        if((! BagianRs.getText().equals(""))&&(! TTndPr.getText().equals(""))&&(! BhpMedis.getText().equals(""))&&(! TTndDr.getText().equals(""))&&(! KSO.getText().equals(""))&&(! Manajemen.getText().equals(""))){
+        if((! BagianRs.getText().equals(""))&&(! TTndPr.getText().equals(""))&&(! BhpMedis.getText().equals(""))&&(! TTndDr.getText().equals(""))&&(! KSO.getText().equals(""))&&(! Menejemen.getText().equals(""))){
             double x=Double.parseDouble(BagianRs.getText().trim());
             double y=Double.parseDouble(TTndPr.getText().trim());
             double z=Double.parseDouble(TTndDr.getText().trim());
             double v=Double.parseDouble(BhpMedis.getText().trim());
             double p=Double.parseDouble(KSO.getText().trim());
-            double q=Double.parseDouble(Manajemen.getText().trim());
+            double q=Double.parseDouble(Menejemen.getText().trim());
             TJmlDrPr.setText(df2.format(x+y+z+v+p+q));
         }
     }

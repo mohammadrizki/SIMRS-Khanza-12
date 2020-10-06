@@ -379,7 +379,7 @@ public class TokoCariPiutang extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Cari Piutang Barang Toko / Minimarket / Koperasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Cari Piutang Barang Toko / Minimarket / Koperasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -723,7 +723,7 @@ public class TokoCariPiutang extends javax.swing.JDialog {
 
             }
         ));
-        tbDokter.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbDokter.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbDokter.setComponentPopupMenu(jPopupMenu1);
         tbDokter.setName("tbDokter"); // NOI18N
         scrollPane1.setViewportView(tbDokter);
@@ -1010,7 +1010,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
             Valid.panggilUrl("billing/NotaToko4.php?nonota="+tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString().trim());      
@@ -1023,7 +1023,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
         JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
         TCari.requestFocus();
     }else if(tbDokter.getSelectedRow()<= -1){
-        JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+        JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
     }else{
        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
        try {
@@ -1058,7 +1058,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                       }
                   }
 
-                  if(sukses=true){
+                  if(sukses==true){
                         ttlpiutang=rs.getDouble("sisapiutang");
                         Sequel.queryu("delete from tampjurnal");
                         Sequel.menyimpan("tampjurnal","'"+Piutang_Toko+"','PIUTANG','0','"+ttlpiutang+"'","Rekening");    
@@ -1117,7 +1117,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
             TokoBayarPiutang bayarpiutang=new TokoBayarPiutang(null,false);

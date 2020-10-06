@@ -35,6 +35,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import kepegawaian.DlgCariDokter;
+import laporan.DlgBerkasRawat;
 import laporan.DlgDiagnosaPenyakit;
 
 
@@ -343,6 +344,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         jPopupMenu1 = new javax.swing.JPopupMenu();
         MnLaporanResume = new javax.swing.JMenuItem();
         MnInputDiagnosa = new javax.swing.JMenuItem();
+        ppBerkasDigital = new javax.swing.JMenuItem();
         internalFrame1 = new widget.InternalFrame();
         Scroll = new widget.ScrollPane();
         tbObat = new widget.Table();
@@ -458,11 +460,27 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         });
         jPopupMenu1.add(MnInputDiagnosa);
 
+        ppBerkasDigital.setBackground(new java.awt.Color(255, 255, 254));
+        ppBerkasDigital.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        ppBerkasDigital.setForeground(new java.awt.Color(50, 50, 50));
+        ppBerkasDigital.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        ppBerkasDigital.setText("Berkas Digital Perawatan");
+        ppBerkasDigital.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ppBerkasDigital.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        ppBerkasDigital.setName("ppBerkasDigital"); // NOI18N
+        ppBerkasDigital.setPreferredSize(new java.awt.Dimension(220, 26));
+        ppBerkasDigital.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppBerkasDigitalBtnPrintActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(ppBerkasDigital);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Resume Medis Pasien ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Resume Medis Pasien ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -472,7 +490,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         Scroll.setPreferredSize(new java.awt.Dimension(452, 200));
 
         tbObat.setAutoCreateRowSorter(true);
-        tbObat.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbObat.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbObat.setComponentPopupMenu(jPopupMenu1);
         tbObat.setName("tbObat"); // NOI18N
         tbObat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -629,7 +647,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-01-2020" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "11-03-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -643,7 +661,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-01-2020" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "11-03-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -1255,8 +1273,6 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
             Valid.textKosong(TNoRw,"Pasien");
         }else if(KodeDokter.getText().equals("")||NamaDokter.getText().equals("")){
             Valid.textKosong(BtnDokter,"Dokter Penanggung Jawab");
-        }else if(KodeDokter.getText().equals("")||NamaDokter.getText().equals("")){
-            Valid.textKosong(BtnDokter,"Dokter Penanggung Jawab");
         }else if(Keluhan.getText().equals("")){
             Valid.textKosong(Keluhan,"Keluhan utama riwayat penyakit yang postif");
         }else if(JalannyaPenyakit.getText().equals("")){
@@ -1308,7 +1324,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null,"Gagal menghapus..!!");
             }
         }else{
-            JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
+            JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
         }            
             
 }//GEN-LAST:event_BtnHapusActionPerformed
@@ -1324,8 +1340,6 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
     private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditActionPerformed
         if(TNoRw.getText().equals("")||TNoRM.getText().equals("")||TPasien.getText().equals("")){
             Valid.textKosong(TNoRw,"Pasien");
-        }else if(KodeDokter.getText().equals("")||NamaDokter.getText().equals("")){
-            Valid.textKosong(BtnDokter,"Dokter Penanggung Jawab");
         }else if(KodeDokter.getText().equals("")||NamaDokter.getText().equals("")){
             Valid.textKosong(BtnDokter,"Dokter Penanggung Jawab");
         }else if(Keluhan.getText().equals("")){
@@ -1348,7 +1362,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
                        emptTeks();
                 }
             }else{
-                JOptionPane.showMessageDialog(rootPane,"Silakan anda pilih data terlebih dahulu..!!");
+                JOptionPane.showMessageDialog(rootPane,"Silahkan anda pilih data terlebih dahulu..!!");
             }
         }
 }//GEN-LAST:event_BtnEditActionPerformed
@@ -1713,7 +1727,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
 
     private void MnInputDiagnosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnInputDiagnosaActionPerformed
         if(TNoRw.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih dulu pasien...!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih dulu pasien...!!!");
             TCari.requestFocus();
         }else{
             penyakit.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
@@ -1740,6 +1754,33 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
     private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChkInputActionPerformed
         isForm();
     }//GEN-LAST:event_ChkInputActionPerformed
+
+    private void ppBerkasDigitalBtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppBerkasDigitalBtnPrintActionPerformed
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        if(tabMode.getRowCount()==0){
+            JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
+            TCari.requestFocus();
+        }else{
+            if(tbObat.getSelectedRow()>-1){
+                if(!tbObat.getValueAt(tbObat.getSelectedRow(),1).toString().equals("")){
+                    this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+                    DlgBerkasRawat berkas=new DlgBerkasRawat(null,true);
+                    berkas.setJudul("::[ Berkas Digital Perawatan ]::","berkasrawat/pages");
+                    try {
+                        berkas.loadURL("http://"+koneksiDB.HOSTHYBRIDWEB()+":"+koneksiDB.PORTWEB()+"/"+koneksiDB.HYBRIDWEB()+"/"+"berkasrawat/login2.php?act=login&usere=admin&passwordte=akusayangsamakamu&no_rawat="+tbObat.getValueAt(tbObat.getSelectedRow(),2).toString());
+                    } catch (Exception ex) {
+                        System.out.println("Notifikasi : "+ex);
+                    }
+
+                    berkas.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+                    berkas.setLocationRelativeTo(internalFrame1);
+                    berkas.setVisible(true);
+                    this.setCursor(Cursor.getDefaultCursor());
+                }
+            }
+        }
+        this.setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_ppBerkasDigitalBtnPrintActionPerformed
 
     /**
     * @param args the command line arguments
@@ -1838,6 +1879,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
     private widget.Label label14;
     private widget.panelisi panelGlass8;
     private widget.panelisi panelGlass9;
+    private javax.swing.JMenuItem ppBerkasDigital;
     private widget.ScrollPane scrollInput;
     private widget.ScrollPane scrollPane2;
     private widget.ScrollPane scrollPane3;
@@ -2146,6 +2188,7 @@ public final class RMDataResumePasien extends javax.swing.JDialog {
         BtnEdit.setEnabled(akses.getdata_resume_pasien());
         BtnPrint.setEnabled(akses.getdata_resume_pasien()); 
         MnInputDiagnosa.setEnabled(akses.getdiagnosa_pasien());   
+        ppBerkasDigital.setEnabled(akses.getberkas_digital_perawatan());    
         if(akses.getjml2()>=1){
             KodeDokter.setEditable(false);
             BtnDokter.setEnabled(false);

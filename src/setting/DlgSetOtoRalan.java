@@ -359,7 +359,7 @@ public final class DlgSetOtoRalan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Setup Tindakan Otomatis Ralan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Setup Tindakan Otomatis Ralan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -533,7 +533,7 @@ public final class DlgSetOtoRalan extends javax.swing.JDialog {
 
         TabRawat.setBackground(new java.awt.Color(255, 255, 254));
         TabRawat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)));
-        TabRawat.setForeground(new java.awt.Color(50, 50, 50));
+        TabRawat.setForeground(new java.awt.Color(50,50,50));
         TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -551,7 +551,7 @@ public final class DlgSetOtoRalan extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         Table1.setAutoCreateRowSorter(true);
-        Table1.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        Table1.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         Table1.setName("Table1"); // NOI18N
         Table1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -707,7 +707,7 @@ public final class DlgSetOtoRalan extends javax.swing.JDialog {
         Scroll1.setOpaque(true);
 
         Table2.setAutoCreateRowSorter(true);
-        Table2.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        Table2.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         Table2.setName("Table2"); // NOI18N
         Table2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -949,7 +949,7 @@ public final class DlgSetOtoRalan extends javax.swing.JDialog {
         Scroll2.setOpaque(true);
 
         Table3.setAutoCreateRowSorter(true);
-        Table3.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        Table3.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         Table3.setName("Table3"); // NOI18N
         Table3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

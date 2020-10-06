@@ -17,7 +17,7 @@ include_once('layout/header.php');
     </audio>
 
     <section class="content">
-        <div class="container-fluid" style="margin: 5%;">
+        <div class="container-fluid" style="margin: 120px;">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -28,11 +28,11 @@ include_once('layout/header.php');
                         </div>
                         <div class="body table-responsive">
 
-                        Pengaduan Langsung	: Ruang Unit Pengaduan Masyarakat di Rumah Sakit<br/>
-						SMS/Telepon	: 081775165995<br/>
+                        Pengaduan Langsung	: Ruang Unit Pengaduan Masyarakat di dekat pintu masuk lobby Rumah Sakit<br/>
+						SMS/Telepon	: <br/>
 						Kotak Saran	: Kotak saran yang berada di informasi, ruang perawatan inap, dan poliklinik rawat jalan<br/>
-						Email : rsum@unram.ac.id<br/>
-
+						Email : rsud.humas@bekasikab.go.id<br/>
+       
                         </div>
                     </div>
                 </div>

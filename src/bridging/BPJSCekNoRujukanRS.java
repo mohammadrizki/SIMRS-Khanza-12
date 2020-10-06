@@ -438,7 +438,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
                         TBiaya.setText(kamar.getTable().getValueAt(kamar.getTable().getSelectedRow(),5).toString());  
                         KdPoli.requestFocus();
                     }else{
-                        JOptionPane.showMessageDialog(null,"Maaf, status kamar isi. Silakan cari yang kosong..!!");
+                        JOptionPane.showMessageDialog(null,"Maaf, status kamar isi. Silahkan cari yang kosong..!!");
                         KdPoli.requestFocus();
                     }
                 }  
@@ -1711,7 +1711,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
 
         MnDocument.setBackground(new java.awt.Color(255, 255, 254));
         MnDocument.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnDocument.setForeground(new java.awt.Color(50, 50, 50));
+        MnDocument.setForeground(new java.awt.Color(50,50,50));
         MnDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnDocument.setText("Cetak Document");
         MnDocument.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1727,7 +1727,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
 
         ppPengajuan.setBackground(new java.awt.Color(255, 255, 254));
         ppPengajuan.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppPengajuan.setForeground(new java.awt.Color(50, 50, 50));
+        ppPengajuan.setForeground(new java.awt.Color(50,50,50));
         ppPengajuan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppPengajuan.setText("Pengajuan SEP");
         ppPengajuan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1743,7 +1743,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
 
         ppPengajuan1.setBackground(new java.awt.Color(255, 255, 254));
         ppPengajuan1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppPengajuan1.setForeground(new java.awt.Color(50, 50, 50));
+        ppPengajuan1.setForeground(new java.awt.Color(50,50,50));
         ppPengajuan1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppPengajuan1.setText("Aproval SEP");
         ppPengajuan1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1819,7 +1819,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pencarian Data Rujukan RS Berdasarkan Nomor Rujukan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pencarian Data Rujukan RS Berdasarkan Nomor Rujukan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1827,7 +1827,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbKamar.setAutoCreateRowSorter(true);
-        tbKamar.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbKamar.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbKamar.setComponentPopupMenu(jPopupMenu1);
         tbKamar.setName("tbKamar"); // NOI18N
         Scroll.setViewportView(tbKamar);
@@ -1983,7 +1983,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
         FormInput.setPreferredSize(new java.awt.Dimension(560, 168));
         FormInput.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
-        FormKelengkapanPasien.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)), "::[ Kelengkapan Data Pasien ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        FormKelengkapanPasien.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)), "::[ Kelengkapan Data Pasien ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         FormKelengkapanPasien.setName("FormKelengkapanPasien"); // NOI18N
         FormKelengkapanPasien.setOpaque(false);
         FormKelengkapanPasien.setPreferredSize(new java.awt.Dimension(1000, 485));
@@ -2044,7 +2044,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
         FormKelengkapanPasien.add(jLabel19);
         jLabel19.setBounds(228, 85, 65, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "BELUM MENIKAH", "JANDA", "DUDHA" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2926,7 +2926,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
 
         FormInput.add(FormKelengkapanPasien);
 
-        FormKelengkapanSEP.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)), "::[ Kelengkapan Data SEP, Registrasi & Kamar Inap ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        FormKelengkapanSEP.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)), "::[ Kelengkapan Data SEP, Registrasi & Kamar Inap ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         FormKelengkapanSEP.setName("FormKelengkapanSEP"); // NOI18N
         FormKelengkapanSEP.setOpaque(false);
         FormKelengkapanSEP.setPreferredSize(new java.awt.Dimension(1000, 337));
@@ -3634,7 +3634,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
             nosep="";
             ChkCari.setSelected(false);
             isForm();
-            JOptionPane.showMessageDialog(null,"Maaf, data rujukan BPJS masih kosong. Silakan lakukan pencarian berdasar No.Rujukan...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, data rujukan BPJS masih kosong. Silahkan lakukan pencarian berdasar No.Rujukan...!!!!");
         }else{
             TTmp.requestFocus();
             isForm();
@@ -4771,7 +4771,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
 
     private void btnKabupatenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKabupatenActionPerformed
         if(KdPropinsi.getText().trim().equals("")||NmPropinsi.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih propinsi dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih propinsi dulu..!!");
             btnPropinsi.requestFocus();
         }else{
             kabupatenkll.setPropinsi(KdPropinsi.getText(),NmPropinsi.getText());
@@ -4787,7 +4787,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
 
     private void btnKecamatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKecamatanActionPerformed
         if(KdKabupaten.getText().trim().equals("")||NmKabupaten.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih kabupaten dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih kabupaten dulu..!!");
             btnKabupaten.requestFocus();
         }else{
             kecamatankll.setPropinsi(KdKabupaten.getText(),NmKabupaten.getText());
@@ -4887,7 +4887,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
         }else if((chkPolri.isSelected()==true)&&nmjabatanpolri.getText().trim().equals("")){
             Valid.textKosong(nmjabatanpolri,"Jabatan POLRI");
         }else if(TNoReg.getText().trim().equals("")){
-            Valid.textKosong(TNoReg,"No.Registrasi");
+            Valid.textKosong(TNoReg,"No.Regristrasi");
         }else if(TNoRw.getText().trim().equals("")){
             Valid.textKosong(TNoRw,"No.Rawat");
         }else if(TDokter.getText().trim().equals("")){
@@ -5330,7 +5330,7 @@ public final class BPJSCekNoRujukanRS extends javax.swing.JDialog {
                     isPoli();
                 }else{
                     if(!response.path("poliRujukan").path("kode").asText().equals("")){
-                        int jawab=JOptionPane.showConfirmDialog(null, "Mapping poli tidak ditemukan.\nSilakan lakukan mapping terlebih dahulu..!!","Konfirmasi",JOptionPane.YES_NO_OPTION);
+                        int jawab=JOptionPane.showConfirmDialog(null, "Mapping poli tidak ditemukan.\nSilahkan lakukan mapping terlebih dahulu..!!","Konfirmasi",JOptionPane.YES_NO_OPTION);
                         if(jawab==JOptionPane.YES_OPTION){
                             poli.isCek();
                             poli.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);

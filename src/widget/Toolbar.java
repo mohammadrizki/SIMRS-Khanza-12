@@ -25,7 +25,7 @@ public class Toolbar extends JToolBar {
     private final Color warna = Color.BLACK;
 
     /**
-     *
+     * 
      */
     public Toolbar() {
         super();

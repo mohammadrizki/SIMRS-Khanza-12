@@ -608,7 +608,7 @@ public final class DlgDataTB extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Pasien Teridentifikasi TB ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Pasien Teridentifikasi TB ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -825,7 +825,7 @@ public final class DlgDataTB extends javax.swing.JDialog {
         internalFrame1.add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
         TabRawat.setBackground(new java.awt.Color(254, 255, 254));
-        TabRawat.setForeground(new java.awt.Color(50, 50, 50));
+        TabRawat.setForeground(new java.awt.Color(50,50,50));
         TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1884,7 +1884,7 @@ public final class DlgDataTB extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbJnsPerawatan.setAutoCreateRowSorter(true);
-        tbJnsPerawatan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbJnsPerawatan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbJnsPerawatan.setName("tbJnsPerawatan"); // NOI18N
         tbJnsPerawatan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2516,7 +2516,7 @@ public final class DlgDataTB extends javax.swing.JDialog {
 
     private void BtnKelurahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelurahanActionPerformed
         if(KdKec.getText().trim().equals("")||Kecamatan.getText().trim().equals("")||Kecamatan.getText().trim().equals("KECAMATAN")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih kecamatan dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih kecamatan dulu..!!");
             BtnKelurahan.requestFocus();
         }else{
             kelurahan.setPropinsi(KdKec.getText(),Kecamatan.getText());
@@ -2550,7 +2550,7 @@ public final class DlgDataTB extends javax.swing.JDialog {
 
     private void BtnKecamatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKecamatanActionPerformed
         if(KdKab.getText().trim().equals("")||Kabupaten.getText().trim().equals("")||Kabupaten.getText().trim().equals("KABUPATEN")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih kabupaten dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih kabupaten dulu..!!");
             BtnKabupaten.requestFocus();
         }else{
             kecamatan.setPropinsi(KdKab.getText(),Kabupaten.getText());
@@ -2590,7 +2590,7 @@ public final class DlgDataTB extends javax.swing.JDialog {
 
     private void BtnKabupatenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKabupatenActionPerformed
         if(KdProp.getText().trim().equals("")||Propinsi.getText().trim().equals("")||Propinsi.getText().trim().equals("PROPINSI")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih propinsi dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih propinsi dulu..!!");
             BtnPropinsi.requestFocus();
         }else{
             kabupaten.setPropinsi(KdProp.getText(),Propinsi.getText());

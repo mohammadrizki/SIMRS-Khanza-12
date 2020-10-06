@@ -45,7 +45,7 @@ include_once('layout/header.php');
     } else if($action  == "selesai") {
 ?>
       <section class="content">
-        <div class="container-fluid" style="margin: 5%;">
+        <div class="container-fluid" style="margin: 120px;">
             <div class="block-header">
             </div>
 <?php
@@ -83,7 +83,7 @@ include_once('layout/header.php');
 if($_SERVER['REQUEST_METHOD'] == "POST") {
 
   	if($_POST['tgl_registrasi'] == $date && $time > LIMITJAM) {
-      	$errors[] = 'Silakan pilih hari berikutnya. Anda tidak diperkenankan mendaftar di hari ini.';
+      	$errors[] = 'Silahkan pilih hari berikutnya. Anda tidak diperkenankan mendaftar dihari ini.';
     }
   	if($_POST['tgl_registrasi'] > $date_next) {
       	$errors[] = 'Maksimal pendaftaran 30 hari kedepan.';
@@ -227,14 +227,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
         }
 } else {
-    echo '<div class="alert bg-pink alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Anda sudah terdaftar untuk tanggal '.$_POST[tgl_registrasi].'. Silakan pilih tanggal periksa yang lain.</div>';
+    echo '<div class="alert bg-pink alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Anda sudah terdaftar untuk tanggal '.$_POST[tgl_registrasi].'. Silahkan pilih tanggal periksa yang lain.</div>';
 
 }
 }
 
 
     ?>
-
+	
 <audio autoplay>
 <source src="sound/poli.mp3" type="audio/mpeg">
 </audio>
@@ -389,7 +389,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
                                         <div id="admDivCheck" style="display:none;">
                                                 <!--<img id="image_upload_preview" width="200px" src="images/upload-rujukan.png" onclick="upload_rujukan()" style="cursor:pointer;" />-->
                                           		<br/>
-                                          		<div class="alert bg-green alert-dismissible" role="alert">Anda memilih cara bayar BPJS. <br/>Apakah anda memiliki surat rujukan atau surat kontrol? <br/>Jika tidak, silakan pilih cara bayar umum. <br/>Jika ya, silakan lanjutkan pendaftaran anda.</div>
+                                          		<div class="alert bg-green alert-dismissible" role="alert">Anda memilih cara bayar BPJS. <br/>Apakah anda memiliki surat rujukan atau surat kontrol? <br/>Jika tidak, silahkan pilih cara bayar umum. <br/>Jika ya, silahkan lanjutkan pendaftaran anda.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -405,9 +405,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             </div>
             <!-- #END# Basic Validation -->
     <?php } ?>
-
-
-
+	
+		
+				
     <?php
     //edit
     $action      =isset($_GET['action'])?$_GET['action']:null;

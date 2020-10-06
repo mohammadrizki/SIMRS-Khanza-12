@@ -483,7 +483,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
                         TBiaya.setText(kamar.getTable().getValueAt(kamar.getTable().getSelectedRow(),5).toString());  
                         KdPoli.requestFocus();
                     }else{
-                        JOptionPane.showMessageDialog(null,"Maaf, status kamar isi. Silakan cari yang kosong..!!");
+                        JOptionPane.showMessageDialog(null,"Maaf, status kamar isi. Silahkan cari yang kosong..!!");
                         KdPoli.requestFocus();
                     }
                 }  
@@ -1905,7 +1905,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pencarian Peserta BPJS Berdasarkan NIK ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pencarian Peserta BPJS Berdasarkan NIK ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -2001,7 +2001,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
         FormKelengkapanPasien.add(jLabel19);
         jLabel19.setBounds(228, 85, 65, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "BELUM MENIKAH", "JANDA", "DUDHA" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -3840,7 +3840,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
             nosep="";
             ChkCari.setSelected(false);
             isForm();
-            JOptionPane.showMessageDialog(null,"Maaf, data peserta BPJS masih kosong. Silakan lakukan pencarian berdasar No.Kartu...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, data peserta BPJS masih kosong. Silahkan lakukan pencarian berdasar No.Kartu...!!!!");
         }else{
             TTmp.requestFocus();
             isForm();
@@ -4930,7 +4930,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
 
     private void btnKabupatenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKabupatenActionPerformed
         if(KdPropinsi.getText().trim().equals("")||NmPropinsi.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih propinsi dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih propinsi dulu..!!");
             btnPropinsi.requestFocus();
         }else{
             kabupatenkll.setPropinsi(KdPropinsi.getText(),NmPropinsi.getText());
@@ -4946,7 +4946,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
 
     private void btnKecamatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKecamatanActionPerformed
         if(KdKabupaten.getText().trim().equals("")||NmKabupaten.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Silakan pilih kabupaten dulu..!!");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih kabupaten dulu..!!");
             btnKabupaten.requestFocus();
         }else{
             kecamatankll.setPropinsi(KdKabupaten.getText(),NmKabupaten.getText());
@@ -5046,7 +5046,7 @@ public final class BPJSCekNIK2 extends javax.swing.JDialog {
         }else if((chkPolri.isSelected()==true)&&nmjabatanpolri.getText().trim().equals("")){
             Valid.textKosong(nmjabatanpolri,"Jabatan POLRI");
         }else if(TNoReg.getText().trim().equals("")){
-            Valid.textKosong(TNoReg,"No.Registrasi");
+            Valid.textKosong(TNoReg,"No.Regristrasi");
         }else if(TNoRw.getText().trim().equals("")){
             Valid.textKosong(TNoRw,"No.Rawat");
         }else if(TDokter.getText().trim().equals("")){

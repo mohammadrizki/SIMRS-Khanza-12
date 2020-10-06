@@ -371,7 +371,7 @@ public final class KeuanganPenagihanPiutangPasien extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Penagihan Piutang Pasien ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Penagihan Piutang Pasien ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -912,7 +912,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
             }
             this.setCursor(Cursor.getDefaultCursor());
          }else{
-             JOptionPane.showMessageDialog(null,"Silakan pilih data terlebih dahulu...!!");
+             JOptionPane.showMessageDialog(null,"Silahkan pilih data terlebih dahulu...!!");
          }                   
     } 
 }//GEN-LAST:event_MnDetailPiutangActionPerformed
@@ -1004,7 +1004,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
         }else if(Catatan.getText().trim().equals("")){
             Valid.textKosong(Catatan,"Catatan");
         }else if(jml<=0){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan masukkan penagihan...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan masukkan penagihan...!!!!");
             TCari.requestFocus();
         }else if(tbBangsal.getRowCount()!=0){
             int reply = JOptionPane.showConfirmDialog(rootPane,"Eeiiiiiits, udah bener belum data yang mau disimpan..??","Konfirmasi",JOptionPane.YES_NO_OPTION);
@@ -1072,7 +1072,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
         }else if(Ditujukan.getText().trim().equals("")){
             Valid.textKosong(Ditujukan,"Ditujukan");
         }else if(jml<=0){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan masukkan penagihan...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan masukkan penagihan...!!!!");
             TCari.requestFocus();
         }else if(tbBangsal.getRowCount()!=0){
             this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
@@ -1546,7 +1546,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
     private void getdata() {
         if(kdpenjab.getText().equals("")||nmpenjab.getText().equals("")){
             tbBangsal.setValueAt(false,tbBangsal.getSelectedRow(),0);
-            JOptionPane.showMessageDialog(null,"Silakan pilih penjamin terlebih dahulu");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih penjamin terlebih dahulu");
         }else{
             total=0;
             jml=0;

@@ -18,7 +18,7 @@ include_once('layout/header.php');
 
 
     <section class="content">
-        <div class="container-fluid" style="margin: 5%;">
+        <div class="container-fluid" style="margin: 120px;">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -54,9 +54,9 @@ include_once('layout/header.php');
                                         <td><?php echo $row['4']; ?></td>
                                         <td>Rp. <?php echo number_format($row['1'], 0, ".",","); ?></td>
                                     </tr>
-                                <?php
+                                <?php 
                                 $no++;
-                                }
+                                } 
                                 ?>
                                 </tbody>
                             </table>
@@ -89,9 +89,9 @@ include_once('layout/header.php');
                                         <td><?php echo $row['4']; ?></td>
                                         <td>Rp. <?php echo number_format($row['5'], 0, ".","."); ?></td>
                                     </tr>
-                                <?php
+                                <?php 
                                 $no++;
-                                }
+                                } 
                                 ?>
                                 </tbody>
                             </table>

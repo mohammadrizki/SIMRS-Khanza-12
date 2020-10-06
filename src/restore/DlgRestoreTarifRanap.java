@@ -48,7 +48,7 @@ public final class DlgRestoreTarifRanap extends javax.swing.JDialog {
         
         Object[] row={"P","Kode Tindakan","Nama Tnd/Prw/Tagihan","Kategori",
                       "J.S.Rumah Sakit","BHP/Paket Obat","J.Medis Dr",
-                      "J.Medis Pr","KSO","Manajemen","Ttl Biaya Dr",
+                      "J.Medis Pr","KSO","Menejemen","Ttl Biaya Dr",
                       "Ttl Biaya Pr","Ttl Biaya Dr & Pr","Jenis Bayar",
                       "Kamar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
@@ -152,7 +152,7 @@ public final class DlgRestoreTarifRanap extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Restore & Hapus Permanen Data Sampah ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Restore & Hapus Permanen Data Sampah ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -174,7 +174,7 @@ public final class DlgRestoreTarifRanap extends javax.swing.JDialog {
         jLabel6.setPreferredSize(new java.awt.Dimension(70, 23));
         panelGlass8.add(jLabel6);
 
-        TCari.setToolTipText("Silakan masukkan kata kunci pencarian kemudian tekan ENTER atau tekan tombol centang. Pencarian bisa berdasar kode, nama perawatan, kategori, poli dan jenis bayar");
+        TCari.setToolTipText("Silahkan masukkan kata kunci pencarian kemudian tekan ENTER atau tekan tombol centang. Pencarian bisa berdasar kode, nama perawatan, kategori, poli dan jenis bayar");
         TCari.setName("TCari"); // NOI18N
         TCari.setPreferredSize(new java.awt.Dimension(250, 23));
         TCari.addKeyListener(new java.awt.event.KeyAdapter() {

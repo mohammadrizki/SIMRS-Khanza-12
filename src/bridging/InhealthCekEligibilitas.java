@@ -508,7 +508,7 @@ public final class InhealthCekEligibilitas extends javax.swing.JDialog {
                         KdJenpel.setText(kamar.getTable().getValueAt(kamar.getTable().getSelectedRow(),3).toString());  
                         KdPoli.requestFocus();
                     }else{
-                        JOptionPane.showMessageDialog(null,"Maaf, status kamar isi. Silakan cari yang kosong..!!");
+                        JOptionPane.showMessageDialog(null,"Maaf, status kamar isi. Silahkan cari yang kosong..!!");
                         KdPoli.requestFocus();
                     }
                 }  
@@ -1583,7 +1583,7 @@ public final class InhealthCekEligibilitas extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pencarian Eligibilitas Peserta Inhealth ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pencarian Eligibilitas Peserta Inhealth ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1679,7 +1679,7 @@ public final class InhealthCekEligibilitas extends javax.swing.JDialog {
         FormKelengkapanPasien.add(jLabel19);
         jLabel19.setBounds(235, 85, 45, 23);
 
-        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
+        CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MENIKAH", "BELUM MENIKAH", "JANDA", "DUDHA" }));
         CmbStts.setLightWeightPopupEnabled(false);
         CmbStts.setName("CmbStts"); // NOI18N
         CmbStts.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -3274,7 +3274,7 @@ public final class InhealthCekEligibilitas extends javax.swing.JDialog {
             nosep="";
             ChkCari.setSelected(false);
             isForm();
-            JOptionPane.showMessageDialog(null,"Maaf, data peserta Inhealth masih kosong. Silakan lakukan pencarian berdasar No.Kartu...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, data peserta Inhealth masih kosong. Silahkan lakukan pencarian berdasar No.Kartu...!!!!");
         }else{
             TTmp.requestFocus();
             isForm();
@@ -3466,7 +3466,7 @@ public final class InhealthCekEligibilitas extends javax.swing.JDialog {
         }else if((chkPolri.isSelected()==true)&&nmjabatanpolri.getText().trim().equals("")){
             Valid.textKosong(nmjabatanpolri,"Jabatan POLRI");
         }else if(TNoReg.getText().trim().equals("")){
-            Valid.textKosong(TNoReg,"No.Registrasi");
+            Valid.textKosong(TNoReg,"No.Regristrasi");
         }else if(TNoRw.getText().trim().equals("")){
             Valid.textKosong(TNoRw,"No.Rawat");
         }else if(TDokter.getText().trim().equals("")){

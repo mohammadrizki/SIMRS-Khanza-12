@@ -38,7 +38,7 @@ public class DlgPengeluaranApotek extends javax.swing.JDialog {
     public boolean tampilkanpermintaan=false;
     private double stok_asal=0;
     private boolean sukses=true;
-    private String aktifkanbatch="no";
+    private String aktifkanbatch="no",DEPOAKTIFOBAT="";
 
     /** Creates new form DlgProgramStudi
      * @param parent
@@ -203,9 +203,11 @@ public class DlgPengeluaranApotek extends javax.swing.JDialog {
         
         try {
             aktifkanbatch = koneksiDB.AKTIFKANBATCHOBAT();
+            DEPOAKTIFOBAT = koneksiDB.DEPOAKTIFOBAT();
         } catch (Exception e) {
             System.out.println("E : "+e);
             aktifkanbatch = "no";
+            DEPOAKTIFOBAT = "";
         }
         
     }
@@ -316,7 +318,7 @@ public class DlgPengeluaranApotek extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Transaksi Stok Keluar Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Transaksi Stok Keluar Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1238,6 +1240,11 @@ private void BtnGudangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
             BtnTambah.setEnabled(akses.getobat());
             kdptg.setText(akses.getkode());
             Sequel.cariIsi("select nama from petugas where nip=?", nmptg,kdptg.getText());
+            if(!DEPOAKTIFOBAT.equals("")){
+                kdgudang.setText(DEPOAKTIFOBAT);
+                nmgudang.setText(Sequel.cariIsi("select nm_bangsal from bangsal where kd_bangsal=?",DEPOAKTIFOBAT));
+                BtnGudang.setEnabled(false);
+            }
         }    
         
     }

@@ -357,7 +357,7 @@ public class DlgCariPemesanan extends javax.swing.JDialog {
 
         ppHapus.setBackground(new java.awt.Color(255, 255, 254));
         ppHapus.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppHapus.setForeground(new java.awt.Color(50, 50, 50));
+        ppHapus.setForeground(new java.awt.Color(50,50,50));
         ppHapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppHapus.setText("Hapus Data Penerimaan");
         ppHapus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -373,7 +373,7 @@ public class DlgCariPemesanan extends javax.swing.JDialog {
 
         ppBayar.setBackground(new java.awt.Color(255, 255, 254));
         ppBayar.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppBayar.setForeground(new java.awt.Color(50, 50, 50));
+        ppBayar.setForeground(new java.awt.Color(50,50,50));
         ppBayar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppBayar.setText("Bayar Tagihan");
         ppBayar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -389,7 +389,7 @@ public class DlgCariPemesanan extends javax.swing.JDialog {
 
         ppUbah.setBackground(new java.awt.Color(255, 255, 254));
         ppUbah.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppUbah.setForeground(new java.awt.Color(50, 50, 50));
+        ppUbah.setForeground(new java.awt.Color(50,50,50));
         ppUbah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppUbah.setText("Ubah Penerimaan");
         ppUbah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -412,7 +412,7 @@ public class DlgCariPemesanan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Cari Penerimaan Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Cari Penerimaan Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -431,7 +431,7 @@ public class DlgCariPemesanan extends javax.swing.JDialog {
 
             }
         ));
-        tbDokter.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbDokter.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbDokter.setComponentPopupMenu(jPopupMenu1);
         tbDokter.setName("tbDokter"); // NOI18N
         scrollPane1.setViewportView(tbDokter);

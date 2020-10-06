@@ -511,7 +511,7 @@ public class DlgCariPenjualan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Cari Penjualan Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Cari Penjualan Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -855,7 +855,7 @@ public class DlgCariPenjualan extends javax.swing.JDialog {
 
             }
         ));
-        tbDokter.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbDokter.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbDokter.setComponentPopupMenu(jPopupMenu1);
         tbDokter.setName("tbDokter"); // NOI18N
         scrollPane1.setViewportView(tbDokter);
@@ -1151,7 +1151,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
                 Valid.textKosong(TCari,"No.Nota");
@@ -1170,7 +1170,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
         JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
         TCari.requestFocus();
     }else if(tbDokter.getSelectedRow()<= -1){
-            JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
     }else{
         if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
             Valid.textKosong(TCari,"No.Nota");
@@ -1216,7 +1216,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                               }
                           }
                           
-                          if(sukses=true){
+                          if(sukses==true){
                                 ttljual=Sequel.cariIsiAngka("select sum(total) from detailjual where nota_jual=?",rs.getString("nota_jual"));
                                 ttlhpp=Sequel.cariIsiAngka("select sum(h_beli*jumlah) from detailjual where nota_jual=?",rs.getString("nota_jual"));
 
@@ -1270,7 +1270,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
                 Valid.textKosong(TCari,"No.Nota");
@@ -1314,7 +1314,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                     psdetailjual.close();
                                 }
                              }
-                             if(sukses=true){
+                             if(sukses==true){
                                 ttljual=Sequel.cariIsiAngka("select sum(total) from detailjual where nota_jual=?",rs.getString("nota_jual"));
                                 ttlhpp=Sequel.cariIsiAngka("select sum(h_beli*jumlah) from detailjual where nota_jual=?",rs.getString("nota_jual"));
                                 Sequel.queryu("delete from tampjurnal");
@@ -1375,7 +1375,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
                 Valid.textKosong(TCari,"No.Nota");
@@ -1423,7 +1423,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
                 Valid.textKosong(TCari,"No.Nota");
@@ -1473,7 +1473,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             TCari.requestFocus();
         }else if(tbDokter.getSelectedRow()<= -1){
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan pilih data..!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
         }else{
             if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
                 Valid.textKosong(TCari,"No.Nota");

@@ -53,7 +53,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         Object[] row={
             "P","Kode Periksa","Nama Pemeriksaan","J.S. RS",
             "Paket BHP","J.M. Perujuk","J.M. Dokter","J.M. Petugas",
-            "K.S.O.","Manajemen","Total Tarif","Jenis Bayar","Kelas"};
+            "K.S.O.","Menejemen","Total Tarif","Jenis Bayar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -104,7 +104,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         JMPerujuk.setDocument(new batasInput((int)15).getOnlyAngka(JMPerujuk));
         Bhp.setDocument(new batasInput((int)15).getOnlyAngka(Bhp));
         KSO.setDocument(new batasInput((int)15).getOnlyAngka(KSO));        
-        Manajemen.setDocument(new batasInput((int)15).getOnlyAngka(Manajemen));
+        Menejemen.setDocument(new batasInput((int)15).getOnlyAngka(Menejemen));
         JMLaborat.setDocument(new batasInput((int)15).getOnlyAngka(JMLaborat));
         TotalBiaya.setDocument(new batasInput((int)20).getOnlyAngka(TotalBiaya));
         kdpnj.setDocument(new batasInput((int)3).getKata(kdpnj));
@@ -192,7 +192,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         jLabel15 = new widget.Label();
         KSO = new widget.TextBox();
         jLabel16 = new widget.Label();
-        Manajemen = new widget.TextBox();
+        Menejemen = new widget.TextBox();
         jLabel5 = new widget.Label();
         Kelas = new widget.ComboBox();
         ChkInput = new widget.CekBox();
@@ -201,7 +201,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
 
         ppTemplate.setBackground(new java.awt.Color(255, 255, 254));
         ppTemplate.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppTemplate.setForeground(new java.awt.Color(50, 50, 50));
+        ppTemplate.setForeground(new java.awt.Color(50,50,50));
         ppTemplate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppTemplate.setText("Template Laboratorium");
         ppTemplate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -217,7 +217,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
 
         MnRestore.setBackground(new java.awt.Color(255, 255, 254));
         MnRestore.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnRestore.setForeground(new java.awt.Color(50, 50, 50));
+        MnRestore.setForeground(new java.awt.Color(50,50,50));
         MnRestore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnRestore.setText("Data Sampah");
         MnRestore.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -246,7 +246,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Tarif Pemeriksaan Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Tarif Pemeriksaan Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -255,7 +255,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbJnsPerawatan.setAutoCreateRowSorter(true);
-        tbJnsPerawatan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbJnsPerawatan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbJnsPerawatan.setComponentPopupMenu(Popup);
         tbJnsPerawatan.setName("tbJnsPerawatan"); // NOI18N
         tbJnsPerawatan.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -649,16 +649,16 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         FormInput.add(jLabel16);
         jLabel16.setBounds(300, 72, 153, 23);
 
-        Manajemen.setText("0");
-        Manajemen.setHighlighter(null);
-        Manajemen.setName("Manajemen"); // NOI18N
-        Manajemen.addKeyListener(new java.awt.event.KeyAdapter() {
+        Menejemen.setText("0");
+        Menejemen.setHighlighter(null);
+        Menejemen.setName("Menejemen"); // NOI18N
+        Menejemen.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                ManajemenKeyPressed(evt);
+                MenejemenKeyPressed(evt);
             }
         });
-        FormInput.add(Manajemen);
-        Manajemen.setBounds(453, 72, 170, 23);
+        FormInput.add(Menejemen);
+        Menejemen.setBounds(453, 72, 170, 23);
 
         jLabel5.setText("Kelas :");
         jLabel5.setName("jLabel5"); // NOI18N
@@ -732,12 +732,12 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
             Valid.textKosong(JMPerujuk,"J.M. Perujuk");
         }else if(KSO.getText().trim().equals("")){
             Valid.textKosong(KSO,"K.S.O");
-        }else if(Manajemen.getText().trim().equals("")){
-            Valid.textKosong(Manajemen,"Manajemen");
+        }else if(Menejemen.getText().trim().equals("")){
+            Valid.textKosong(Menejemen,"Menejemen");
         }else{
             if(Sequel.menyimpantf("jns_perawatan_lab","?,?,?,?,?,?,?,?,?,?,?,?,?","Kode Periksa",13,new String[]{
                 TKd.getText(),TNm.getText(),BagianRs.getText(),Bhp.getText(),JMPerujuk.getText(),JMDokter.getText(),
-                JMLaborat.getText(),KSO.getText(),Manajemen.getText(),TotalBiaya.getText(),kdpnj.getText(),"1",
+                JMLaborat.getText(),KSO.getText(),Menejemen.getText(),TotalBiaya.getText(),kdpnj.getText(),"1",
                 Kelas.getSelectedItem().toString()
             })==true){
                 BtnCariActionPerformed(evt);
@@ -801,12 +801,12 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
             Valid.textKosong(JMPerujuk,"J.M. Perujuk");
         }else if(KSO.getText().trim().equals("")){
             Valid.textKosong(KSO,"K.S.O");
-        }else if(Manajemen.getText().trim().equals("")){
-            Valid.textKosong(Manajemen,"Manajemen");
+        }else if(Menejemen.getText().trim().equals("")){
+            Valid.textKosong(Menejemen,"Menejemen");
         }else{
             Sequel.mengedit("jns_perawatan_lab","kd_jenis_prw=?","kd_jenis_prw=?,nm_perawatan=?,bagian_rs=?,tarif_tindakan_petugas=?,total_byr=?,kd_pj=?,tarif_tindakan_dokter=?,tarif_perujuk=?,bhp=?,kso=?,menejemen=?,kelas=?",13,new String[]{
                 TKd.getText(),TNm.getText(),BagianRs.getText(),JMLaborat.getText(),TotalBiaya.getText(),kdpnj.getText(),JMDokter.getText(),JMPerujuk.getText(),Bhp.getText(),
-                KSO.getText(),Manajemen.getText(),Kelas.getSelectedItem().toString(),tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),1).toString()
+                KSO.getText(),Menejemen.getText(),Kelas.getSelectedItem().toString(),tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),1).toString()
             });
             if(tabMode.getRowCount()!=0){BtnCariActionPerformed(evt);}
             emptTeks();
@@ -1071,7 +1071,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
     }//GEN-LAST:event_JMPerujukKeyPressed
 
     private void TotalBiayaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TotalBiayaKeyPressed
-        Valid.pindah(evt,Manajemen,kdpnj);
+        Valid.pindah(evt,Menejemen,kdpnj);
     }//GEN-LAST:event_TotalBiayaKeyPressed
 
     private void MnRestoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnRestoreActionPerformed
@@ -1086,14 +1086,14 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
             isjml();
         }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             isjml();
-            Manajemen.requestFocus();
+            Menejemen.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
             isjml();
             JMPerujuk.requestFocus();
         }
     }//GEN-LAST:event_KSOKeyPressed
 
-    private void ManajemenKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ManajemenKeyPressed
+    private void MenejemenKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MenejemenKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
             isjml();
         }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
@@ -1103,7 +1103,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
             isjml();
             KSO.requestFocus();
         }
-    }//GEN-LAST:event_ManajemenKeyPressed
+    }//GEN-LAST:event_MenejemenKeyPressed
 
     private void KelasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KelasKeyPressed
         Valid.pindah(evt,kdpnj,BtnSimpan);
@@ -1155,7 +1155,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
     private widget.TextBox KSO;
     private widget.ComboBox Kelas;
     private widget.Label LCount;
-    private widget.TextBox Manajemen;
+    private widget.TextBox Menejemen;
     private javax.swing.JMenuItem MnRestore;
     private javax.swing.JPanel PanelInput;
     private javax.swing.JPopupMenu Popup;
@@ -1244,7 +1244,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
         JMPerujuk.setText("0");
         JMLaborat.setText("0");
         KSO.setText("0");
-        Manajemen.setText("0");
+        Menejemen.setText("0");
         TotalBiaya.setText("0");
         Kelas.setSelectedIndex(0);
         //Valid.autoNomer(" jns_perawatan_lab ","JP",6,TKd);
@@ -1262,7 +1262,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
             JMDokter.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),6).toString())));
             JMLaborat.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),7).toString())));
             KSO.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),8).toString())));
-            Manajemen.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),9).toString())));
+            Menejemen.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),9).toString())));
             TotalBiaya.setText(Valid.SetAngka2(Double.parseDouble(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),10).toString())));
             Sequel.cariIsi("select kd_pj from jns_perawatan_lab where kd_jenis_prw=?", kdpnj,tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),1).toString());
             nmpnj.setText(tbJnsPerawatan.getValueAt(tbJnsPerawatan.getSelectedRow(),11).toString());
@@ -1274,7 +1274,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
         if((! BagianRs.getText().equals(""))&&(! JMLaborat.getText().equals(""))
                 &&(! JMDokter.getText().equals(""))&&(! JMPerujuk.getText().equals(""))
                 &&(! Bhp.getText().equals(""))&&(! KSO.getText().equals(""))
-                &&(! Manajemen.getText().equals(""))){
+                &&(! Menejemen.getText().equals(""))){
             TotalBiaya.setText(Valid.SetAngka2(
                     Double.parseDouble(BagianRs.getText().trim())+
                     Double.parseDouble(JMDokter.getText().trim())+
@@ -1282,7 +1282,7 @@ private void btnPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
                     Double.parseDouble(JMPerujuk.getText().trim())+
                     Double.parseDouble(Bhp.getText().trim())+
                     Double.parseDouble(KSO.getText().trim())+
-                    Double.parseDouble(Manajemen.getText().trim())
+                    Double.parseDouble(Menejemen.getText().trim())
             ));
         }
     }

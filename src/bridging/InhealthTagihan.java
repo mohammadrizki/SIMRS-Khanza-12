@@ -289,7 +289,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pengiriman Tagihan Inhealth ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pengiriman Tagihan Inhealth ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -298,7 +298,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbSJP.setAutoCreateRowSorter(true);
-        tbSJP.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbSJP.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbSJP.setName("tbSJP"); // NOI18N
         tbSJP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -537,7 +537,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll3.setOpaque(true);
         Scroll3.setPreferredSize(new java.awt.Dimension(492, 170));
 
-        tbTagihanKamar.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTagihanKamar.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTagihanKamar.setName("tbTagihanKamar"); // NOI18N
         Scroll3.setViewportView(tbTagihanKamar);
 
@@ -548,7 +548,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll4.setOpaque(true);
         Scroll4.setPreferredSize(new java.awt.Dimension(492, 170));
 
-        tbTagihanRawatJalan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTagihanRawatJalan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTagihanRawatJalan.setName("tbTagihanRawatJalan"); // NOI18N
         Scroll4.setViewportView(tbTagihanRawatJalan);
 
@@ -559,7 +559,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll5.setOpaque(true);
         Scroll5.setPreferredSize(new java.awt.Dimension(492, 170));
 
-        tbTagihanRawatInap.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTagihanRawatInap.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTagihanRawatInap.setName("tbTagihanRawatInap"); // NOI18N
         Scroll5.setViewportView(tbTagihanRawatInap);
 
@@ -570,7 +570,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll6.setOpaque(true);
         Scroll6.setPreferredSize(new java.awt.Dimension(492, 170));
 
-        tbTagihanOperasi.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTagihanOperasi.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTagihanOperasi.setName("tbTagihanOperasi"); // NOI18N
         Scroll6.setViewportView(tbTagihanOperasi);
 
@@ -581,7 +581,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll7.setOpaque(true);
         Scroll7.setPreferredSize(new java.awt.Dimension(492, 170));
 
-        tbTagihanRadiologi.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTagihanRadiologi.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTagihanRadiologi.setName("tbTagihanRadiologi"); // NOI18N
         Scroll7.setViewportView(tbTagihanRadiologi);
 
@@ -592,7 +592,7 @@ public final class InhealthTagihan extends javax.swing.JDialog {
         Scroll8.setOpaque(true);
         Scroll8.setPreferredSize(new java.awt.Dimension(492, 170));
 
-        tbTagihanLaborat.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbTagihanLaborat.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbTagihanLaborat.setName("tbTagihanLaborat"); // NOI18N
         Scroll8.setViewportView(tbTagihanLaborat);
 

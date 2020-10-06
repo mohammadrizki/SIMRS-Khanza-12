@@ -13,10 +13,10 @@
 
     function  bukakoneksi(){
      	global $db_hostname, $db_username, $db_password, $db_name;
-        $konektor=mysqli_connect($db_hostname,$db_username,$db_password)
-        or die ("<font color=red><h3>Not Connected ..!!</h3></font>");
-        $db_select=mysqli_select_db($konektor, $db_name)
-        or die("<font color=red><h3>Cannot chose database..!!</h3></font>". mysqli_error());
+         $konektor=mysqli_connect($db_hostname,$db_username,$db_password)
+         or die ("<font color=red><h3>Not Connected ..!!</h3></font>");
+         $db_select=mysqli_select_db($konektor, $db_name)
+         or die("<font color=red><h3>Cannot chose database..!!</h3></font>". mysqli_error());
 	return $konektor;
     }
      
@@ -27,7 +27,7 @@
 	if (get_magic_quotes_gpc()) {
             $clean = mysqli_real_escape_string($konektor,stripslashes($dirty));	 
 	}else{
-		$clean = mysqli_real_escape_string($konektor,$dirty);	
+            $clean = mysqli_real_escape_string($konektor,$dirty);	
 	} 
          mysqli_close($konektor);
 	return preg_replace('/[^a-zA-Z0-9\s_,@. ]/', '',$clean);
@@ -285,24 +285,24 @@
         return $tmp;
     }
 
-    	function konversiBulan($bln) {
-		switch($bln) {
-			case "01": $bulan="Januari"; break;
-			case "02": $bulan="Februari"; break;
-			case "03": $bulan="Maret"; break;
-			case "04": $bulan="April"; break;
-			case "05": $bulan="Mei"; break;
-			case "06": $bulan="Juni"; break;
-			case "07": $bulan="Juli"; break;
-			case "08": $bulan="Agustus"; break;
-			case "09": $bulan="September"; break;
-			case "10": $bulan="Oktober"; break;
-			case "11": $bulan="Nopember"; break;
-			case "12": $bulan="Desember"; break;
-			default  : $bulan="Tidak Boleh";
-		}
-		return $bulan;
-	}
+    function konversiBulan($bln) {
+        switch($bln) {
+            case "01": $bulan="Januari"; break;
+            case "02": $bulan="Februari"; break;
+            case "03": $bulan="Maret"; break;
+            case "04": $bulan="April"; break;
+            case "05": $bulan="Mei"; break;
+            case "06": $bulan="Juni"; break;
+            case "07": $bulan="Juli"; break;
+            case "08": $bulan="Agustus"; break;
+            case "09": $bulan="September"; break;
+            case "10": $bulan="Oktober"; break;
+            case "11": $bulan="Nopember"; break;
+            case "12": $bulan="Desember"; break;
+            default  : $bulan="Tidak Boleh";
+        }
+        return $bulan;
+    }
 
     function konversiTanggal($tanggal){
         list($thn,$bln,$tgl)=explode('-',$tanggal);
@@ -315,7 +315,7 @@
     }
         
     function formatDuit2($duit){
-		return @number_format($duit,0,",",".")."";
+        return @number_format($duit,0,",",".")."";
     }
         
     function formatDec($duit){
@@ -327,122 +327,122 @@
     }
 
     function JumlahBaris($result) {
-  		return mysqli_num_rows($result);
-	}
+        return mysqli_num_rows($result);
+    }
 
-     function getOne($sql) {
+    function getOne($sql) {
         $hasil=bukaquery($sql);
         list($result) =mysqli_fetch_array($hasil);
         return $result;
-     }
+    }
 
-        function cekKosong($sql) {
-		$jum = mysqli_num_rows($sql);
-		if ($jum==0) return true;
-		else return false;
-	}
+    function cekKosong($sql) {
+        $jum = mysqli_num_rows($sql);
+        if ($jum==0) return true;
+        else return false;
+    }
 	
-	function loadTgl(){
-		echo "<option>-&nbsp</option>";
-		for($tgl=1; $tgl<=31; $tgl++){
-			$tgl_leng=strlen($tgl);
-			if ($tgl_leng==1)
-			$i="0".$tgl;
-			else
-			$i=$tgl;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
-        
-        function loadTglnow(){
-                $tglsekarang=date('d');
-		echo "<option>".$tglsekarang."</option>";
-		for($tgl=1; $tgl<=31; $tgl++){
-			$tgl_leng=strlen($tgl);
-			if ($tgl_leng==1)
-			$i="0".$tgl;
-			else
-			$i=$tgl;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
-	
+    function loadTgl(){
+        echo "<option>-&nbsp</option>";
+        for($tgl=1; $tgl<=31; $tgl++){
+            $tgl_leng=strlen($tgl);
+            if ($tgl_leng==1)
+            $i="0".$tgl;
+            else
+            $i=$tgl;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
 
-        function loadTgl2(){
-		//echo "<option>-&nbsp</option>";
-		for($tgl=1; $tgl<=31; $tgl++){
-			$tgl_leng=strlen($tgl);
-			if ($tgl_leng==1)
-			$i="0".$tgl;
-			else
-			$i=$tgl;
-			echo "<option value=$i>$i</option>";
-		}
-	}
-	
-	function loadBln(){
-		echo "<option>-&nbsp</option>";
-		for($bln=1; $bln<=12; $bln++){
-			$bln_leng=strlen($bln);
-			if ($bln_leng==1)
-			$i="0".$bln;
-			else
-			$i=$bln;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
-        
-        function loadBlnnow(){
-                $blnsekarang=date('m');
-		echo "<option>$blnsekarang</option>";
-		for($bln=1; $bln<=12; $bln++){
-			$bln_leng=strlen($bln);
-			if ($bln_leng==1)
-			$i="0".$bln;
-			else
-			$i=$bln;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
-        
-        function loadBln2(){
-		//echo "<option>-&nbsp</option>";
-		for($bln=1; $bln<=12; $bln++){
-			$bln_leng=strlen($bln);
-			if ($bln_leng==1)
-			$i="0".$bln;
-			else
-			$i=$bln;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
-	
-	function loadThn(){
-		$thnini=date('Y');
-		echo "<option>-&nbsp</option>";
-		for($thn=$thnini; $thn>=1960; $thn--){
-			$thn_leng=strlen($thn);
-			if ($thn_leng==1)
-			$i="0".$thn;
-			else
-			$i=$thn;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
-        
-        
-        function loadThnnow(){
-		$thnini=date('Y');
-		//echo "<option>-&nbsp</option>";
-		for($thn=$thnini; $thn>=1960; $thn--){
-			$thn_leng=strlen($thn);
-			if ($thn_leng==1)
-			$i="0".$thn;
-			else
-			$i=$thn;                        
-			echo "<option value=$i>$i</option>";
-		}
-	}
+    function loadTglnow(){
+        $tglsekarang=date('d');
+        echo "<option>".$tglsekarang."</option>";
+        for($tgl=1; $tgl<=31; $tgl++){
+            $tgl_leng=strlen($tgl);
+            if ($tgl_leng==1)
+            $i="0".$tgl;
+            else
+            $i=$tgl;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
+
+
+    function loadTgl2(){
+        //echo "<option>-&nbsp</option>";
+        for($tgl=1; $tgl<=31; $tgl++){
+            $tgl_leng=strlen($tgl);
+            if ($tgl_leng==1)
+            $i="0".$tgl;
+            else
+            $i=$tgl;
+            echo "<option value=$i>$i</option>";
+        }
+    }
+
+    function loadBln(){
+        echo "<option>-&nbsp</option>";
+        for($bln=1; $bln<=12; $bln++){
+            $bln_leng=strlen($bln);
+            if ($bln_leng==1)
+            $i="0".$bln;
+            else
+            $i=$bln;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
+
+    function loadBlnnow(){
+        $blnsekarang=date('m');
+        echo "<option>$blnsekarang</option>";
+        for($bln=1; $bln<=12; $bln++){
+            $bln_leng=strlen($bln);
+            if ($bln_leng==1)
+            $i="0".$bln;
+            else
+            $i=$bln;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
+
+    function loadBln2(){
+        //echo "<option>-&nbsp</option>";
+        for($bln=1; $bln<=12; $bln++){
+            $bln_leng=strlen($bln);
+            if ($bln_leng==1)
+            $i="0".$bln;
+            else
+            $i=$bln;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
+
+    function loadThn(){
+        $thnini=date('Y');
+        echo "<option>-&nbsp</option>";
+        for($thn=$thnini; $thn>=1960; $thn--){
+            $thn_leng=strlen($thn);
+            if ($thn_leng==1)
+            $i="0".$thn;
+            else
+            $i=$thn;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
+
+
+    function loadThnnow(){
+        $thnini=date('Y');
+        //echo "<option>-&nbsp</option>";
+        for($thn=$thnini; $thn>=1960; $thn--){
+            $thn_leng=strlen($thn);
+            if ($thn_leng==1)
+            $i="0".$thn;
+            else
+            $i=$thn;                        
+            echo "<option value=$i>$i</option>";
+        }
+    }
 
     function loadThn2(){
         $thnini=date('Y');

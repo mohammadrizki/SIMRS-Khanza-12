@@ -44,6 +44,7 @@ public final class DlgKegiatanFarmasi extends javax.swing.JDialog {
     private ResultSet rs,rs2;
     private int i=0;
     private double itempengadaan=0,jmlitempengadaan=0,itemtersedia=0,jmlitemtersedia=0;   
+    private String qrystok="",aktifkanbatch="no";
     /** Creates new form DlgLhtBiaya
      * @param parent
      * @param modal */
@@ -171,6 +172,12 @@ public final class DlgKegiatanFarmasi extends javax.swing.JDialog {
                 }
             });
         }
+        
+        try {
+            aktifkanbatch = koneksiDB.AKTIFKANBATCHOBAT();
+        } catch (Exception e) {
+            aktifkanbatch = "no";
+        }
     }    
 
     /** This method is called from within the constructor to
@@ -211,12 +218,12 @@ public final class DlgKegiatanFarmasi extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Kegiatan Farmasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Kegiatan Farmasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
         TabRawat.setBackground(new java.awt.Color(255, 255, 253));
-        TabRawat.setForeground(new java.awt.Color(50, 50, 50));
+        TabRawat.setForeground(new java.awt.Color(50,50,50));
         TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -563,6 +570,13 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 ps.setString(1,"%"+TCari.getText().trim()+"%");
                 rs=ps.executeQuery();
                 i=1;jmlitempengadaan=0;jmlitemtersedia=0;   
+                
+                if(aktifkanbatch.equals("yes")){
+                    qrystok="select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kode_golongan=? and gudangbarang.no_batch<>'' and gudangbarang.no_faktur<>'' and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data";
+                }else{
+                    qrystok="select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kode_golongan=? and gudangbarang.no_batch='' and gudangbarang.no_faktur='' and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data";
+                }
+                
                 while(rs.next()){
                     itempengadaan=0;itemtersedia=0;
                     //pemesanan
@@ -590,8 +604,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         }
                     }
                        
-                    ps2=koneksi.prepareStatement(
-                            "select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kode_golongan=? and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data");
+                    ps2=koneksi.prepareStatement(qrystok);
                     try {
                         ps2.setString(1,rs.getString("kode"));
                         rs2=ps2.executeQuery();
@@ -643,7 +656,13 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
             try {                
                 ps.setString(1,"%"+TCari.getText().trim()+"%");
                 rs=ps.executeQuery();
-                i=1;jmlitempengadaan=0;jmlitemtersedia=0;   
+                i=1;jmlitempengadaan=0;jmlitemtersedia=0;  
+                
+                if(aktifkanbatch.equals("yes")){
+                    qrystok="select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kdjns=? and gudangbarang.no_batch<>'' and gudangbarang.no_faktur<>'' and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data";
+                }else{
+                    qrystok="select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kdjns=? and gudangbarang.no_batch='' and gudangbarang.no_faktur='' and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data";
+                }
                 while(rs.next()){
                     itempengadaan=0;itemtersedia=0;
                     //pemesanan
@@ -671,8 +690,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         }
                     }
                        
-                    ps2=koneksi.prepareStatement(
-                            "select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kdjns=? and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data");
+                    ps2=koneksi.prepareStatement(qrystok);
                     try {
                         ps2.setString(1,rs.getString("kdjns"));
                         rs2=ps2.executeQuery();
@@ -724,7 +742,14 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
             try {                
                 ps.setString(1,"%"+TCari.getText().trim()+"%");
                 rs=ps.executeQuery();
-                i=1;jmlitempengadaan=0;jmlitemtersedia=0;   
+                i=1;jmlitempengadaan=0;jmlitemtersedia=0;  
+                
+                if(aktifkanbatch.equals("yes")){
+                    qrystok="select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kode_kategori=? and gudangbarang.no_batch<>'' and gudangbarang.no_faktur<>'' and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data";
+                }else{
+                    qrystok="select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kode_kategori=? and gudangbarang.no_batch='' and gudangbarang.no_faktur='' and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data";
+                }
+                
                 while(rs.next()){
                     itempengadaan=0;itemtersedia=0;
                     //pemesanan
@@ -752,8 +777,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         }
                     }
                        
-                    ps2=koneksi.prepareStatement(
-                            "select count(*) as jumlah from(select gudangbarang.kode_brng from gudangbarang inner join databarang on gudangbarang.kode_brng=databarang.kode_brng where databarang.kode_kategori=? and gudangbarang.stok>0 group by gudangbarang.kode_brng) as data");
+                    ps2=koneksi.prepareStatement(qrystok);
                     try {
                         ps2.setString(1,rs.getString("kode"));
                         rs2=ps2.executeQuery();

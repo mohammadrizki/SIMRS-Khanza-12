@@ -428,7 +428,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Setup Harga Obat/Barang/Alkes ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Setup Harga Obat/Barang/Alkes ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -548,7 +548,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         Scroll2.setName("Scroll2"); // NOI18N
         Scroll2.setOpaque(true);
 
-        tbPengaturanUmum.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPengaturanUmum.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPengaturanUmum.setName("tbPengaturanUmum"); // NOI18N
         tbPengaturanUmum.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -882,7 +882,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         Scroll1.setName("Scroll1"); // NOI18N
         Scroll1.setOpaque(true);
 
-        tbPengaturanHargaUmum.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPengaturanHargaUmum.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPengaturanHargaUmum.setComponentPopupMenu(Popup1);
         tbPengaturanHargaUmum.setName("tbPengaturanHargaUmum"); // NOI18N
         tbPengaturanHargaUmum.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1214,7 +1214,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
-        tbAdmin.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbAdmin.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbAdmin.setComponentPopupMenu(Popup);
         tbAdmin.setName("tbAdmin"); // NOI18N
         tbAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1611,7 +1611,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         Scroll3.setName("Scroll3"); // NOI18N
         Scroll3.setOpaque(true);
 
-        tbPengaturanHargaPerBarang.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPengaturanHargaPerBarang.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPengaturanHargaPerBarang.setComponentPopupMenu(Popup2);
         tbPengaturanHargaPerBarang.setName("tbPengaturanHargaPerBarang"); // NOI18N
         tbPengaturanHargaPerBarang.addMouseListener(new java.awt.event.MouseAdapter() {

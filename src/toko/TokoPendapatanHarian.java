@@ -192,7 +192,7 @@ public final class TokoPendapatanHarian extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pendapatan Harian Toko ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pendapatan Harian Toko ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -205,7 +205,7 @@ public final class TokoPendapatanHarian extends javax.swing.JDialog {
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
-        tbPenjualan.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPenjualan.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPenjualan.setName("tbPenjualan"); // NOI18N
         Scroll.setViewportView(tbPenjualan);
 
@@ -215,7 +215,7 @@ public final class TokoPendapatanHarian extends javax.swing.JDialog {
         Scroll2.setName("Scroll2"); // NOI18N
         Scroll2.setOpaque(true);
 
-        tbPiutang.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbPiutang.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbPiutang.setName("tbPiutang"); // NOI18N
         Scroll2.setViewportView(tbPiutang);
 

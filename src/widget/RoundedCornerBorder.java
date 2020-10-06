@@ -27,7 +27,7 @@ public class RoundedCornerBorder extends AbstractBorder{
     Graphics2D g2 = (Graphics2D)g.create();
     g2.setRenderingHint(
         RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-    int r = 12;
+    int r = 2;
     int w = width  - 1;
     int h = height - 1;
     Area round = new Area(new RoundRectangle2D.Float(x, y, w, h, r, r));

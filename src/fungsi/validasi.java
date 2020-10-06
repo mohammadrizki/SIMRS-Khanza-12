@@ -12,7 +12,6 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -46,8 +45,6 @@ import net.sf.jasperreports.engine.JRResultSetDataSource;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.export.JRExporterContext;
-import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.view.JasperViewer;
 import uz.ncipro.calendar.JDateTimePicker;
 import widget.Button;
@@ -353,7 +350,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getText()+"'", update);                 
         }
@@ -361,7 +358,7 @@ public final class validasi {
     
     public void editTable(String table,String field_acuan,JTextField nilai_field,String update) {
         if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getText()+"'", update);                 
         }
@@ -371,7 +368,7 @@ public final class validasi {
         if(tabMode.getRowCount()==0){
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
         }else if(nilai_field.trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.trim().equals("")){            
             sek.mengedit(table,field_acuan+"="+nilai_field, update,i,a);                 
         }
@@ -382,7 +379,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getSelectedItem().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(nilai_field.getSelectedItem()!=""){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getSelectedItem()+"'", update);            
             
@@ -394,7 +391,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang hendak diedit.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal mengedit. Pilih dulu data yang mau diedit.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.mengedit(table,field_acuan+"='"+nilai_field.getText()+"'", update);            
             
@@ -430,7 +427,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(! nilai_field.getText().trim().equals("")){            
             sek.meghapus(table,field,nilai_field.getText());            
             
@@ -442,7 +439,7 @@ public final class validasi {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
             nilai_field.requestFocus();
         }else if(nilai_field.getSelectedItem().equals("")){
-            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang hendak dihapus.\nKlik data pada table untuk memilih...!!!!");
+            JOptionPane.showMessageDialog(null,"Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik data pada table untuk memilih...!!!!");
         }else if(nilai_field.getSelectedItem()!=""){            
             String data=nilai_field.getSelectedItem().toString();
             sek.meghapus(table,field,data);     

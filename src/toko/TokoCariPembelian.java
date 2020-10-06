@@ -38,6 +38,7 @@ public class TokoCariPembelian extends javax.swing.JDialog {
     private double tagihan=0;
     private Jurnal jur=new Jurnal();
     private String akunpengadaan=Sequel.cariIsi("select Pengadaan_Toko from set_akun");
+    private boolean sukses=false;
 
     /** Creates new form DlgProgramStudi
      * @param parent
@@ -318,7 +319,7 @@ public class TokoCariPembelian extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Cari Pengadaan Barang Toko / Minimarket / Koperasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Cari Pengadaan Barang Toko / Minimarket / Koperasi ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -849,7 +850,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
 private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppHapusActionPerformed
     if(tbDokter.getSelectedRow()> -1){
         if(tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString().trim().equals("")){
-          JOptionPane.showMessageDialog(null,"Silakan pilih No.Faktur");
+          JOptionPane.showMessageDialog(null,"Silahkan pilih No.Faktur");
         }else{
            try {
                pscaribeli=koneksi.prepareStatement("select no_faktur, tagihan,tgl_beli from tokopembelian where no_faktur=?");
@@ -857,6 +858,8 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                   pscaribeli.setString(1,tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString());
                   rs=pscaribeli.executeQuery();
                   if(rs.next()){
+                      Sequel.AutoComitFalse();
+                      sukses=true;
                       pstoko_detail_beli=koneksi.prepareStatement("select kode_brng,jumlah from toko_detail_beli where no_faktur=? ");
                       try {
                           pstoko_detail_beli.setString(1,rs.getString(1));
@@ -885,8 +888,17 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                       Sequel.menyimpan("tampjurnal","?,?,?,?","Rekening",4,new String[]{
                           Sequel.cariIsi("select kd_rek from tokopembelian where no_faktur =?",rs.getString("no_faktur")),"KAS DI TANGAN",rs.getString("tagihan"),"0"
                       }); 
-                      jur.simpanJurnal(rs.getString("no_faktur"),Sequel.cariIsi("select current_date()"),"U","PEMBATALAN PENGADAAN BARANG TOKO"+", OLEH "+akses.getkode());
-                      Sequel.queryu2("delete from tokopembelian where no_faktur=?",1,new String[]{tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()});
+                      sukses=jur.simpanJurnal(rs.getString("no_faktur"),Sequel.cariIsi("select current_date()"),"U","PEMBATALAN PENGADAAN BARANG TOKO"+", OLEH "+akses.getkode());
+                      if(sukses==true){
+                           Sequel.queryu2("delete from tokopembelian where no_faktur=?",1,new String[]{tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()});
+                           Sequel.Commit();
+                           tampil();
+                      }else{
+                          JOptionPane.showMessageDialog(null,"Terjadi kesalahan saat pemrosesan data, transaksi dibatalkan.\nPeriksa kembali data sebelum melanjutkan menyimpan..!!");
+                          Sequel.RollBack();
+                      }
+
+                      Sequel.AutoComitTrue();
                   }   
                } catch (Exception e) {
                    System.out.println("Notif : "+e);

@@ -56,7 +56,7 @@ public class DlgBarang extends javax.swing.JDialog {
     private ResultSet rs, rs2, rs3;
     private int i = 0;
     public String aktifkanbatch="no",pengaturanharga=Sequel.cariIsi("select setharga from set_harga_obat");;
-    private String kdlokasi = "", nmlokasi = "", tanggal = "0000-00-00";
+    private String kdlokasi = "", nmlokasi = "", tanggal = "0000-00-00",qrystok="";
 
 
     public DlgBarang(java.awt.Frame parent, boolean modal) {
@@ -646,7 +646,7 @@ public class DlgBarang extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -854,7 +854,7 @@ public class DlgBarang extends javax.swing.JDialog {
 
             }
         ));
-        tbDokter.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbDokter.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbDokter.setComponentPopupMenu(Popup);
         tbDokter.setName("tbDokter"); // NOI18N
         tbDokter.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2667,6 +2667,11 @@ private void KapasitasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
     private void tampil2() {
         Valid.tabelKosong(tabMode);
         try {
+            if(aktifkanbatch.equals("yes")){
+                qrystok="select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=? and no_batch<>'' and no_faktur<>''";
+            }else{
+                qrystok="select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=? and no_batch='' and no_faktur=''";
+            }
             if(TCari.getText().trim().equals("")){
                 ps = koneksi.prepareStatement(
                         "select databarang.kode_brng, databarang.nama_brng,databarang.kode_satbesar,satuanbesar.satuan as satuanbesar, "
@@ -2771,7 +2776,7 @@ private void KapasitasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
                         totalstok = 0;
                         while (rs2.next()) {
                             stokgudang = 0;
-                            ps3 = koneksi.prepareStatement("select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=?");
+                            ps3 = koneksi.prepareStatement(qrystok);
                             try {
                                 ps3.setString(1, rs.getString(1));
                                 ps3.setString(2, rs2.getString(1));
@@ -2825,6 +2830,11 @@ private void KapasitasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
     public void tampil3() {
         Valid.tabelKosong(tabMode);
         try {
+            if(aktifkanbatch.equals("yes")){
+                qrystok="select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=? and no_batch<>'' and no_faktur<>''";
+            }else{
+                qrystok="select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=? and no_batch='' and no_faktur=''";
+            }
             if(TCari.getText().trim().equals("")){
                 ps = koneksi.prepareStatement(
                         "select databarang.kode_brng, databarang.nama_brng,databarang.kode_satbesar,satuanbesar.satuan as satuanbesar, "
@@ -2923,7 +2933,7 @@ private void KapasitasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
                         rs.getString("golongan")
                     });
                     stokgudang = 0;
-                    ps3 = koneksi.prepareStatement("select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=?");
+                    ps3 = koneksi.prepareStatement(qrystok);
                     try {
                         ps3.setString(1, rs.getString(1));
                         ps3.setString(2, kdlokasi);

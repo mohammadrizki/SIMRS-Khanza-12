@@ -257,7 +257,7 @@ public final class DlgPiutangBelumLunas extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Piutang Belum Lunas ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Piutang Belum Lunas ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -655,7 +655,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
             }
             this.setCursor(Cursor.getDefaultCursor());
          }else{
-             JOptionPane.showMessageDialog(null,"Silakan pilih data terlebih dahulu...!!");
+             JOptionPane.showMessageDialog(null,"Silahkan pilih data terlebih dahulu...!!");
          }                   
     } 
 }//GEN-LAST:event_MnDetailPiutangActionPerformed
@@ -858,19 +858,15 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
                        "piutang_pasien.no_rkm_medis=pasien.no_rkm_medis and "+
                        "piutang_pasien.no_rawat=reg_periksa.no_rawat and "+
                        "reg_periksa.kd_pj=penjab.kd_pj where "+
-                       "piutang_pasien.status='Belum Lunas' and penjab.png_jawab like ? and piutang_pasien.no_rawat like ? or "+
-                       "piutang_pasien.status='Belum Lunas' and penjab.png_jawab like ? and piutang_pasien.no_rkm_medis like ? or "+
-                       "piutang_pasien.status='Belum Lunas' and penjab.png_jawab like ? and pasien.nm_pasien like ? or "+
-                       "piutang_pasien.status='Belum Lunas' and penjab.png_jawab like ? and piutang_pasien.status like ? order by piutang_pasien.tgl_piutang");
+                       "piutang_pasien.status='Belum Lunas' and piutang_pasien.no_rawat like ? or "+
+                       "piutang_pasien.status='Belum Lunas' and piutang_pasien.no_rkm_medis like ? or "+
+                       "piutang_pasien.status='Belum Lunas' and pasien.nm_pasien like ? or "+
+                       "piutang_pasien.status='Belum Lunas' and piutang_pasien.status like ? order by piutang_pasien.tgl_piutang");
             try {
-                ps.setString(1,"%"+nmpenjab.getText()+"%");
+                ps.setString(1,"%"+TCari.getText()+"%");
                 ps.setString(2,"%"+TCari.getText()+"%");
-                ps.setString(3,"%"+nmpenjab.getText()+"%");
+                ps.setString(3,"%"+TCari.getText()+"%");
                 ps.setString(4,"%"+TCari.getText()+"%");
-                ps.setString(5,"%"+nmpenjab.getText()+"%");
-                ps.setString(6,"%"+TCari.getText()+"%");
-                ps.setString(7,"%"+nmpenjab.getText()+"%");
-                ps.setString(8,"%"+TCari.getText()+"%");
                 rs=ps.executeQuery();
                 while(rs.next()){
                     cicilan=Sequel.cariIsiAngka("SELECT ifnull(SUM(bayar_piutang.besar_cicilan),0) FROM bayar_piutang where bayar_piutang.no_rawat=?",rs.getString(1));
@@ -902,7 +898,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
         try{
             sisapiutang=0;
             ps=koneksi.prepareStatement("select piutang_pasien.no_rawat, piutang_pasien.tgl_piutang, concat(piutang_pasien.no_rkm_medis,' ',pasien.nm_pasien), "+
-                       "piutang_pasien.status,detail_piutang_pasien.totalpiutang,0, detail_piutang_pasien.sisapiutang, piutang_pasien.tgltempo,penjab.png_jawab "+
+                       "piutang_pasien.status,detail_piutang_pasien.totalpiutang,0, detail_piutang_pasien.sisapiutang, piutang_pasien.tgltempo,detail_piutang_pasien.nama_bayar "+
                        "from piutang_pasien inner join pasien inner join reg_periksa inner join penjab inner join detail_piutang_pasien on  "+
                        "piutang_pasien.no_rkm_medis=pasien.no_rkm_medis and piutang_pasien.no_rawat=reg_periksa.no_rawat and "+
                        "reg_periksa.kd_pj=penjab.kd_pj and piutang_pasien.no_rawat=detail_piutang_pasien.no_rawat where "+
@@ -950,7 +946,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
             if(tbBangsal.getSelectedRow()!= -1){
                 tbBangsal.setValueAt(false,tbBangsal.getSelectedRow(),0);
             }
-            JOptionPane.showMessageDialog(null,"Silakan pilih cara bayar terlebih dahulu");
+            JOptionPane.showMessageDialog(null,"Silahkan pilih cara bayar terlebih dahulu");
         }else{
             total=0;
             try {

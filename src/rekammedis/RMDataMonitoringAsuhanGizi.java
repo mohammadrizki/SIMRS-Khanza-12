@@ -244,7 +244,7 @@ public final class RMDataMonitoringAsuhanGizi extends javax.swing.JDialog {
         Scroll.setOpaque(true);
         Scroll.setPreferredSize(new java.awt.Dimension(452, 200));
 
-        tbObat.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbObat.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbObat.setComponentPopupMenu(jPopupMenu1);
         tbObat.setName("tbObat"); // NOI18N
         tbObat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -479,7 +479,7 @@ public final class RMDataMonitoringAsuhanGizi extends javax.swing.JDialog {
         PanelInput.setPreferredSize(new java.awt.Dimension(192, 126));
         PanelInput.setLayout(new java.awt.BorderLayout(1, 1));
 
-        FormInput.setBackground(new java.awt.Color(255, 253, 247));
+        FormInput.setBackground(new java.awt.Color(250, 255, 245));
         FormInput.setName("FormInput"); // NOI18N
         FormInput.setPreferredSize(new java.awt.Dimension(100, 225));
         FormInput.setLayout(null);

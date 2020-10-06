@@ -50,7 +50,7 @@ public final class DlgTemplateLaboratorium extends javax.swing.JDialog {
 
         Object[] row={"Pemeriksaan","Satuan","N.Rujukan L.D.","N.Rujukan L.A.","N.Rujukan P.D.",
                       "N.Rujukan P.A.","J.S. Rmh Skt","Paket BHP","J.M. Perujuk","J.M. Dokter",
-                      "J.M. Laborat","K.S.O.","Manajemen","Biaya Item","",""};
+                      "J.M. Laborat","K.S.O.","Menejemen","Biaya Item","",""};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = true;
@@ -117,7 +117,7 @@ public final class DlgTemplateLaboratorium extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Template Hasil Pemeriksaan Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Template Hasil Pemeriksaan Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 

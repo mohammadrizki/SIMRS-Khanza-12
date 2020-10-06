@@ -336,7 +336,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
 
         MnSurat.setBackground(new java.awt.Color(255, 255, 254));
         MnSurat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnSurat.setForeground(new java.awt.Color(50, 50, 50));
+        MnSurat.setForeground(new java.awt.Color(50,50,50));
         MnSurat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnSurat.setText("Surat SKDP BPJS");
         MnSurat.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -359,7 +359,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ SKDP BPJS ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ SKDP BPJS ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -367,7 +367,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         Scroll.setOpaque(true);
 
         tbObat.setAutoCreateRowSorter(true);
-        tbObat.setToolTipText("Silakan klik untuk memilih data yang hendak diedit ataupun dihapus");
+        tbObat.setToolTipText("Silahkan klik untuk memilih data yang mau diedit ataupun dihapus");
         tbObat.setComponentPopupMenu(jPopupMenu1);
         tbObat.setName("tbObat"); // NOI18N
         tbObat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -999,9 +999,9 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         if(TNoRM.getText().trim().equals("")||TPasien.getText().trim().equals("")){
             Valid.textKosong(TNoRM,"pasien");
         }else if(NmDokter.getText().trim().equals("")||KdDokter.getText().trim().equals("")){
-            Valid.textKosong(KdDokter,"Operator");
+            Valid.textKosong(KdDokter,"Dokter");
         }else if(NmPoli.getText().trim().equals("")||NmPoli.getText().trim().equals("")){
-            Valid.textKosong(KdPoli,"Operasi");
+            Valid.textKosong(KdPoli,"Poli");
         }else if(NoSurat.getText().trim().equals("")){
             Valid.textKosong(NoSurat,"No.Surat");
         }else if(NoReg.getText().trim().equals("")){
@@ -1066,7 +1066,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
                     emptTeks();
                 }                        
             }else{
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
             }  
         }
 }//GEN-LAST:event_BtnHapusActionPerformed
@@ -1244,9 +1244,9 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         if(TNoRM.getText().trim().equals("")||TPasien.getText().trim().equals("")){
             Valid.textKosong(TNoRM,"pasien");
         }else if(NmDokter.getText().trim().equals("")||KdDokter.getText().trim().equals("")){
-            Valid.textKosong(KdDokter,"Operator");
+            Valid.textKosong(KdDokter,"Dokter");
         }else if(NmPoli.getText().trim().equals("")||NmPoli.getText().trim().equals("")){
-            Valid.textKosong(KdPoli,"Operasi");
+            Valid.textKosong(KdPoli,"Poli");
         }else if(NoSurat.getText().trim().equals("")){
             Valid.textKosong(NoSurat,"No.Surat");
         }else if(NoReg.getText().trim().equals("")){
@@ -1273,7 +1273,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     tampil();
                 }
             }else{
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang mau anda ganti...\n Klik data pada table untuk memilih data...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih terlebih dulu data yang mau anda ganti...\n Klik data pada table untuk memilih data...!!!!");
             }                
         }
     }//GEN-LAST:event_BtnEditActionPerformed
@@ -1421,7 +1421,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 Valid.MyReport("rptSuratSKDPBPJS.jasper","report","::[ Surat SKDP BPJS ]::",param); 
                 this.setCursor(Cursor.getDefaultCursor());
             }else{
-                JOptionPane.showMessageDialog(null,"Maaf, Silakan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
+                JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
             }  
         }
     }//GEN-LAST:event_MnSuratActionPerformed

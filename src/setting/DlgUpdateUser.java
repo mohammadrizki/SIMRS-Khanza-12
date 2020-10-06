@@ -204,7 +204,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Update Hak Akses User ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Update Hak Akses User ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -655,7 +655,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         "zis_kepemilikan_rumah_penerima_dankes,zis_kamar_mandi_penerima_dankes,zis_dapur_rumah_penerima_dankes,zis_kursi_rumah_penerima_dankes,"+
                         "zis_kategori_phbs_penerima_dankes,zis_elektronik_penerima_dankes,zis_ternak_penerima_dankes,zis_jenis_simpanan_penerima_dankes,"+
                         "penilaian_awal_keperawatan_anak,zis_kategori_asnaf_penerima_dankes,master_masalah_keperawatan_anak,master_imunisasi,"+
-                        "zis_patologis_penerima_dankes,pcare_cek_kartu,surat_bebas_narkoba from user where id_user=AES_ENCRYPT(?,'nur')");
+                        "zis_patologis_penerima_dankes,pcare_cek_kartu,surat_bebas_narkoba,surat_keterangan_covid,pemakaian_air_tanah,"+
+                        "grafik_air_tanah_pertanggal,grafik_air_tanah_perbulan,lama_pelayanan_poli,hemodialisa,laporan_tahunan_irj,"+
+                        "grafik_harian_hemodialisa,grafik_bulanan_hemodialisa,grafik_tahunan_hemodialisa,grafik_bulanan_meninggal,"+
+                        "perbaikan_inventaris,surat_cuti_hamil,permintaan_stok_obat_pasien,pemeliharaan_inventaris from user where id_user=AES_ENCRYPT(?,'nur')");
             try {
                 ps.setString(1,user);
                 rs=ps.executeQuery();
@@ -1160,6 +1163,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[D]Sirkulasi Obat, Alkes & BHP 5",rs.getBoolean("sirkulasi_obat5")});
                     }
                     
+                    if("[D]Permintaan Stok Obat Pasien".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[D]Permintaan Stok Obat Pasien",rs.getBoolean("permintaan_stok_obat_pasien")});
+                    }
+                    
                     if("[E]Barang Non Medis".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[E]Barang Non Medis",rs.getBoolean("ipsrs_barang")});
                     }
@@ -1318,6 +1325,18 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[F]Asal Hibah".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[F]Asal Hibah",rs.getBoolean("asal_hibah")});
+                    }
+                    
+                    if("[F]Pemakaian Air Tanah".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[F]Pemakaian Air Tanah",rs.getBoolean("pemakaian_air_tanah")});
+                    }
+                    
+                    if("[F]Perbaikan Inventaris".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[F]Perbaikan Inventaris",rs.getBoolean("perbaikan_inventaris")});
+                    }
+                    
+                    if("[F]Pemeliharaan Inventaris".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[F]Pemeliharaan Inventaris",rs.getBoolean("pemeliharaan_inventaris")});
                     }
                     
                     if("[G]Jenis Parkir".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -1480,12 +1499,12 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[H]Bulanan KSO",rs.getBoolean("bulanan_kso")});
                     }
                     
-                    if("[H]Harian Manajemen".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[H]Harian Manajemen",rs.getBoolean("harian_menejemen")});
+                    if("[H]Harian Menejemen".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[H]Harian Menejemen",rs.getBoolean("harian_menejemen")});
                     }
                     
-                    if("[H]Bulanan Manajemen".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[H]Bulanan Manajemen",rs.getBoolean("bulanan_menejemen")});
+                    if("[H]Bulanan Menejemen".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[H]Bulanan Menejemen",rs.getBoolean("bulanan_menejemen")});
                     }
                     
                     if("[H]Piutang Ralan".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -1798,6 +1817,14 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[I]Registrasi Poli Per Tanggal".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[I]Registrasi Poli Per Tanggal",rs.getBoolean("registrasi_poli_per_tanggal")});
+                    }
+                    
+                    if("[I]Lama Pelayanan Poli".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[I]Lama Pelayanan Poli",rs.getBoolean("lama_pelayanan_poli")});
+                    }
+                    
+                    if("[I]Laporan Tahunan IRJ".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[I]Laporan Tahunan IRJ",rs.getBoolean("laporan_tahunan_irj")});
                     }
                     
                     if("[J]Deposit Pasien".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -2472,6 +2499,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[L]Master Imunisasi",rs.getBoolean("master_imunisasi")});
                     }
                     
+                    if("[L]Hemodialisa".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[L]Hemodialisa",rs.getBoolean("hemodialisa")});
+                    }
+                    
                     if("[M]Pengambilan BHP Medis".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[M]Pengambilan BHP Medis",rs.getBoolean("pengambilan_utd2")});
                     }
@@ -2892,6 +2923,30 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[N]Penerimaan Obat, Alkes & BHP Per Bulan",rs.getBoolean("penerimaan_obat_perbulan")});
                     }
                     
+                    if("[N]Pemakaian Air Tanah Per Tanggal".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Pemakaian Air Tanah Per Tanggal",rs.getBoolean("grafik_air_tanah_pertanggal")});
+                    }
+                    
+                    if("[N]Pemakaian Air Tanah Per Bulan".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Pemakaian Air Tanah Per Bulan",rs.getBoolean("grafik_air_tanah_perbulan")});
+                    }
+                    
+                    if("[N]Hemodialisa Per Tanggal".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Hemodialisa Per Tanggal",rs.getBoolean("grafik_harian_hemodialisa")});
+                    }
+                    
+                    if("[N]Hemodialisa Per Bulan".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Hemodialisa Per Bulan",rs.getBoolean("grafik_bulanan_hemodialisa")});
+                    }
+                    
+                    if("[N]Hemodialisa Per Tahun".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Hemodialisa Per Tahun",rs.getBoolean("grafik_tahunan_hemodialisa")});
+                    }
+                    
+                    if("[N]Pasien Meninggal Per Bulan".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Pasien Meninggal Per Bulan",rs.getBoolean("grafik_bulanan_meninggal")});
+                    }
+                    
                     if("[O]Indeks Surat".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[O]Indeks Surat",rs.getBoolean("surat_indeks")});
                     }
@@ -2950,6 +3005,14 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[O]Surat Bebas Narkoba".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[O]Surat Bebas Narkoba",rs.getBoolean("surat_bebas_narkoba")});
+                    }
+                    
+                    if("[O]Surat Keterangan Covid".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[O]Surat Keterangan Covid",rs.getBoolean("surat_keterangan_covid")});
+                    }
+                    
+                    if("[O]Surat Cuti Hamil".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[O]Surat Cuti Hamil",rs.getBoolean("surat_cuti_hamil")});
                     }
                     
                     if("[P]Ruang Perpustakaan".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -3778,6 +3841,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             if("[D]Sirkulasi Obat, Alkes & BHP 5".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","sirkulasi_obat5='"+tbUser.getValueAt(i,2).toString()+"'");
             }
+            
+            if("[D]Permintaan Stok Obat Pasien".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","permintaan_stok_obat_pasien='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
 
             if("[E]Barang Non Medis".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","ipsrs_barang='"+tbUser.getValueAt(i,2).toString()+"'");
@@ -3937,6 +4004,18 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             
             if("[F]Asal Hibah".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","asal_hibah='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[F]Pemakaian Air Tanah".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pemakaian_air_tanah='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[F]Perbaikan Inventaris".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","perbaikan_inventaris='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[F]Pemeliharaan Inventaris".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pemeliharaan_inventaris='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
             if("[G]Jenis Parkir".equals(tbUser.getValueAt(i,1).toString())){
@@ -4099,11 +4178,11 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","bulanan_kso='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
-            if("[H]Harian Manajemen".equals(tbUser.getValueAt(i,1).toString())){
+            if("[H]Harian Menejemen".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","harian_menejemen='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
-            if("[H]Bulanan Manajemen".equals(tbUser.getValueAt(i,1).toString())){
+            if("[H]Bulanan Menejemen".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","bulanan_menejemen='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
@@ -4417,6 +4496,14 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             
             if("[I]Registrasi Poli Per Tanggal".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","registrasi_poli_per_tanggal='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[I]Lama Pelayanan Poli".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","lama_pelayanan_poli='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[I]Laporan Tahunan IRJ".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","laporan_tahunan_irj='"+tbUser.getValueAt(i,2).toString()+"'");
             }
             
             if("[J]Deposit Pasien".equals(tbUser.getValueAt(i,1).toString())){
@@ -5095,6 +5182,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","master_imunisasi='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
+            if("[L]Hemodialisa".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","hemodialisa='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
             if("[M]Pengambilan BHP Medis".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pengambilan_utd2='"+tbUser.getValueAt(i,2).toString()+"'");
             }
@@ -5514,7 +5605,31 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             if("[N]Penerimaan Obat, Alkes & BHP Per Bulan".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","penerimaan_obat_perbulan='"+tbUser.getValueAt(i,2).toString()+"'");
             }
+            
+            if("[N]Pemakaian Air Tanah Per Tanggal".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_air_tanah_pertanggal='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[N]Pemakaian Air Tanah Per Bulan".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_air_tanah_perbulan='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
 
+            if("[N]Hemodialisa Per Tanggal".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_harian_hemodialisa='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[N]Hemodialisa Per Bulan".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_bulanan_hemodialisa='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[N]Hemodialisa Per Tahun".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_tahunan_hemodialisa='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[N]Pasien Meninggal Per Bulan".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_bulanan_meninggal='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
             if("[O]Indeks Surat".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","surat_indeks='"+tbUser.getValueAt(i,2).toString()+"'");
             }
@@ -5573,6 +5688,14 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             
             if("[O]Surat Bebas Narkoba".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","surat_bebas_narkoba='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[O]Surat Keterangan Covid".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","surat_keterangan_covid='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[O]Surat Cuti Hamil".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","surat_cuti_hamil='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
             if("[P]Ruang Perpustakaan".equals(tbUser.getValueAt(i,1).toString())){

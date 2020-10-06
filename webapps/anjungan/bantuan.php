@@ -17,7 +17,7 @@ include_once('layout/header.php');
     </audio>
 
     <section class="content">
-        <div class="container-fluid" style="margin: 5%;">
+        <div class="container-fluid" style="margin: 120px;">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -30,12 +30,12 @@ include_once('layout/header.php');
                             <div class="row clearfix">
                                 <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
                                     <div class="panel-group" id="accordion_17" role="tablist" aria-multiselectable="true">
-
+                                      
                                         <div class="panel">
                                             <div class="panel-heading" role="tab" id="headingOne_17">
                                                 <h4 class="panel-title">
                                                     <a role="button" data-toggle="collapse" data-parent="#accordion_17" href="#collapseOne_17" aria-expanded="false" aria-controls="collapseOne_17">
-                                                        Kapan waktu berkunjung di rawat inap ?
+                                                        Kapan waktu berkunjung dirawat inap ?
                                                     </a>
                                                 </h4>
                                             </div>
@@ -46,23 +46,23 @@ include_once('layout/header.php');
                                                 </div>
                                             </div>
                                         </div>
-
+                                      
                                         <div class="panel">
                                             <div class="panel-heading" role="tab" id="headingTwo_17">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_17" href="#collapseTwo_17" aria-expanded="false"
                                                        aria-controls="collapseTwo_17">
-                                                        Apakah pendaftaran online bisa dilakukan pada hari yang sama ?
+                                                        Apakah pendaftaran online bisa dilakukan dihari yang sama ?
                                                     </a>
                                                 </h4>
                                             </div>
                                             <div id="collapseTwo_17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_17">
                                                 <div class="panel-body">
-                                                    Bisa apabila sebelum jam 08.00 pada hari yang sama.
+                                                    Bisa apabila sebelum jam 08.00 dihari yang sama.
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </div> 
+                                  
                                      <div class="panel">
                                             <div class="panel-heading" role="tab" id="headingThree_17">
                                                 <h4 class="panel-title">
@@ -73,11 +73,11 @@ include_once('layout/header.php');
                                             </div>
                                             <div id="collapseThree_17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_17">
                                                 <div class="panel-body">
-                                                  		3 hari ke depan (misal mendaftar tanggal 1 Agustus 2018, bisa didaftarkan sampai tanggal 4 Agustus 2018)
+                                                  		3 hari kedepan (misal mendaftar tanggal 1 Agustus 2018, bisa didaftarkan sampai tanggal 4 Agustus 2018)
                                                 </div>
                                             </div>
                                         </div>
-
+                        		                         	               
                                     </div>
                                 </div>
                             </div>

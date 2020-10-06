@@ -490,7 +490,7 @@ public final class DlgPeresepanDokter extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Peresepan Obat Oleh Dokter ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Peresepan Obat Oleh Dokter ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -952,15 +952,15 @@ public final class DlgPeresepanDokter extends javax.swing.JDialog {
                             tbObatResepRacikan.getValueAt(tbObatResepRacikan.getSelectedRow(),4).toString().equals("")||
                             tbObatResepRacikan.getValueAt(tbObatResepRacikan.getSelectedRow(),5).toString().equals("")||
                             tbObatResepRacikan.getValueAt(tbObatResepRacikan.getSelectedRow(),6).toString().equals("")){
-                        JOptionPane.showMessageDialog(null,"Silakan lengkapi data racikan..!!");
+                        JOptionPane.showMessageDialog(null,"Silahkan lengkapi data racikan..!!");
                     }else{
                         tampildetailracikanresep();
                     }
                 }else{
-                    JOptionPane.showMessageDialog(null,"Silakan pilih racikan..!!");
+                    JOptionPane.showMessageDialog(null,"Silahkan pilih racikan..!!");
                 }
             }else{
-                JOptionPane.showMessageDialog(null,"Silakan masukkan racikan..!!");
+                JOptionPane.showMessageDialog(null,"Silahkan masukkan racikan..!!");
             }
         }  
 }//GEN-LAST:event_BtnCariActionPerformed
@@ -1063,7 +1063,6 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                 Sequel.AutoComitFalse();
                 sukses=true;
                 if(ubah==false){
-                    emptTeksobat();
                     if(Sequel.menyimpantf2("resep_obat","?,?,?,?,?,?,?,?","Nomer Resep",8,new String[]{
                         NoResep.getText(),Valid.SetTgl(DTPBeri.getSelectedItem()+""),
                         cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem(),
@@ -1090,6 +1089,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 })==true){
                                     simpandata();
                             }else{
+                                emptTeksobat();
                                 sukses=false;
                             }
                         }
@@ -1263,7 +1263,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
                     aturanpakai.setVisible(true);
                 }else if(i==3){
                     if(tbObatResepRacikan.getValueAt(tbObatResepRacikan.getSelectedRow(),1).equals("")){
-                        JOptionPane.showMessageDialog(null,"Silakan masukkan nama racikan..!!");
+                        JOptionPane.showMessageDialog(null,"Silahkan masukkan nama racikan..!!");
                         tbObatResepRacikan.requestFocus();
                     }else{
                         metoderacik.isCek();
@@ -1306,7 +1306,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         if(tbDetailResepObatRacikan.getRowCount()!=0){
             if((evt.getKeyCode()==KeyEvent.VK_ENTER)||(evt.getKeyCode()==KeyEvent.VK_RIGHT)||(evt.getKeyCode()==KeyEvent.VK_UP)||(evt.getKeyCode()==KeyEvent.VK_DOWN)){
                 i=tbDetailResepObatRacikan.getSelectedColumn();
-                if((i==11)||(i==9)){
+                if((i==11)||(i==9)||(i==13)||(i==14)){
                     try {
                         if(!tbDetailResepObatRacikan.getValueAt(tbDetailResepObatRacikan.getSelectedRow(),11).toString().equals(tbDetailResepObatRacikan.getValueAt(tbDetailResepObatRacikan.getSelectedRow(),9).toString())){
                             if(Valid.SetAngka(tbDetailResepObatRacikan.getValueAt(tbDetailResepObatRacikan.getSelectedRow(),8).toString())==0){
@@ -1329,6 +1329,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
                     }  
                     getCekStokRacikan();
                 }
+                hitungResep();
             }
         }
     }//GEN-LAST:event_tbDetailResepObatRacikanKeyPressed
@@ -1721,7 +1722,6 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         KdDokter.setText(KodeDokter);
         NmDokter.setText(NamaDokter);
         KdPj.setText(Sequel.cariIsi("select kd_pj from reg_periksa where no_rawat=?",norwt));
-        kenaikan=Sequel.cariIsiAngka("select (hargajual/100) from set_harga_obat_ralan where kd_pj=?",KdPj.getText());
         TCari.requestFocus();
         this.status=status;
         SetHarga();
@@ -1735,7 +1735,6 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         KdDokter.setText(KodeDokter);
         NmDokter.setText(NamaDokter);
         KdPj.setText(kodepj);
-        kenaikan=Sequel.cariIsiAngka("select (hargajual/100) from set_harga_obat_ralan where kd_pj=?",KdPj.getText());
         TCari.requestFocus();
         this.status=status;
         SetHarga();
@@ -1756,7 +1755,6 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",NmDokter,KdDokter.getText());
         
         KdPj.setText(Sequel.cariIsi("select kd_pj from reg_periksa where no_rawat=?",norwt));
-        kenaikan=Sequel.cariIsiAngka("select (hargajual/100) from set_harga_obat_ralan where kd_pj=?",KdPj.getText());
         TCari.requestFocus();
         this.status=status;
         SetHarga();
@@ -3172,8 +3170,10 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
             }else if(kelas.equals("Kelas VVIP")){
                 Jeniskelas.setSelectedItem("VVIP");
             } 
+            kenaikan=Sequel.cariIsiAngka2("select (hargajual/100) from  set_harga_obat_ranap where kd_pj=? and kelas=?",KdPj.getText(),kelas);
         }else if(status.equals("ralan")){
             kelas="Rawat Jalan";
+            kenaikan=Sequel.cariIsiAngka("select (hargajual/100) from set_harga_obat_ralan where kd_pj=?",KdPj.getText());
         }
     }
     

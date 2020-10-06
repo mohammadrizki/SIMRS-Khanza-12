@@ -26,6 +26,7 @@ public class DlgSisaStok extends javax.swing.JDialog {
     private String[] posisigudang;
     private int i=0,kolom=0,no=0;
     private double total=0,stok=0;
+    private String qrystok="",aktifkanbatch="no";
     
     /** Creates new form DlgProgramStudi
      * @param parent
@@ -34,6 +35,11 @@ public class DlgSisaStok extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
+        try {
+            aktifkanbatch = koneksiDB.AKTIFKANBATCHOBAT();
+        } catch (Exception e) {
+            aktifkanbatch = "no";
+        }
         
         LoadHTML.setEditable(false);
         HTMLEditorKit kit = new HTMLEditorKit();
@@ -78,7 +84,7 @@ public class DlgSisaStok extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Sisa Stok Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Sisa Stok Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -366,6 +372,13 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             );  
             
             no=1;
+            
+            if(aktifkanbatch.equals("yes")){
+                qrystok="select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=? and no_batch<>'' and no_faktur<>''";
+            }else{
+                qrystok="select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=? and no_batch='' and no_faktur=''";
+            }
+            
             ps= koneksi.prepareStatement(
                     "select kode_brng,nama_brng,kode_sat,dasar from databarang where "+
                     "kode_brng like ? or nama_brng like ? order by kode_brng");
@@ -383,7 +396,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             "<td valign='middle' align='left'>"+rs.getString("kode_sat")+"</td>"+
                             "<td valign='middle' align='right'>"+Valid.SetAngka(rs.getDouble("dasar"))+"</td>");
                     for(i=0;i<kolom;i++){
-                        stok=Sequel.cariIsiAngka2("select sum(stok) from gudangbarang where kode_brng=? and kd_bangsal=?",rs.getString("kode_brng"),posisigudang[i]);
+                        stok=Sequel.cariIsiAngka2(qrystok,rs.getString("kode_brng"),posisigudang[i]);
                         htmlContent.append("<td valign='middle' align='right'>"+Valid.SetAngka(stok)+"</td>");
                         total=total+stok;
                     }
