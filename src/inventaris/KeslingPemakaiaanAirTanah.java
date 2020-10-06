@@ -40,7 +40,7 @@ import kepegawaian.DlgCariPetugas;
  *
  * @author perpustakaan
  */
-public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
+public final class KeslingPemakaiaanAirTanah extends javax.swing.JDialog {
     private final DefaultTableModel tabMode;
     private Connection koneksi=koneksiDB.condb();
     private sekuel Sequel=new sekuel();
@@ -48,18 +48,18 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
     private PreparedStatement ps;
     private ResultSet rs;
     private int i=0;
-    private double total=0,ph=0,suhu=0;
+    private double total=0;
     /** Creates new form DlgRujuk
      * @param parent
      * @param modal */
-    public KeslingMutuAirLimbah(java.awt.Frame parent, boolean modal) {
+    public KeslingPemakaiaanAirTanah(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocation(8,1);
         setSize(628,674);
 
         tabMode=new DefaultTableModel(null,new Object[]{
-                "No.","NIP","Petugas","Tanggal","Meteran","Jml.Harian(M³)","pH","Suhu(°C)"
+                "No.","NIP","Petugas","Tanggal","Meteran","Jml.Harian(M³)","Keterangan"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
@@ -69,32 +69,29 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         tbObat.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbObat.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 8; i++) {
+        for (i = 0; i < 7; i++) {
             TableColumn column = tbObat.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(35);
             }else if(i==1){
                 column.setPreferredWidth(100);
             }else if(i==2){
-                column.setPreferredWidth(190);
+                column.setPreferredWidth(170);
             }else if(i==3){
                 column.setPreferredWidth(120);
             }else if(i==4){
-                column.setPreferredWidth(65);
+                column.setPreferredWidth(75);
             }else if(i==5){
-                column.setPreferredWidth(83);
+                column.setPreferredWidth(85);
             }else if(i==6){
-                column.setPreferredWidth(40);
-            }else if(i==7){
-                column.setPreferredWidth(60);
+                column.setPreferredWidth(170);
             }
         }
         tbObat.setDefaultRenderer(Object.class, new WarnaTable());
 
         Meteran.setDocument(new batasInput((byte)10).getKata(Meteran));
         JmlHarian.setDocument(new batasInput((byte)10).getKata(JmlHarian));
-        PH.setDocument(new batasInput((int)10).getKata(PH));
-        Suhu.setDocument(new batasInput((int)10).getKata(Suhu));
+        Keterangan.setDocument(new batasInput((int)50).getKata(Keterangan));
         TCari.setDocument(new batasInput((byte)100).getKata(TCari));
         if(koneksiDB.CARICEPAT().equals("aktif")){
             TCari.getDocument().addDocumentListener(new javax.swing.event.DocumentListener(){
@@ -192,9 +189,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         btnPetugas = new widget.Button();
         NmPetugas = new widget.TextBox();
         jLabel15 = new widget.Label();
-        PH = new widget.TextBox();
-        Suhu = new widget.TextBox();
-        jLabel16 = new widget.Label();
+        Keterangan = new widget.TextBox();
         ChkInput = new widget.CekBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -206,7 +201,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Mutu Air Limbah ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Pemakaian Air Tanah ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -379,7 +374,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "15-04-2019" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-07-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -393,7 +388,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "15-04-2019" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-07-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -483,10 +478,10 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
             }
         });
         FormInput.add(JmlHarian);
-        JmlHarian.setBounds(304, 40, 55, 23);
+        JmlHarian.setBounds(284, 40, 60, 23);
 
         Tanggal.setForeground(new java.awt.Color(50, 70, 50));
-        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "15-04-2019 00:42:54" }));
+        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-07-2020 11:52:35" }));
         Tanggal.setDisplayFormat("dd-MM-yyyy HH:mm:ss");
         Tanggal.setName("Tanggal"); // NOI18N
         Tanggal.setOpaque(false);
@@ -498,10 +493,10 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         FormInput.add(Tanggal);
         Tanggal.setBounds(590, 10, 135, 23);
 
-        jLabel12.setText("Jumlah Harian (M³/Hr) :");
+        jLabel12.setText("Jumlah Harian (M³) :");
         jLabel12.setName("jLabel12"); // NOI18N
         FormInput.add(jLabel12);
-        jLabel12.setBounds(180, 40, 120, 23);
+        jLabel12.setBounds(160, 40, 120, 23);
 
         jLabel5.setText("Petugas :");
         jLabel5.setName("jLabel5"); // NOI18N
@@ -542,35 +537,20 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         FormInput.add(NmPetugas);
         NmPetugas.setBounds(189, 10, 283, 23);
 
-        jLabel15.setText("Konsentrasi pH :");
+        jLabel15.setText(" Keterangan :");
         jLabel15.setName("jLabel15"); // NOI18N
         FormInput.add(jLabel15);
-        jLabel15.setBounds(375, 40, 90, 23);
+        jLabel15.setBounds(345, 40, 90, 23);
 
-        PH.setHighlighter(null);
-        PH.setName("PH"); // NOI18N
-        PH.addKeyListener(new java.awt.event.KeyAdapter() {
+        Keterangan.setHighlighter(null);
+        Keterangan.setName("Keterangan"); // NOI18N
+        Keterangan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                PHKeyPressed(evt);
+                KeteranganKeyPressed(evt);
             }
         });
-        FormInput.add(PH);
-        PH.setBounds(469, 40, 55, 23);
-
-        Suhu.setHighlighter(null);
-        Suhu.setName("Suhu"); // NOI18N
-        Suhu.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                SuhuKeyPressed(evt);
-            }
-        });
-        FormInput.add(Suhu);
-        Suhu.setBounds(670, 40, 55, 23);
-
-        jLabel16.setText("Konsentrasi Suhu (°C) :");
-        jLabel16.setName("jLabel16"); // NOI18N
-        FormInput.add(jLabel16);
-        jLabel16.setBounds(546, 40, 120, 23);
+        FormInput.add(Keterangan);
+        Keterangan.setBounds(439, 40, 286, 23);
 
         PanelInput.add(FormInput, java.awt.BorderLayout.CENTER);
 
@@ -607,7 +587,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
 }//GEN-LAST:event_MeteranKeyPressed
 
     private void JmlHarianKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JmlHarianKeyPressed
-        Valid.pindah(evt,Meteran,PH);
+        Valid.pindah(evt,Meteran,Keterangan);
 }//GEN-LAST:event_JmlHarianKeyPressed
 
     private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSimpanActionPerformed
@@ -615,16 +595,14 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
             Valid.textKosong(Meteran,"Meteran");
         }else if(JmlHarian.getText().trim().equals("")){
             Valid.textKosong(JmlHarian,"Jumlah Harian");
-        }else if(PH.getText().trim().equals("")){
-            Valid.textKosong(PH,"pH");
-        }else if(PH.getText().trim().equals("")){
-            Valid.textKosong(Suhu,"Suhu");
+        }else if(Keterangan.getText().trim().equals("")){
+            Valid.textKosong(Keterangan,"Keterangan");
         }else if(NmPetugas.getText().trim().equals("")){
-            Valid.textKosong(KdPetugas,"Petugas yang bertugas");
+            Valid.textKosong(KdPetugas,"petugas yang bertugas");
         }else{
-            if(Sequel.menyimpantf("kesling_mutu_air_limbah","?,?,?,?,?,?","Data",6,new String[]{
+            if(Sequel.menyimpantf("kesling_pemakaian_air_tanah","?,?,?,?,?","Data",5,new String[]{
                     KdPetugas.getText(),Valid.SetTgl(Tanggal.getSelectedItem()+"")+" "+Tanggal.getSelectedItem().toString().substring(11,19),
-                    Meteran.getText(),JmlHarian.getText(),PH.getText(),Suhu.getText()
+                    Meteran.getText(),JmlHarian.getText(),Keterangan.getText()
                 })==true){
                     tampil();
                     emptTeks();
@@ -636,7 +614,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
         if(evt.getKeyCode()==KeyEvent.VK_SPACE){
             BtnSimpanActionPerformed(null);
         }else{
-            Valid.pindah(evt,Suhu,BtnBatal);
+            Valid.pindah(evt,Keterangan,BtnBatal);
         }
 }//GEN-LAST:event_BtnSimpanKeyPressed
 
@@ -654,7 +632,7 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
 
     private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
         if(tbObat.getSelectedRow()> -1){
-            Sequel.meghapus("kesling_mutu_air_limbah","nip","tanggal",tbObat.getValueAt(tbObat.getSelectedRow(),1).toString(),tbObat.getValueAt(tbObat.getSelectedRow(),3).toString());
+            Sequel.meghapus("kesling_pemakaian_air_tanah","nip","tanggal",tbObat.getValueAt(tbObat.getSelectedRow(),1).toString(),tbObat.getValueAt(tbObat.getSelectedRow(),3).toString());
             tampil();
             emptTeks();
         }
@@ -673,17 +651,15 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
             Valid.textKosong(Meteran,"Meteran");
         }else if(JmlHarian.getText().trim().equals("")){
             Valid.textKosong(JmlHarian,"Jumlah Harian");
-        }else if(PH.getText().trim().equals("")){
-            Valid.textKosong(PH,"pH");
-        }else if(PH.getText().trim().equals("")){
-            Valid.textKosong(Suhu,"Suhu");
+        }else if(Keterangan.getText().trim().equals("")){
+            Valid.textKosong(Keterangan,"Keterangan");
         }else if(NmPetugas.getText().trim().equals("")){
-            Valid.textKosong(KdPetugas,"Petugas yang bertugas");
-        }else{ 
+            Valid.textKosong(KdPetugas,"petugas yang bertugas");
+        }else{   
             if(tbObat.getSelectedRow()> -1){
-                if(Sequel.mengedittf("kesling_mutu_air_limbah","nip=? and tanggal=?","nip=?,tanggal=?,meteran=?,jumlahharian=?,ph=?,suhu=?",8,new String[]{
+                if(Sequel.mengedittf("kesling_pemakaian_air_tanah","nip=? and tanggal=?","nip=?,tanggal=?,meteran=?,jumlahharian=?,keterangan=?",7,new String[]{
                         KdPetugas.getText(),Valid.SetTgl(Tanggal.getSelectedItem()+"")+" "+Tanggal.getSelectedItem().toString().substring(11,19),
-                        Meteran.getText(),JmlHarian.getText(),PH.getText(),Suhu.getText(),tbObat.getValueAt(tbObat.getSelectedRow(),1).toString(),
+                        Meteran.getText(),JmlHarian.getText(),Keterangan.getText(),tbObat.getValueAt(tbObat.getSelectedRow(),1).toString(),
                         tbObat.getValueAt(tbObat.getSelectedRow(),3).toString()
                     })==true){
                         tampil();
@@ -725,13 +701,14 @@ public final class KeslingMutuAirLimbah extends javax.swing.JDialog {
             param.put("kontakrs",akses.getkontakrs());
             param.put("emailrs",akses.getemailrs());   
             param.put("logo",Sequel.cariGambar("select logo from setting")); 
-            Valid.MyReportqry("rptMutuAirLimbah.jasper","report","::[ Data Mutu Air Limbah ]::",
-                   "select kesling_mutu_air_limbah.nip,petugas.nama,kesling_mutu_air_limbah.tanggal,"+
-                   "kesling_mutu_air_limbah.meteran,kesling_mutu_air_limbah.jumlahharian,kesling_mutu_air_limbah.ph,kesling_mutu_air_limbah.suhu "+
-                   "from kesling_mutu_air_limbah inner join petugas on kesling_mutu_air_limbah.nip=petugas.nip where "+
-                   "kesling_mutu_air_limbah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and kesling_mutu_air_limbah.nip like '%"+TCari.getText().trim()+"%' or "+
-                   "kesling_mutu_air_limbah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and petugas.nama like '%"+TCari.getText().trim()+"%' "+
-                   "order by kesling_mutu_air_limbah.tanggal",param);
+            Valid.MyReportqry("rptPemakaianAirTanah.jasper","report","::[ Data Pemakaian Air Tanah ]::",
+                   "select kesling_pemakaian_air_tanah.nip,petugas.nama,kesling_pemakaian_air_tanah.tanggal,"+
+                   "kesling_pemakaian_air_tanah.meteran,kesling_pemakaian_air_tanah.jumlahharian,kesling_pemakaian_air_tanah.keterangan "+
+                   "from kesling_pemakaian_air_tanah inner join petugas on kesling_pemakaian_air_tanah.nip=petugas.nip where "+
+                   "kesling_pemakaian_air_tanah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and kesling_pemakaian_air_tanah.nip like '%"+TCari.getText().trim()+"%' or "+
+                   "kesling_pemakaian_air_tanah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and petugas.nama like '%"+TCari.getText().trim()+"%' or "+
+                   "kesling_pemakaian_air_tanah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59' and kesling_pemakaian_air_tanah.keterangan like '%"+TCari.getText().trim()+"%' "+
+                   "order by kesling_pemakaian_air_tanah.tanggal",param);
         }
         this.setCursor(Cursor.getDefaultCursor());
 }//GEN-LAST:event_BtnPrintActionPerformed
@@ -814,9 +791,9 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
         //Valid.pindah(evt,TKd,TSpek);
 }//GEN-LAST:event_NmPetugasKeyPressed
 
-    private void PHKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PHKeyPressed
-        Valid.pindah(evt,JmlHarian,Suhu);
-    }//GEN-LAST:event_PHKeyPressed
+    private void KeteranganKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KeteranganKeyPressed
+        Valid.pindah(evt,JmlHarian,BtnSimpan);
+    }//GEN-LAST:event_KeteranganKeyPressed
 
     private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChkInputActionPerformed
         isForm();
@@ -837,16 +814,12 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
         tampil();
     }//GEN-LAST:event_formWindowOpened
 
-    private void SuhuKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SuhuKeyPressed
-        Valid.pindah(evt,PH,BtnSimpan);
-    }//GEN-LAST:event_SuhuKeyPressed
-
     /**
     * @param args the command line arguments
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            KeslingMutuAirLimbah dialog = new KeslingMutuAirLimbah(new javax.swing.JFrame(), true);
+            KeslingPemakaiaanAirTanah dialog = new KeslingPemakaiaanAirTanah(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {
@@ -872,20 +845,18 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
     private widget.PanelBiasa FormInput;
     private widget.TextBox JmlHarian;
     private widget.TextBox KdPetugas;
+    private widget.TextBox Keterangan;
     private widget.Label LCount;
     private widget.TextBox Meteran;
     private widget.TextBox NmPetugas;
-    private widget.TextBox PH;
     private javax.swing.JPanel PanelInput;
     private widget.ScrollPane Scroll;
-    private widget.TextBox Suhu;
     private widget.TextBox TCari;
     private widget.Tanggal Tanggal;
     private widget.Button btnPetugas;
     private widget.InternalFrame internalFrame1;
     private widget.Label jLabel12;
     private widget.Label jLabel15;
-    private widget.Label jLabel16;
     private widget.Label jLabel19;
     private widget.Label jLabel21;
     private widget.Label jLabel3;
@@ -903,12 +874,13 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
         Valid.tabelKosong(tabMode);
         try{
             ps=koneksi.prepareStatement(
-                   "select kesling_mutu_air_limbah.nip,petugas.nama,kesling_mutu_air_limbah.tanggal,"+
-                   "kesling_mutu_air_limbah.meteran,kesling_mutu_air_limbah.jumlahharian,kesling_mutu_air_limbah.ph,kesling_mutu_air_limbah.suhu "+
-                   "from kesling_mutu_air_limbah inner join petugas on kesling_mutu_air_limbah.nip=petugas.nip where "+
-                   "kesling_mutu_air_limbah.tanggal between ? and ? and kesling_mutu_air_limbah.nip like ? or "+
-                   "kesling_mutu_air_limbah.tanggal between ? and ? and petugas.nama like ? "+
-                   "order by kesling_mutu_air_limbah.tanggal");
+                   "select kesling_pemakaian_air_tanah.nip,petugas.nama,kesling_pemakaian_air_tanah.tanggal,"+
+                   "kesling_pemakaian_air_tanah.meteran,kesling_pemakaian_air_tanah.jumlahharian,kesling_pemakaian_air_tanah.keterangan "+
+                   "from kesling_pemakaian_air_tanah inner join petugas on kesling_pemakaian_air_tanah.nip=petugas.nip where "+
+                   "kesling_pemakaian_air_tanah.tanggal between ? and ? and kesling_pemakaian_air_tanah.nip like ? or "+
+                   "kesling_pemakaian_air_tanah.tanggal between ? and ? and petugas.nama like ? or "+
+                   "kesling_pemakaian_air_tanah.tanggal between ? and ? and kesling_pemakaian_air_tanah.keterangan like ? "+
+                   "order by kesling_pemakaian_air_tanah.tanggal");
             try {
                 ps.setString(1,Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00");
                 ps.setString(2,Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59");
@@ -916,16 +888,17 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
                 ps.setString(4,Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00");
                 ps.setString(5,Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59");
                 ps.setString(6,"%"+TCari.getText().trim()+"%");
+                ps.setString(7,Valid.SetTgl(DTPCari1.getSelectedItem()+"")+" 00:00:00");
+                ps.setString(8,Valid.SetTgl(DTPCari2.getSelectedItem()+"")+" 23:59:59");
+                ps.setString(9,"%"+TCari.getText().trim()+"%");
                 rs=ps.executeQuery();
                 i=1;
-                total=0;ph=0;suhu=0;
+                total=0;
                 while(rs.next()){
                     tabMode.addRow(new String[]{
-                        i+"",rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)
+                        i+"",rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6)
                     });
                     total=total+rs.getDouble(5);
-                    ph=ph+rs.getDouble(6);
-                    suhu=suhu+rs.getDouble(7);
                     i++;
                 }
             } catch (Exception e) {
@@ -940,7 +913,7 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
             }
             if(total>0){
                 tabMode.addRow(new String[]{
-                    "","","JUMLAH :","","",""+total,""+(ph/(i-1)),""+(suhu/(i-1))
+                    "","","JUMLAH :","","",""+total,""
                 });
             }
         }catch(Exception e){
@@ -953,8 +926,7 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
         Meteran.setText("0");
         JmlHarian.setText("0");
         Tanggal.setDate(new Date());
-        PH.setText("0");
-        Suhu.setText("0");
+        Keterangan.setText("");
         Meteran.requestFocus();
     }
 
@@ -966,8 +938,7 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
             Valid.SetTgl2(Tanggal,tbObat.getValueAt(tbObat.getSelectedRow(),3).toString());
             Meteran.setText(tbObat.getValueAt(tbObat.getSelectedRow(),4).toString());
             JmlHarian.setText(tbObat.getValueAt(tbObat.getSelectedRow(),5).toString());
-            PH.setText(tbObat.getValueAt(tbObat.getSelectedRow(),6).toString());
-            Suhu.setText(tbObat.getValueAt(tbObat.getSelectedRow(),7).toString());
+            Keterangan.setText(tbObat.getValueAt(tbObat.getSelectedRow(),6).toString());
         }
     }
 
@@ -986,9 +957,9 @@ private void NmPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
     }
     
     public void isCek(){
-        BtnSimpan.setEnabled(akses.getmutu_air_limbah());
-        BtnHapus.setEnabled(akses.getmutu_air_limbah());
-        BtnEdit.setEnabled(akses.getmutu_air_limbah());
+        BtnSimpan.setEnabled(akses.getpemakaian_air_tanah());
+        BtnHapus.setEnabled(akses.getpemakaian_air_tanah());
+        BtnEdit.setEnabled(akses.getpemakaian_air_tanah());
         if(akses.getjml2()>=1){
             KdPetugas.setEditable(false);
             btnPetugas.setEnabled(false);
